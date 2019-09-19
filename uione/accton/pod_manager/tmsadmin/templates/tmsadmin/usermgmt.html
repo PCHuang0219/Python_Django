@@ -1,0 +1,113 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TMS - Admin User Management</title>
+	{% include 'preset_style.html' %}
+</head>
+{% include 'template_common.html' %}
+<div class="right_col" role="main">
+	<div class="clearfix"></div>
+	<div class="col-12">
+		<table class="table table-hover">
+			<tbody id="account_content">
+				<tr>
+					<th>User Type</th>
+					<th>User Name</th>
+					<th>First_Name</th>
+					<th>Email</th>
+					<th>Last Login</th>
+					<th>Joined Date</th>
+				</tr>
+				<tr>
+					<td data-th="User Type"></td>
+					<td data-th="User Name">Datasheet</td>
+					<td data-th="First_Name">AS5512-54X DS R03</td>
+					<td data-th="Email">AS5512-54X_DS_R03_20180614.pdf</td>
+					<td data-th="Last Login">n/a</td>
+					<td data-th="Joined Date">2018-06-14</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-12">
+		<a id="createAccount" class="btn btn-primary" href="/accounts/register/" style="margin:20px 0">Create Account</a>
+		<!-- Button trigger modal -->
+		<a id="deleteBtn" class="btn btn-primary" data-toggle="modal" data-target="#a" style="margin:20px 0">Delete Account</a>
+		<!-- Button trigger modal -->
+		<a id="createAccount" class="btn btn-primary" data-toggle="modal" data-target="#b" style="margin:20px 0">Change User Type</a>
+	</div>
+	<!-- Modal -->
+	<div class="modal" id="b" role="dialog" aria-hidden="true" value="x">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group clearfix">
+						Choose User<span class="red">*</span>：</label><br>
+						<select id="selectUserName" class="btn btn-default dropdown-toggle col-xs-12">
+						</select>
+						<br><br><br>
+						Choose User Type<span class="red">*</span>：</label><br>
+						<select id="selectUserType" class="btn btn-default dropdown-toggle col-xs-12">
+							<option value="1">General User</option>
+							<option value="2">Subscriber</option>
+							<option value="3">Lab-Controller</option>
+							<option value="4">Lab_Master</option>
+							<option value="5">Reseller</option>
+							<option value="6">Channel_Partners</option>
+							<option value="7">TMS_Admin</option>
+							<option value="8">TMS_Project Mananger</option>
+							<option value="9">TMS_Project Viewer</option>
+						</select>
+					</div>						
+				</div>
+				<div class="modal-footer">
+					<a id="changeUserType" class="btn btn-primary" data-toggle="modal" style="margin:20px 0">Change</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal" id="a" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group clearfix">
+						Choose User<span class="red">*</span>：</label><br>
+						<select id="showAllAccount" name="delete"class="btn btn-default dropdown-toggle col-xs-12">
+						</select>
+					</div>						
+				</div>
+				<div class="modal-footer">
+					<a id="deleteAccount" class="btn btn-primary" data-toggle="modal" style="margin:20px 0">Delete</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- footer content -->
+	<footer>
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</footer>	
+	{% include 'preset_js.html' %}
+	<script>
+    	$.ajaxSetup({
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+        });
+    </script>
+	<script src="{% static 'js/tms/usermgmt.js' %}"></script>
+	
+</body>
+</html>

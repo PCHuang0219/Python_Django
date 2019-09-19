@@ -1,0 +1,238 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Meta, title, CSS, favicons, etc. -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	<title>Wiki-Data center network architectures</title>
+	
+	<!-- Bootstrap -->
+	<link href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+	<!-- Modify_Table-->
+  	<link href="{% static 'vendors/additional/modify_table.css' %}" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+	<!-- NProgress -->
+	<link href="{% static 'vendors/nprogress/nprogress.css' %}" rel="stylesheet">
+	<!-- iCheck -->
+	<link href="{% static 'vendors/iCheck/skins/flat/green.css' %}" rel="stylesheet">
+	<!-- bootstrap-progressbar -->
+	<link href="{% static 'vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' %}" rel="stylesheet">
+	<!-- JQVMap -->
+	<link href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}" rel="stylesheet" />
+	<!-- bootstrap-daterangepicker -->
+	<link href="{% static 'vendors/bootstrap-daterangepicker/daterangepicker.css' %}" rel="stylesheet">
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/wiki.css' %}" rel="stylesheet">
+</head>
+<body>
+	<div class="main_container">
+		<div class="col-sm-2 col-2 left_col">
+			<div class="sidenav">
+				<img src="{%static '/images/logo/edgecore.png' %}" style="width:200px">
+				<h3 class="font3">Accton WIKI</h3>
+				</br>
+				<a >Main page</a>
+				<a href="#">Featured content</a>
+				<a href="#">Current events</a>
+				
+				<p class="font3">Interaction</p>
+				<a href="#">Help</a>
+				<a>About Wikipedia</a>
+				<a>Community portal</a>
+				
+				<p class="font3">Contents</p>
+				<a href="/sonic/accton/wiki/data_center">Data center network architectures</a>
+				<a href="/sonic/accton/wiki/network_switch">Network Switch</a>
+				<a href="/sonic/accton/wiki/sonic_wiki">SONiC</a>
+				<a href="/sonic/accton/wiki/onie">onie</a>
+			</div>
+
+		</div>
+
+		<div class="col-sm-10 col-10" role="main">
+				
+
+				<!--ul class="tab nav nav-tabs nav-justified">
+						<li class="active" role="presentation"><button class="tablink" onclick="openPage('Article', this, '#999')" >Article</button></li>
+						<li role="presentation"><button class="tablink" onclick="openPage('Talk', this, '#999')">Talk</button></li>
+						<li role="presentation"><button class="tablink" onclick="openPage('Read', this, '#999')">Read</button></li>
+						<li role="presentation"><button class="tablink" onclick="openPage('Edit', this, '#999')">Edit</button></li>
+				</ul-->
+				<div class="main">
+				
+					<div class="green_border">
+						<a class="X" href="#" title="Hide" onclick="mw.centralNotice.hideBanner();return false;"><img src="//upload.wikimedia.org/wikipedia/foundation/2/20/CloseWindow19x19.png" alt="Hide" border="0"></a>
+						<p><img src="{%static '/images/wiki/Austria_Logo.png' %}" style="padding:20px">
+						Wiki Loves Earth photo contest: Upload photos of natural heritage sites in Taiwan to help Wikipedia and win fantastic prizes!
+					</p>
+						
+					</div>
+					<div id="Article" class="tabcontent">
+						<h3>Data center network architectures </h3>
+						<p class="font1">
+							From Wikipedia, the free encyclopedia</br></br>
+							Data center is a pool of resources (computational, storage, network) interconnected 
+							using a communication network.[1][2] Data Center Network (DCN) holds a pivotal role 
+							in a data center, as it interconnects all of the data center resources together. DCNs 
+							need to be scalable and efficient to connect tens or even hundreds of thousands of 
+							servers to handle the growing demands of Cloud computing.[3][4] 
+							Today’s data centers are constrained by the interconnection network.[5] 
+						</p>
+						<div class="contents">
+								<ul class="ul1">
+									<b>Contents</b>
+									<li>Types of Data center network</li>
+									<ul class="ul2">
+										<li>1.1 Three-tier DCN</li>
+										<li>1.2 Fat tree DCN</li>
+										<li>1.3 DCell</li>
+										<li>1.4 Others</li>
+
+									</ul>
+									<li>Challenges</li>
+									<li>Performance Analysis of DCNs</li>
+									<li>Structural robustness and Connectivity of DCNs</li>
+									<li>Energy efficiency of DCNs</li> 
+									<li>References</li>
+								</ul>
+						</div>
+						<h3>Types of Data center network</h3>
+						<p class="font1">
+							<b class="font2">Three-tier DCN</b></br>
+								The legacy three-tier DCN architecture follows a multi-rooted tree based network topology composed
+								of three layers of network switches, namely access, aggregate, and core layers.[6] The servers in
+								the lowest layers are connected directly to one of the edge layer switches. The aggregate layer
+								switches interconnect together multiple access layer switches. All of the aggregate layer switches
+								are connected to each other by core layer switches. Core layer switches are also responsible for
+								connecting the data center to the Internet. The three-tier is the common network architecture used
+								in data centers.[6] However, three-tier architecture is unable to handle the growing demand of
+								cloud computing.[7] The higher layers of the three-tier DCN are highly oversubscribed.[3]
+								Moreover, scalability is another major issue in three-tier DCN. Major problems faced by the
+								three-tier architecture include, scalability, fault tolerance, energy efficiency, and
+								cross-sectional bandwidth. The three-tier architecture uses enterprise-level network devices at
+								the higher layers of topology that are very expensive and power hungry.[5]
+							</br>
+							<b class="font2">Fat tree DCN</b></br>
+								Fat tree DCN architecture handles the oversubscription and cross section bandwidth problem faced
+								by the legacy three-tier DCN architecture. Fat tree DCN employs commodity network switches based
+								architecture using Clos topology.[3] The network elements in fat tree topology also follows
+								hierarchical organization of network switches in access, aggregate, and core layers. However, the
+								number of network switches is much larger than the three-tier DCN. The architecture is composed of
+								k pods, where each pod contains, (k/2)2 servers, k/2 access layer switches, and k/2 aggregate
+								layer switches in the topology. The core layers contain (k/2)2 core switches where each of the
+								core switches is connected to one aggregate layer switch in each of the pods. The fat tree
+								topology offers 1:1 oversubscription ratio and full bisection bandwidth.[3] The fat tree
+								architecture uses a customized addressing scheme and routing algorithm. The scalability is one of
+								the major issues in fat tree DCN architecture and maximum number of pods is equal to the number of
+								ports in each switch.[7]
+							</br>
+							<b class="font2">DCell</b></br>
+								DCell is a server-centric hybrid DCN architecture where one server is directly connected to many
+								other servers.[4] A server in the DCell architecture is equipped with multiple Network Interface
+								Cards (NICs). The DCell follows a recursively built hierarchy of cells. A cell0 is the basic unit
+								and building block of DCell topology arranged in multiple levels, where a higher level cell
+								contains multiple lower layer cells. The cell0 is building block of DCell topology, which contains
+								n servers and one commodity network switch. The network switch is only used to connect the server
+								within a cell0. A cell1 contain k=n+1 cell0 cells, and similarly a cell2 contains k * n + 1
+								dcell1. The DCell is a highly scalable architecture where a four level DCell with only six servers
+								in cell0 can accommodate around 3.26 million servers. Besides very high scalability, the DCell
+								architecture depicts very high structural robustness.[8] However, cross section bandwidth and
+								network latency is a major issue in DCell DCN architecture.[1]
+							</br>
+						<h3>Chanllenges</h3>
+						<p class="font1">
+							Scalability is one of the foremost challenges to the DCNs.[3] With the advent of cloud paradigm,
+							data centers are required to scale up to hundreds of thousands of nodes. Besides offering immense
+							scalability, the DCNs are also required to deliver high cross-section bandwidth. Current DCN
+							architectures, such as three-tier DCN offer poor cross-section bandwidth and possess very high
+							over-subscription ratio near the root.[3] Fat tree DCN architecture delivers 1:1 oversubscription
+							ratio and high cross section bandwidth, but it suffers from low scalability limited to k=total
+							number of ports in a switch. DCell offers immense scalability, but it delivers very poor
+							performance under heavy network load and one-to-many traffic patterns.
+						</p>
+						<h3>References</h3>
+						<ul class="ul1">
+							<li>K. Bilal, S. U. Khan, L. Zhang, H. Li, K. Hayat, S. A. Madani, N. Min-Allah, L. Wang, D. Chen, M. Iqbal, C.-Z. Xu, and A. Y. Zomaya, "Quantitative Comparisons of the State of the Art Data Center Architectures," Concurrency and Computation: Practice and Experience, vol. 25, no. 12, pp. 1771-1783, 2013.</li>
+							<li>M. Noormohammadpour, C. S. Raghavendra, "Datacenter Traffic Control: Understanding Techniques and Trade-offs," IEEE Communications Surveys & Tutorials, vol. PP, no. 99, pp. 1-1.</li>
+							<li>M. Al-Fares, A. Loukissas, A. Vahdat, A scalable, commodity data center 2 network architecture, in: ACM SIGCOMM 2008 Conference on Data 3 Communication, Seattle,WA, 2008, pp. 63–74.</li>
+						</ul>
+					</div>
+								
+				
+
+
+				</div>
+
+		</div>
+	
+
+		<!-- footer content -->
+		<footer>
+			<div class="clearfix"></div>
+			<div class="container">
+
+
+				<div class="pull-right">Powered by Accton Technology &copy;</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</footer>
+		<!-- /footer content -->
+
+	<!-- jQuery -->
+	<script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+	<!-- FastClick -->
+	<script src="{% static 'vendors/fastclick/lib/fastclick.js' %}"></script>
+	<!-- NProgress -->
+	<script src="{% static 'vendors/nprogress/nprogress.js' %}"></script>
+	<!-- Chart.js -->
+	<script src="{% static 'vendors/Chart.js/dist/Chart.min.js' %}"></script>
+	<!-- gauge.js -->
+	<script src="{% static 'vendors/gauge.js/dist/gauge.min.js' %}"></script>
+	<!-- bootstrap-progressbar -->
+	<script src="{% static 'vendors/bootstrap-progressbar/bootstrap-progressbar.min.js' %}"></script>
+	<!-- iCheck -->
+	<script src="{% static 'vendors/iCheck/icheck.min.js' %}"></script>
+	<!-- Skycons -->
+	<script src="{% static 'vendors/skycons/skycons.js' %}"></script>
+	<!-- Flot -->
+	<script src="{% static 'vendors/Flot/jquery.flot.js' %}"></script>
+	<script src="{% static 'vendors/Flot/jquery.flot.pie.js' %}"></script>
+	<script src="{% static 'vendors/Flot/jquery.flot.time.js' %}"></script>
+	<script src="{% static 'vendors/Flot/jquery.flot.stack.js' %}"></script>
+	<script src="{% static 'vendors/Flot/jquery.flot.resize.js' %}"></script>
+	<!-- Flot plugins -->
+	<script src="{% static 'vendors/flot.orderbars/js/jquery.flot.orderBars.js' %}"></script>
+	<script src="{% static 'vendors/flot-spline/js/jquery.flot.spline.min.js' %}"></script>
+	<script src="{% static 'vendors/flot.curvedlines/curvedLines.js' %}"></script>
+	<!-- DateJS -->
+	<script src="{% static 'vendors/DateJS/build/date.js' %}"></script>
+	<!-- JQVMap -->
+	<script src="{% static 'vendors/jqvmap/dist/jquery.vmap.js' %}"></script>
+	<script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
+	<script src="{% static 'vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
+	<!-- bootstrap-daterangepicker -->
+	<script src="{% static 'vendors/moment/min/moment.min.js' %}"></script>
+	<script src="{% static 'vendors/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+	<!-- Custom Theme Scripts -->
+	<script src="{% static 'build/js/custom.min.js' %}"></script>
+	<!-- Additional JS-->
+	<script src="{% static 'js/sonic/product.js' %}"></script>
+	<script src="{% static 'js/sonic/location.js' %}"></script>
+	</div>
+
+	<script src="{% static 'vendors/additional/js/common.js' %}"></script>
+	<script src="{% static 'vendors/additional/js/wiki.js' %}"></script>
+</body>
+
+</html>

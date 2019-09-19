@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TMS-News-20190418</title>
+    {% include 'preset_style.html' %}
+    <!-- Additional CSS-->
+</head>
+
+{% include 'template_sonic.html' %}
+<div class="right_col" role="main">
+    <div class="clearfix"></div>    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <p class="title2_news">New Release</p>
+                <p class="title3_news">2019-04-18</p>
+                <a href="https://newsroom.intel.com/contact-intels-public-relations-team/"
+                    class="btn btn-primary btn-block intel-cta" style="width:50%">
+                    Contact Intel PR </a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <h1 class="entry-title">2019 Q2 Enterprise Switch EOL Announcement</h1>
+
+                <div style="text-align: justify;padding:3vw;padding-left: 0%">
+                    <br>
+                    Effective <span style="color:#FF0000;">Apr, 18 2019</span>: The following products and parts have
+                    completed the End of Sales (EOS)&nbsp;process and are now End of Life (EOL). They will be removed
+                    from the spares section of the&nbsp;worldwide price list. The Last Time Buy window that began with
+                    the End of Sales notices now&nbsp;closed.&nbsp;&nbsp;Products and parts ordered during the last
+                    time buy window will continue to be covered under Edgecore.<br>
+                    &nbsp;
+                    <table border="1" cellpadding="1" cellspacing="1" style="width:80%;">
+                        <tbody>
+                            <tr>
+                                <td>EOL Model</td>
+                                <td>Replacement Model&nbsp;</td>
+                                <td>Reason</td>
+                            </tr>
+                            <tr>
+                                <td>ECS4210-12P&nbsp;</td>
+                                <td>ECS4100-12PH&nbsp;</td>
+                                <td>chipset EOL&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>ECS4210-28T&nbsp;</td>
+                                <td>ECS4100-28T&nbsp;</td>
+                                <td>chipset EOL&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>ECS4210-28P&nbsp;</td>
+                                <td>ECS4100-28P&nbsp;</td>
+                                <td>chipset EOL&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                    <span style=
+                    "color: rgb(50, 50, 50); font-family: 思源黑體, 微軟正黑體, Verdana, Arial, serif, 新細明體-ExtB; font-size: 15px; text-align: justify; background-color: rgb(255, 255, 255);">
+                    Edgecore continues to strive to provide an End of Sales notice several months before an End of
+                    Life&nbsp;declaration is sent. Those products and part numbers identified as EOS are placed into
+                    the certified&nbsp;spare parts section of the price list and can be ordered during the Last Time
+                    Buy window. Please note&nbsp;that availability of EOS products cannot be guaranteed and
+                    appropriate forecasts are required. Bundles&nbsp;and upgrades cannot be ordered after the EOS
+                    notification. When the EOL declaration is issued, those&nbsp;products and part numbers identified
+                    are removed from certified spares and will no longer be&nbsp;orderable.&nbsp;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- footer content -->
+<footer>
+    <div class="container">
+        <div class="pull-left">Powered by Accton Technology &copy;</div>
+    </div>
+</footer>
+{% include 'preset_js.html' %}
+<script src="{% static 'js/roadmap.js' %}"></script>
+</body>
+
+</html>

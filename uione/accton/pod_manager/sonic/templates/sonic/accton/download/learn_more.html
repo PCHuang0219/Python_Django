@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TMS-SONiC Leanmore</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/download.css' %}" rel="stylesheet">
+</head>
+
+{% include 'template_sonic.html' %}
+<div class="right_col" role="main">
+	<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+	<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+	<div class="clearfix"></div><!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="col-sm-12">
+					<div class="col-xs-3 col-sm-3" style="line-height: 300px;"><img src="{% static 'images/icon/accton.png' %}" style="width:80%;padding:10% 0% 10% 0;"></div>
+					<div class="col-xs-9 col-sm-9" style="float:right;">
+						<div class="download_panel1">
+							<img src="{%static '/images/making_partnership.png'%}">
+							<p >With 30 years of network product design and development experience, Accton produces leading-edge, top-quality and reliable communication networking equipments.<br>
+							As a leader in the design of open hardware platforms for data center, carrier access and campus network, Accton works closely with its long-term global partners to deliver the next-generation designs that customers demand.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>				
+<!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+	{% include 'preset_js.html' %}
+</body>
+</html>

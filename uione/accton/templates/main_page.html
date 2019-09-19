@@ -1,0 +1,403 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Accton Total Management System</title>
+        {% include 'preset_style.html' %}
+        <!-- Additional -->
+        <link href="{% static 'vendors/additional/home_page.css' %}" rel="stylesheet">
+</head>
+
+<body class="nav-md common_font_family">
+<div class="container body">
+	<!-- top navigation header -->
+	<div id="top_nav"class="top_nav">
+		<div class="top_nav" id="top_nav">
+			<div class="nav_menu">
+				<div class="navbar nav_title" style="background: none; border: 0; width: 50%">
+					<a class="site_title" href="/" style="width: auto;">Accton | Total Management System</a>
+				</div>
+				<div class="col-sm-5 col-xs-5 form-group pull-right top_search">
+					<div class="input-group">
+						<input class="form-control" placeholder="Search for..." type="text">
+						<span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button>
+					</div>
+				</div>
+				<nav>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="">
+							<a aria-expanded="false" class="user-profile dropdown-toggle" data-toggle="dropdown" href="javascript:;">DC Manager</a>
+							<ul class="dropdown-menu dropdown-usermenu pull-right">
+								<li>
+									<a href="javascript:;">My POD Manager</a>
+								</li>
+								<li>
+									<a href="javascript:;">My Dashboard</a>
+								</li>
+								<li style="list-style: none">{% if request.user.is_authenticated %}</li>
+								<li>
+									<a href="/personal_settings"><span class="glyphicon glyphicon-user"></span> Hello {{ request.user.first_name }}</a>
+								</li>
+								<li>
+									<a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+								</li>
+								<li style="list-style: none">{% else %}</li>
+								<li>
+									<a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+								</li>
+								<li style="list-style: none">{% endif %}</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	<!-- page content -->
+	
+	<div class="right_col" role="main" style="margin-left: 0px; padding: 15px;">
+		<div id="content">
+			<!-- top tiles -->
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12 profile_details clickable">
+					<div class="well profile_view">
+						<a href="/sonic/"><div class="col-sm-12" style="padding: 0px">
+							<div class="text-center">
+								<img class="img-responsive clickable-pic" src="{% static 'images/mainpage/homeBigSonic@2x.png' %}">
+							</div>
+						</div>
+						<div class="col-xs-12 text-center title-main">
+							<b>SONiC</b>
+						</div></a>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 profile_details clickable" id="ntc-1">
+					<div class="well profile_view">
+						<a href="/test/jobManagement"><div class="col-sm-12"  style="padding: 0px">
+							<div class="text-center">
+								<img class="img-responsive clickable-pic" src="{% static 'images/mainpage/homeBigTest@2x.png' %}" >
+							</div>
+						</div>
+						<div class=" col-xs-12 text-center title-main">
+							<b>Network Test Center</b>
+						</div></a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12 profile_details clickable" style="margin-top: 0px;">
+						<div class="well profile_view">
+							<a href="/monitor/"><div class="col-sm-12"  style="padding: 0px">
+								<div class="text-center">
+									<img class="img-responsive clickable-pic" src="{% static 'images/mainpage/homeBigCctv@2x.png' %}">
+								</div>
+							</div>
+							<div class="col-xs-12 text-center title-main">
+								<b>CCTV System</b>
+							</div></a>
+						</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 profile_details clickable" style="margin-top: 0px;">
+					<div class="well profile_view">
+						<a href="/project_management/"><div class="col-sm-12"  style="padding: 0px">
+						<div class="text-center">
+							<img class="img-responsive clickable-pic" src="{% static 'images/mainpage/homeBigTms@2x.png' %}"  >
+						</div>
+					</div>
+					<div class="col-xs-12 text-center title-main">
+							<b>Project Management</b>
+						</div></a>
+				</div>
+
+				</div>
+			</div><!-- /top tiles -->
+			<div class="row container_small">
+				<div class="col-md-3 col-sm-3 col-xs-6 profile_details">
+					<a href="https://myibm.ibm.com/evernts/think/all-sessions">
+					<div class="profile_view small-area clickable-pic">
+						<div class="col-sm-4 img-area">
+							<img class="img-responsive" src="{% static 'images/mainpage/homeSmallData.png' %}" >
+						</div>
+						<div class="col-sm-8 content-area">
+							<div class="col-sm-12 common-font1">
+								<h2><b>Data Analytics</b></h2>
+							</div>
+							<div class="col-sm-12 common-font2">
+								IBM: Think 2019 Sessions
+							</div>
+						</div>
+					</div>
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 profile_details">
+					<a href="https://www.tecmint.com/install-and-configure-kvm-in-linux/">
+					<div class="profile_view small-area clickable-pic">
+						<div class="col-sm-4 img-area">
+							<img class="img-responsive" src="{% static 'images/mainpage/homeSmallDemo.png' %}">
+						</div>
+						<div class="col-sm-8 content-area">
+							<div class="col-sm-12 common-font1">
+								<h2><b>Demo</b></h2>
+							</div>
+							<div class="col-sm-12 common-font2">
+								Install and configure KVM on Bare Metal hardware
+							</div>
+						</div>
+					</div>
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 profile_details">
+					<a href="https://www.cnet.com/how-to/onedrive-dropbox-google-drive-and-box-which-cloud-storage-service-is-right-for-you/">
+					<div class="profile_view small-area clickable-pic">
+						<div class="col-sm-4 img-area">
+							<img class="img-responsive" src="{% static 'images/mainpage/homeSmallService.png' %}">
+						</div>
+						<div class="col-sm-8 content-area">
+							<div class="col-sm-12 common-font1">
+								<h2><b>Services</b></h2>
+							</div>
+							<div class="col-sm-12 common-font2">
+								Cloud Services comparision
+							</div>
+						</div>
+					</div>
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 profile_details">
+						<a href="/sonic/">
+						<div class="profile_view small-area clickable-pic">
+						<div class="col-sm-4 img-area">
+								<img class="img-responsive"  src="{% static 'images/mainpage/homeSmallSonic.png' %}">
+						</div>
+						<div class="col-sm-8 content-area">
+							<div class="col-sm-12 common-font1">
+								<h2><b>SONiC</b></h2>
+							</div>
+							<div class="col-sm-12 common-font2">
+								An open source network operating system for everyone.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+			<div class="row container_small">
+				<div class="col-md-3 col-sm-3 col-xs-6 profile_details">
+					<a href="https://blogs.cisco.com/news/intelligent-next-step-for-intent-based-networking">
+					<div class="profile_view small-area clickable-pic">
+						<div class="col-sm-4 img-area">
+							<img class="img-responsive" src="{% static 'images/mainpage/homeSmallBlog.png' %}">
+						</div>
+						<div class="col-sm-8 content-area">
+							<div class="col-sm-12 common-font1">
+								<h2><b>Blogs</b></h2>
+							</div>
+							<div class="col-sm-12 common-font2">
+								Cisco > Executive Platform:<br>
+								The Intelligent Next Step for Intent-Based Networking 
+							</div>
+						</div>
+					</div>
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 profile_details">
+					<a href="https://learningportal.juniper.net/juniper/user_activity_info.aspx?id=5798">
+					<div class="profile_view small-area clickable-pic">
+						<div class="col-sm-4 img-area">
+							<img class="img-responsive" src="{% static 'images/mainpage/homeSmallTrain.png' %}">
+						</div>
+						<div class="col-sm-8 content-area">
+							<div class="col-sm-12 common-font1">
+								<h2><b>Training</b></h2>
+							</div>
+							<div class="col-sm-12 common-font2">
+								Visit Juniper Network for free training
+							</div>
+						</div>
+					</div>
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 profile_details">
+					<a href="https://www.iottechexpo.com/">
+					<div class="profile_view small-area clickable-pic">
+						<div class="col-sm-4 img-area">
+							<img class="img-responsive" src="{% static 'images/mainpage/homeSmallIot.png' %}">
+						</div>
+						<div class="col-sm-8 content-area">
+							<div class="col-sm-12 common-font1">
+								<h2><b>IoT (Internet of Things)</b></h2>
+							</div>
+							<div class="col-sm-12 common-font2">
+								IoT Tech Expo 2019 Schedule
+							</div>
+						</div>
+					</div>
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-6 profile_details">
+					<a href="http://onie.org/static/onie/pdf/OCP_Summit_SJ_ONIE_16x9_final.pdf">
+					<div class="profile_view small-area clickable-pic">
+						<div class="col-sm-4 img-area">
+							<img class="img-responsive" src="{% static 'images/mainpage/homeSmallLearn.png' %}">
+						</div>
+						<div class="col-sm-8 content-area">
+							<div class="col-sm-12 common-font1">
+								<h2><b>Learn</b></h2>
+							</div>
+							<div class="col-sm-12 common-font2">
+								ONIE installation guide from onie.org
+							</div>
+						</div>
+					</div>
+				</a>
+				</div>
+			</div>
+			<div class="row container_small">
+				<div class="col-md-3 col-sm-3 col-xs-6 profile_details">
+					<a href="/tmsadmin/">
+					<div class="profile_view small-area clickable-pic">
+						<div class="col-sm-4 img-area">
+							<img class="img-responsive" src="{% static 'images/mainpage/homeSmallTms.png' %}">
+						</div>
+						<div class="col-sm-8 content-area">
+							<div class="col-sm-12 common-font1">
+								<h2><b>TMS Administration</b></h2>
+							</div>
+							<div class="col-sm-12 common-font2">
+								User Management, System Administration
+							</div>
+						</div>
+					</div>
+				</a>
+				</div>
+			</div>
+		</div>
+	
+	
+</div>
+
+	</div>
+	<div class="clearfix"></div>
+	<div class="container common-font main-footer">
+		<div class="row" style="padding-left:120px;">
+			<div class="col-xs-12 col-sm-6">
+				<div class="col-xs-6">
+					<h2 class="footer-title">About Us</h2>
+					<ul class="footer-ul common-font1">
+						<li>
+							<a href="/sonic/about_us/introduction">Accton Corp</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/introduction#edgecore">Edgecore Corp</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/introduction#ignitenet">Ignitenent</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/arts_foundation">Accton Arts Foundation</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/charitable">Accton Charitable Foundation</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/news">News</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/investor">Investor Relationships</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-6">
+					<h2 class="footer-title">Solutions</h2>
+					<ul class="footer-ul common-font1">
+						<li>
+							<a href="/sonic">Open Networking Solutions</a>
+						</li>
+						<li>
+							<a href="/sonic/carrier_access">Carrier Access Solutions</a>
+						</li>
+						<li>
+							<a href="/sonic/iot">IoT Integration Solutions</a>
+						</li>
+						<li>
+							<a href="/sonic/sd_wan">SD-WAN Solutions</a>
+						</li>
+						<li>
+							<a href="/telco/vOLT_concepts">vOLT Solutions</a>
+						</li>
+						<li>
+							<a href="/telco/roadm">ROADM Solutions - Cassini</a>
+						</li>
+						<li>
+							<a href="/telco/dcsg">DCSG Solutions</a>
+						</li>
+						<li>
+							<a href="/telco/disaggrated_network_solution">Disaggragted Network Solutions</a>
+						</li>
+						<li>
+							<a href="/telco/cpes">CPEs Virtualization</a>
+						</li>
+						<li>
+							<a href="/telco/tip">TIP and Open Packet Transponder</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<div class="col-xs-6">
+					<h2 class="footer-title">Support</h2>
+					<ul class="footer-ul common-font1">
+						<li>
+							<a href="/sonic/accton/download">Downloads</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/kb">Knowledge Base</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/wiki">Wiki</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/faq">FAQs</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/forum">Forum</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/resources/whitepaper">White Paper</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/videos">Technical Videos</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/webinar">Webinar</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/sonic_now">SONiC Now</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-6">
+					<h2 class="footer-title">How to Buy</h2>
+					<ul class="footer-ul common-font1">
+						<li>
+							<a href="/sonic/wheretobuy">Where to Buy</a>
+						</li>
+						<li>
+							<a href="/sonic/sales_contact">Contact Sales</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/contact_us">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div><!-- /footer content -->
+		<div class="footer common-font1">
+			Powered by Accton Technology &copy;
+		</div>
+		</div>
+
+
+{% include 'preset_js.html' %}
+</body>
+</html>

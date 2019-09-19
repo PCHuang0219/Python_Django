@@ -1,0 +1,4 @@
+DATABASE_NAME = "forum"
+DATABASE_USER = "username"
+DATABASE_PASSWORD = "password"
+DATABASE_HOST = "192.168.40.82"

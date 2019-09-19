@@ -1,0 +1,82 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TMS-Amozon Management</title>
+	{% include 'preset_style.html' %}
+</head>
+{% include 'template_pm.html' %}
+<div class="right_col" role="main">
+	<div class="clearfix"></div>
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
+			<div class="x_panel">
+				<div class="x_title">
+					<h2 id="customer">Amozon Management</h2>
+                    <div class="clearfix"></div>
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#createSubproject" style="margin:20px 0">Create Subproject</a>
+				</div>
+				<div class="x_content">
+					<!--<p class="text-muted font-13 m-b-30">message</p>-->
+					<table class="table Table tablesorter">
+						<thead>
+							<tr class="tr-only-hide">
+								<th scope="col">Cust Model No</th>
+								<th scope="col">Project Name</th>
+								<th scope="col">Model part_no</th>
+								<th scope="col">PCBA part_no</th>
+								<th scope="col">OEM Code</th>
+								<th scope="col">Model Description</th>
+							</tr>
+						</thead>
+						<tbody id="project_content"></tbody>
+					</table>
+					<div aria-hidden="true" class="modal" id="createSubproject" role="dialog">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+                                    <h1 class="modal-title">Create Subproject
+                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button></h1>
+								</div>
+								<div class="modal-body">
+									<div class="form-group clearfix">
+										Cust Model No<span class="red">*</span>：<br>
+                                        <input id="custModel" type="text" class="col-xs-12"><br><br>
+                                        Project Name<span class="red">*</span>：<br>
+                                        <input id="projectName" type="text" class="col-xs-12"><br><br>
+                                        Model part_no<span class="red">*</span>：<br>
+                                        <input id="modelPart_no" type="text" class="col-xs-12"><br><br>
+                                        PCBA part_no<span class="red">*</span>：<br>
+										<input id="PCBAPart_no" type="text" class="col-xs-12"><br><br>
+										OEM Code<span class="red">*</span>：<br>
+										<input id="OEMCode" type="text" class="col-xs-12"><br><br>
+										Model Description<span class="red">*</span>：<br>
+                                        <input id="modelDes" type="text" class="col-xs-12"><br><br>
+                                        PL<span class="red">*</span>：<br>
+                                        <select id="PL" class="col-xs-12">
+                                            <option>Qiyao</option>
+                                            <option>Nike</option>
+                                            <option>Jenny</option>
+                                        </select>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<a class="btn btn-primary" data-toggle="modal" id="createMainProject">Create</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer content -->
+<div class="clearfix"></div>
+{% include 'main_footer.html' %}
+	</div>
+</div>
+    {% include 'preset_js.html' %}
+    <script src="{% static 'js/pm/mainProject.js' %}"></script>
+</body>
+</html>

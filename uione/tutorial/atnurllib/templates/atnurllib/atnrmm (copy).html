@@ -1,0 +1,163 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Accton 2nd page (overview)              -->
+ <!-- Accton 2nd page (overview)              -->
+ <!-- Accton 2nd page (overview)              -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Accton Total Management System</title>
+
+<!-- Bootstrap -->
+<link href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+<!-- NProgress -->
+<link href="{% static 'vendors/nprogress/nprogress.css' %}" rel="stylesheet">
+<!-- iCheck -->
+<link href="{% static 'vendors/iCheck/skins/flat/green.css' %}" rel="stylesheet">
+
+<!-- bootstrap-progressbar -->
+<link href="{% static 'vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' %}" rel="stylesheet">
+<!-- JQVMap -->
+<link href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}" rel="stylesheet"/>
+<!-- bootstrap-daterangepicker -->
+<link href="{% static 'vendors/bootstrap-daterangepicker/daterangepicker.css' %}" rel="stylesheet">
+
+<!-- Custom Theme Style -->
+<link href="{% static 'build/css/custom.css' %}" rel="stylesheet">
+</head>
+
+
+<body>
+    JSON Viewer                  Back to Top View             Help
+<div class="container body">
+    <div class="row">    show raw data
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img src="Images/tom.png" class="media-object" alt="tom" />
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Tom<small><i>July</i></small></h4>
+                </div>
+            </div>
+            <ul>
+                <li> dot 1</li>
+                <li> dot 2</li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <div class="row">
+        <div class = "col-xs-9">
+            <table class="table table-bordered table-hover table-striped">
+            <thead class="thead-dark">
+                <th>Tag name</th>
+                <th>Tag attribute</th>
+                <th>Note</th>
+            </thead>
+                <!-- this page is /redfish/v1, the next page shouold be
+                                  /redfish/v1/Chassis,
+                                  /redfish/v1/Managers              -->
+            <tbody>
+            {% for key, value in rmmdics.items %}
+                <tr>
+                    <td> {{ key }} </td>
+
+                    {% if "@odata.id" in value %}
+
+                        {# <td> <a href="https://10.3.0.7:8091/redfish/v1/Chassis"> #}
+                        <td> <a href="https://10.3.0.7:8091{{ value|cut:"{'@odata.id': '" |cut:"'}" }}">
+                        {{ value|cut:"{'@odata.id': '" |cut:"'}" }}</td>
+
+
+                    {% comment %}
+                    http://127.0.0.1:8000/redfish/v1/$metadata#ServiceRoot
+                    'Chassis': {'@odata.id': '/redfish/v1/Chassis'},
+                    Chassis     /redfish/v1/Chassis
+                                https://10.3.0.7:8091/redfish/v1/Chassis
+
+
+
+                    {% endcomment %}
+
+                    {% else %}
+                        <td> {{ value }} </td>
+                    {% endif %}
+
+                    <td>Note</td>
+                </tr>
+
+            {% empty %}
+                <tr>
+                    <td> Empty Tag</td>
+                    <td>{{ emptytext }}</td>
+                    <td>n/a</td>
+                </tr>
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- jQuery -->
+<script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'vendors/fastclick/lib/fastclick.js' %}"></script>
+<!-- NProgress -->
+<script src="{% static 'vendors/nprogress/nprogress.js' %}"></script>
+<!-- Chart.js -->
+<script src="{% static 'vendors/Chart.js/dist/Chart.min.js' %}"></script>
+<!-- gauge.js -->
+<script src="{% static 'vendors/gauge.js/dist/gauge.min.js' %}"></script>
+<!-- bootstrap-progressbar -->
+<script src="{% static 'vendors/bootstrap-progressbar/bootstrap-progressbar.min.js' %}"></script>
+<!-- iCheck -->
+<script src="{% static 'vendors/iCheck/icheck.min.js' %}"></script>
+<!-- Skycons -->
+<script src="{% static 'vendors/skycons/skycons.js' %}"></script>
+<!-- Flot -->
+<script src="{% static 'vendors/Flot/jquery.flot.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.pie.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.time.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.stack.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.resize.js' %}"></script>
+<!-- Flot plugins -->
+<script src="{% static 'vendors/flot.orderbars/js/jquery.flot.orderBars.js' %}"></script>
+<script src="{% static 'vendors/flot-spline/js/jquery.flot.spline.min.js' %}"></script>
+<script src="{% static 'vendors/flot.curvedlines/curvedLines.js' %}"></script>
+<!-- DateJS -->
+<script src="{% static 'vendors/DateJS/build/date.js' %}"></script>
+<!-- JQVMap -->
+<script src="{% static 'vendors/jqvmap/dist/jquery.vmap.js' %}"></script>
+<script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
+<script src="{% static 'vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="{% static 'vendors/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'vendors/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+<!-- Custom Theme Scripts -->
+<script src="{% static 'build/js/custom.min.js' %}"></script>
+
+</body>
+</html>

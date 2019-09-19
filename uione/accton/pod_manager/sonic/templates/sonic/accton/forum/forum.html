@@ -1,0 +1,116 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TMS-Forum</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/forum.css' %}" rel="stylesheet">
+</head>
+{% include 'template_sonic.html' %}
+<div class="right_col" role="main">
+	<div class="col-xs-12 col-sm-8 forum-font">
+		<div class="col-xs-12 col-sm-5">
+			<div class="forum_font1">All Questions<br></div>
+			<div id="forum_total_number" class="forum_font2"><!--748,9966 questions--></div>
+		</div>
+		<div class="col-xs-12 col-sm-7">
+			<div class="row">
+			<nav aria-label="Page navigation example">
+				<ul class="pagination topbar">
+					<li class="topbar-item">
+						<a class="topbar-link">Popular</a>
+					</li>
+					<li class="topbar-item">
+						<a class="topbar-link">Featured</a>
+					</li>
+					<li class="topbar-item">
+						<a class="topbar-link">Votes</a>
+					</li>
+					<li class="topbar-item">
+						<a class="topbar-link">Unanswered</a>
+					</li>
+				</ul>
+			</nav>
+			</div>
+		</div>
+		<div class="x_panel your_q">
+			<img src="{%static '/images/icon/accton.png' %}"> Accton<br>What is your quetion?
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<a class="btn btn-primary" href="/sonic/accton/forum/newArticle" style="margin:20px 0">add new article</a>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<nav aria-label="Page navigation example">
+				<ul class="pagination page-selector">
+					<li class="page-item" id="previous">
+						<a aria-label="Previous" class="page-link" href="#"><span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span></a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">1</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">2</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">3</a>
+					</li>
+					<li class="page-item" id="next">
+						<a aria-label="Next" class="page-link" href="#"><span aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-sm-12 col-xs-12" id="article_list">
+			<div class="col-sm-12 col-xs-12 article">
+				<div class="col-sm-2 col-xs-2 user-info">
+					<img src="../../../../../static/images/learn.jpg" style="width:60%">
+					<p class="user-name">Anber</p>
+				</div>
+				<div class="col-sm-8 col-xs-8 titile">
+					<h3>This is simple article titile</h3>
+					<p>Simple description ...</p>
+				</div>
+				<div class="col-sm-2 col-xs-2 post-info">
+					<div class="comments">
+						<div class="commentbg">
+							<div class="mark"></div>1
+						</div>
+					</div>
+					<div class="views">
+						<i class="fa fa-eye show">8888</i>
+					</div>
+					<div class="fa fa-clock-o show">
+						24min
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-2 col-sm-2 sort">
+		<ul class="list-group" id="tag_sort">
+			<li class="list-group-item">Overview<span class="badge">4</span></li>
+		</ul>
+	</div>
+</div>
+<!-- footer content -->
+<footer>
+	<div class="clearfix"></div>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+				
+	{% include 'preset_js.html' %}
+	<!-- Additional JS-->
+	<script>
+            $.ajaxSetup({
+                data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+            });
+    </script>
+	
+		<!-- Additional JS-->
+		<script src="{% static 'js/sonic/forum/forum.js' %}"></script>
+</body>
+</html>

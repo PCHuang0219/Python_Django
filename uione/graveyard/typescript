@@ -1,0 +1,110 @@
+Script started on 廿十七年十二月廿二日 (週五) 十八時49分八秒
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ cd tmsone/
+]0;jlo@psme-001: ~/Pyroot/uione/tmsonejlo@psme-001:~/Pyroot/uione/tmsone$ ls
+db.sqlite3  [0m[01;34mhome[0m  [01;32mmanage.py[0m  outputfile.txt  [01;34mtms[0m  [01;34mtms.cschang[0m
+]0;jlo@psme-001: ~/Pyroot/uione/tmsonejlo@psme-001:~/Pyroot/uione/tmsone$ cd tms
+]0;jlo@psme-001: ~/Pyroot/uione/tmsone/tmsjlo@psme-001:~/Pyroot/uione/tmsone/tms$ ls
+__init__.py  [0m[01;34m__pycache__[0m  settings.py  urls.py  wsgi.py
+]0;jlo@psme-001: ~/Pyroot/uione/tmsone/tmsjlo@psme-001:~/Pyroot/uione/tmsone/tms$ cd ..
+]0;jlo@psme-001: ~/Pyroot/uione/tmsonejlo@psme-001:~/Pyroot/uione/tmsone$ ls
+db.sqlite3  [0m[01;34mhome[0m  [01;32mmanage.py[0m  outputfile.txt  [01;34mtms[0m  [01;34mtms.cschang[0m
+]0;jlo@psme-001: ~/Pyroot/uione/tmsonejlo@psme-001:~/Pyroot/uione/tmsone$ cd ..
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ ls
+db.sqlite3  [0m[01;32mmanage.py[0m  [01;34mnewenv[0m  [01;34mtmsone[0m  typescript  typescript1  typescript2  [01;34muienv[0m
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ ls tmsone
+db.sqlite3  [0m[01;34mhome[0m  [01;32mmanage.py[0m  outputfile.txt  [01;34mtms[0m  [01;34mtms.cschang[0m
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ cd [K[K[Kcd tms
+bash: cd: tms: No such file or directory
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ ls
+db.sqlite3  [0m[01;32mmanage.py[0m  [01;34mnewenv[0m  [01;34mtmsone[0m  typescript  typescript1  typescript2  [01;34muienv[0m
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ cd tmsone
+]0;jlo@psme-001: ~/Pyroot/uione/tmsonejlo@psme-001:~/Pyroot/uione/tmsone$ ls
+db.sqlite3  [0m[01;34mhome[0m  [01;32mmanage.py[0m  outputfile.txt  [01;34mtms[0m  [01;34mtms.cschang[0m
+]0;jlo@psme-001: ~/Pyroot/uione/tmsonejlo@psme-001:~/Pyroot/uione/tmsone$ ls[K[Kls tms
+__init__.py  [0m[01;34m__pycache__[0m  settings.py  urls.py  wsgi.py
+]0;jlo@psme-001: ~/Pyroot/uione/tmsonejlo@psme-001:~/Pyroot/uione/tmsone$ cd [K[K[Kls
+db.sqlite3  [0m[01;34mhome[0m  [01;32mmanage.py[0m  outputfile.txt  [01;34mtms[0m  [01;34mtms.cschang[0m
+]0;jlo@psme-001: ~/Pyroot/uione/tmsonejlo@psme-001:~/Pyroot/uione/tmsone$ ls
+db.sqlite3  [0m[01;34mhome[0m  [01;32mmanage.py[0m  outputfile.txt  [01;34mtms[0m  [01;34mtms.cschang[0m
+]0;jlo@psme-001: ~/Pyroot/uione/tmsonejlo@psme-001:~/Pyroot/uione/tmsone$ cd ..
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ ls
+db.sqlite3  [0m[01;32mmanage.py[0m  [01;34mnewenv[0m  [01;34mtmsone[0m  typescript  typescript1  typescript2  [01;34muienv[0m
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ mkdir tmsten
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ cd tmsten
+]0;jlo@psme-001: ~/Pyroot/uione/tmstenjlo@psme-001:~/Pyroot/uione/tmsten$ ls
+]0;jlo@psme-001: ~/Pyroot/uione/tmstenjlo@psme-001:~/Pyroot/uione/tmsten$ mkdir te[Kmste[K[K11
+]0;jlo@psme-001: ~/Pyroot/uione/tmstenjlo@psme-001:~/Pyroot/uione/tmsten$ cd tem[K[Kms11/
+]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11jlo@psme-001:~/Pyroot/uione/tmsten/tms11$ ls
+]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11jlo@psme-001:~/Pyroot/uione/tmsten/tms11$ mkdir te[Kms12
+]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11jlo@psme-001:~/Pyroot/uione/tmsten/tms11$ cd tem12
+bash: cd: tem12: No such file or directory
+]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11jlo@psme-001:~/Pyroot/uione/tmsten/tms11$ cd tms12/
+]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ source[K[K[K[K[K[K. [K[Kcd ../../..
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ ls
+db.sqlite3  [0m[01;32mmanage.py[0m  [01;34mnewenv[0m  [01;34mtmsone[0m  [01;34mtmsten[0m  typescript  typescript1  typescript2  [01;34muienv[0m
+]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ source uienv/bin/activate
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uionejlo@psme-001:~/Pyroot/uione$ cd tmsone[K[K[Kten
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmstenjlo@psme-001:~/Pyroot/uione/tmsten$ ls
+[0m[01;34mtms11[0m
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmstenjlo@psme-001:~/Pyroot/uione/tmsten$ cd th[Kms11
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11jlo@psme-001:~/Pyroot/uione/tmsten/tms11$ cd tms12/
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ ls
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ ls
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ django-admin startproject tsmone .
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ ls
+[0m[01;32mmanage.py[0m  [01;34mtsmone[0m
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ cd[K[Kpython manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+[31m
+You have 14 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.[0m
+[31mRun 'python manage.py migrate' to apply them.
+[0m
+December 22, 2017 - 10:55:10
+Django version 2.0, using settings 'tsmone.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[31;1mError: That port is already in use.
+[0m(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ tms [K[K[K[Kpython manage.py migrate
+[36;1mOperations to perform:[0m
+[1m  Apply all migrations: [0madmin, auth, contenttypes, sessions
+[36;1mRunning migrations:[0m
+  Applying contenttypes.0001_initial...[32;1m OK[0m
+  Applying auth.0001_initial...[32;1m OK[0m
+  Applying admin.0001_initial...[32;1m OK[0m
+  Applying admin.0002_logentry_remove_auto_add...[32;1m OK[0m
+  Applying contenttypes.0002_remove_content_type_name...[32;1m OK[0m
+  Applying auth.0002_alter_permission_name_max_length...[32;1m OK[0m
+  Applying auth.0003_alter_user_email_max_length...[32;1m OK[0m
+  Applying auth.0004_alter_user_username_opts...[32;1m OK[0m
+  Applying auth.0005_alter_user_last_login_null...[32;1m OK[0m
+  Applying auth.0006_require_contenttypes_0002...[32;1m OK[0m
+  Applying auth.0007_alter_validators_add_error_messages...[32;1m OK[0m
+  Applying auth.0008_alter_user_username_max_length...[32;1m OK[0m
+  Applying auth.0009_alter_user_last_name_max_length...[32;1m OK[0m
+  Applying sessions.0001_initial...[32;1m OK[0m
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ 
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ 
+(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ python manage.py migraterunserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 22, 2017 - 10:55:44
+Django version 2.0, using settings 'tsmone.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[31;1mError: That port is already in use.
+[0m(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 22, 2017 - 10:56:27
+Django version 2.0, using settings 'tsmone.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[31;1mError: That port is already in use.
+[0m(uienv) ]0;jlo@psme-001: ~/Pyroot/uione/tmsten/tms11/tms12jlo@psme-001:~/Pyroot/uione/tmsten/tms11/tms12$ exit[K[K[K[Kexit
+exit
+
+Script done on 廿十七年十二月廿二日 (週五) 十八時56分41秒

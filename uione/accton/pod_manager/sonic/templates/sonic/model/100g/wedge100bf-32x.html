@@ -1,0 +1,122 @@
+{% extends 'SONiCProducts/products_template.html' %}
+{% load staticfiles %}
+{% block title %} TMS-Wedge100BF-32X {% endblock %}
+
+{% block picture %}
+	<div class="slider-for">
+		<img src="{% static 'images/products/100g/wedge100bf-32x/wedge100bf-32x-1.png' %}" alt="">
+		<img src="{% static 'images/products/100g/wedge100bf-32x/wedge100bf-32x-2.png' %}" alt="">
+		<img src="{% static 'images/products/100g/wedge100bf-32x/wedge100bf-32x-3.png' %}" alt="">
+		<img src="{% static 'images/products/100g/wedge100bf-32x/wedge100bf-32x-4.png' %}" alt="">
+	</div>
+	<div class="slider-nav">
+		<img src="{% static 'images/products/100g/wedge100bf-32x/wedge100bf-32x-1.png' %}" alt="">
+		<img src="{% static 'images/products/100g/wedge100bf-32x/wedge100bf-32x-2.png' %}" alt="">
+		<img src="{% static 'images/products/100g/wedge100bf-32x/wedge100bf-32x-3.png' %}" alt="">
+		<img src="{% static 'images/products/100g/wedge100bf-32x/wedge100bf-32x-4.png' %}" alt="">
+	</div>
+{% endblock %}
+
+{% block productSummary %}
+<h2>WEDGE 100BF-32X</h2>
+<h4>100GbE Data Center Switch</h4>
+<p>The Edgecore Wedge100BF-32X switch is a Top-of-Rack (TOR) or spine switch for high-performance data centers, designed with programmable Toﬁno switch silicon from Barefoot Networks. In a 1RU form factor, the switch provides line-rate L2 and L3 switching across the 32 x QSFP28 ports, supporting up to 32 x 25/40/50/100 GbE connections.</p>
+{% endblock %}
+
+{% block Overview %}
+<p class="content2 font2">The Edgecore Wedge100BF-32X/65X switch is a Top-of-Rack (TOR) or spine switch for high-performance data centers. In a 2RU form factor, the switch provides line-rate L2 and L3 switching across the 65 x QSFP28 ports, supporting up to 32/65 x 25/40/50/100 GbE connections. The Wedge100BF-32X/65X can be deployed as a TOR switch supporting 25/50 GbE to servers with 40/50/100 GbE uplinks, or as a spine switch supporting 40/50/100 GbE spine interconnects. This open network switch is loaded with the Open Network Install Environment (ONIE), which supports the installation of compatible Network Operating System software.</p>
+{% endblock %}
+
+{% block specs %}
+	<table class="table table-bordered table-striped">
+		<colgroup>
+			<col class="col-xs-6">
+			<col class="col-xs-6">
+		</colgroup>
+		<tbody>
+			<tr>
+				<th><div class="specs_title">Ports</div></th>
+				<td class="common-style-font2 content">32</td>
+			</tr>
+			<tr>
+				<th><div class="specs_title">Predominant Port Type</div></th>
+				<td class="common-style-font2 content">100GbE QSFP28</td>
+			</tr>
+			<tr>
+				<th><div class="specs_title">High Availability</div></th>
+				<td class="common-style-font2 content">Redundant Power Supply, Redundant Fans</td>
+			</tr>
+			<tr>
+				<th><div class="specs_title">Compatible Soft Option</div></th>
+				<td class="common-style-font2 content">Microsoft - SONiC , Open Compute Project - Open Network Linux</td>
+			</tr>
+		</tbody>
+	</table>
+{% endblock %}
+
+{% block features %}
+<div class="col-md-6 common-style-font2 content">
+		<div class="bs-example" data-example-id="simple-ul">
+			<ul>
+				<li>Cost-effective, bare-metal switch infrastructure for data center fabric.</li>
+				<li>Designed with programmable Toﬁno switch silicon from Barefoot Networks.</li>
+				<li>Deploys as Top-of-Rack or Spine switch supporting 25 GbE to servers, with 40 or 50 or 100 GbE uplinks.</li>
+				<li>Deploys as spine switch supporting 40, 50, or 100 GbE ToR and spine interconnects.</li>
+				<li>32 x QSFP28 switch ports, each supporting 1 x 100 GbE or 1 x 50 GBE or 1 x 40 GbE, or via breakout cables, 4 x 25 GbE or 4 x 10 GbE.</li>
+				<li>Layer 2 or Layer 3 forwarding of 3.2/6.4 Tbps (full duplex).</li>
+			</ul>
+		</div>
+	</div>
+<div class="col-md-6 common-style-font2 content">
+		<div class="bs-example" data-example-id="simple-ul">
+			<ul>
+				<li>Supports hot/cold aisle with port-to-power airﬂow SKU.</li>
+				<li>All ports on front; PSUs and fans accessible from rear.</li>
+				<li>Hot-swappable, load-sharing, redundant AC or 48V DC PSUs.</li>
+				<li>5/10 redundant, hot-swappable fan modules.</li>
+				<li>Switch pre-loaded with diagnostics and with Open Network Install Environment (ONIE) for automated loading of compatible open source and commercial NOS offerings.</li>
+				<li>Compatible with SONiC open source network software.</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block downloads %}
+	<table class="table Table table-hover">
+		<tbody>
+			<tr class="tr-only-hide">
+				<th>Category</th>
+				<th>Name</th>
+				<th>Rev</th>
+				<th>Release Notes</th>
+				<th>Date</th>
+				<th>Note</th>
+				<th>Download</th>
+			</tr>
+			<tr>
+				<td data-th="Category">Datasheet</td>
+				<td data-th="Name">Wedge 100BF-32X R04</td>
+				<th data-th="Rev">n/a</td>
+				<th data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-05-31</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/100g/wedge100bf-32x/Wedge100BF-32X_65X_DS_R04_20180531.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Firmware</td>
+				<td data-th="Name">SONiC image</td>
+				<th data-th="Rev">n/a</td>
+				<th data-th="Release Notes">n/a</td>
+				<th data-th="Date">n/a</td>
+				<td data-th="Note">
+					<a href="/sonic/accton/download"><span class="badge badge-pill badge-primary jumpDownload">More available</span>
+				</td>
+				<td data-th="Download">
+					<a id="SONiC_Image_Downloads" href="#"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+{% endblock %}

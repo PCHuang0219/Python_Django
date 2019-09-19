@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DjangoForm</title>
+</head>
+<body>
+    <form action="/James Lo/" method="post">
+       {% csrf_token %}
+       {{ form }}
+        <input type="submit" vlaue="submit">
+    </form>
+    <hr>
+    <img src="{% static 'images/learn.jpg' %}" width="360" height="360" alt="Image"/>
+    <hr>
+    <!--
+    <video width="320" height="240" controls>
+        <source src="{% static 'videos/movie.mp4' %}" type="video/mp4">
+        <source src="{% static 'videos/Animation.mp4' %}" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+    <hr>
+    -->
+
+    <img src="{% static 'images/images.jpeg' %}" alt="Live Cam" height="200" width="200">
+    <meta http-equiv="refresh" content="3">
+
+
+
+
+
+
+
+
+    <div id="container">
+        <video autoplay="true" id="videoElement">
+
+        </video>
+    </div>
+    <script>
+            var video = document.querySelector("#videoElement");
+
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+    if (navigator.getUserMedia) {
+        navigator.getUserMedia({video: true}, handleVideo, videoError);
+    }
+
+    function handleVideo(stream) {
+        video.src = window.URL.createObjectURL(stream);
+    }
+
+    function videoError(e) {
+        alert("error");
+    }
+    </script>
+
+</body>
+</html>

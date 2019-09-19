@@ -1,0 +1,150 @@
+{% extends 'wiki_template.html' %}
+{% load staticfiles %}
+
+{% block titile %}
+	<title>Wiki-Leaf-spine architecture</title>
+{% endblock %}
+{% block style %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/wiki.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	<div class="tabcontent">
+		<h3>Software-defined networking</h3>
+		<p class="font1">Software-defined networking (SDN) technology is an approach to network management that enables dynamic, programmatically efficient network configuration in order to improve network performance and monitoring making it more like cloud computing than traditional network management.[1] SDN is meant to address the fact that the static architecture of traditional networks is decentralized and complex while current networks require more flexibility and easy troubleshooting. SDN attempts to centralize network intelligence in one network component by disassociating the forwarding process of network packets (data plane) from the routing process (control plane). The control plane consists of one or more controllers which are considered as the brain of SDN network where the whole intelligence is incorporated. However, the intelligence centralization has its own drawbacks when it comes to security,[1] scalability and elasticity[1] and this is the main issue of SDN.
+                <br>
+                SDN was commonly associated with the OpenFlow protocol (for remote communication with network plane elements for the purpose of determining the path of network packets across network switches) since the latter's emergence in 2011. However, since 2012[2][3] OpenFlow for many companies is no longer an exclusive solution, they added proprietary techniques. These include Cisco Systems' Open Network Environment and Nicira's network virtualization platform.
+                <br>             
+                SD-WAN applies similar technology to a wide area network (WAN).[4] 
+        </p>
+        <h3>History</h3>
+		<p class="font1">The history of SDN principles can be traced back to the separation of the control and data plane first used in the public switched telephone network as a way to simplify provisioning and management well before this architecture began to be used in data networks.
+                <br>             
+                The Internet Engineering Task Force (IETF) began considering various ways to decouple the control and forwarding functions in a proposed interface standard published in 2004 appropriately named "Forwarding and Control Element Separation" (ForCES).[5] The ForCES Working Group also proposed a companion SoftRouter Architecture.[6] Additional early standards from the IETF that pursued separating control from data include the Linux Netlink as an IP Services Protocol[7] and A Path Computation Element (PCE)-Based Architecture.[8]
+                <br>             
+                These early attempts failed to gain traction for two reasons. One is that many in the Internet community viewed separating control from data to be risky, especially owing to the potential for a failure in the control plane. The second is that vendors were concerned that creating standard application programming interfaces (APIs) between the control and data planes would result in increased competition.
+                <br>             
+                The use of open source software in split control/data plane architectures traces its roots to the Ethane project at Stanford's computer sciences department. Ethane's simple switch design led to the creation of OpenFlow.[9] An API for OpenFlow was first created in 2008.[10] That same year witnessed the creation of NOX—an operating system for networks.[11]
+                <br>             
+                Work on OpenFlow continued at Stanford, including with the creation of testbeds to evaluate use of the protocol in a single campus network, as well as across the WAN as a backbone for connecting multiple campuses.[12] In academic settings there were a few research and production networks based on OpenFlow switches from NEC and Hewlett-Packard; as well as based on Quanta Computer whiteboxes, starting from about 2009.[13]
+                <br>             
+                Beyond academia, the first deployments were by Nicira in 2010 to control OVS from Onix, co-developed with NTT and Google. A notable deployment was Google's B4 deployment in 2012.[14][15] Later Google acknowledged their first OpenFlow with Onix deployments in their Datacenters at the same time.[16] Another known large deployment is at China Mobile.[17]
+                <br>             
+                The Open Networking Foundation was founded in 2011 to promote SDN and OpenFlow.
+                <br>             
+                At the 2014 Interop and Tech Field Day, software-defined networking was demonstrated by Avaya using shortest path bridging (IEEE 802.1aq) and OpenStack as an automated campus, extending automation from the data center to the end device, removing manual provisioning from service delivery.[18][19] 
+        </p>
+
+        <h3>Concept</h3>
+		<p class="font1">TSDN architectures decouple network control and forwarding functions, enabling network control to become directly programmable and the underlying infrastructure to be abstracted from applications and network services.[20]</p>
+            <br>             
+                The OpenFlow protocol can be used in SDN technologies. The SDN architecture is: 
+            <ul class="ul3">
+                <li>Directly programmable: Network control is directly programmable because it is decoupled from forwarding functions.</li>
+                <li>Agile: Abstracting control from forwarding lets administrators dynamically adjust network-wide traffic flow to meet changing needs.</li>
+                <li>Centrally managed: Network intelligence is (logically) centralized in software-based SDN controllers that maintain a global view of the network, which appears to applications and policy engines as a single, logical switch.</li>
+                <li>Programmatically configured: SDN lets network managers configure, manage, secure, and optimize network resources very quickly via dynamic, automated SDN programs, which they can write themselves because the programs do not depend on proprietary software.</li>
+                <li>Open standards-based and vendor-neutral: When implemented through open standards, SDN simplifies network design and operation because instructions are provided by SDN controllers instead of multiple, vendor-specific devices and protocols.</li>
+            </ul>
+
+        <h3>The need for a new network architecture</h3>
+        <p class="font1">The explosion of mobile devices and content, server virtualization, and advent of cloud services are among the trends driving the networking industry to re-examine traditional network architectures.[21] Many conventional networks are hierarchical, built with tiers of Ethernet switches arranged in a tree structure. This design made sense when client-server computing was dominant, but such a static architecture is ill-suited to the dynamic computing and storage needs of today's enterprise data centers, campuses, and carrier environments.[22] Some of the key computing trends driving the need for a new network paradigm include: 
+                <br>   
+            <br>             
+        <b class="font2">Changing traffic patterns</b>
+            <br>             
+                Within the enterprise data center, traffic patterns have changed significantly. In contrast to client-server applications where the bulk of the communication occurs between one client and one server, today's applications access different databases and servers, creating a flurry of "east-west" machine-to-machine traffic before returning data to the end user device in the classic "north-south" traffic pattern. At the same time, users are changing network traffic patterns as they push for access to corporate content and applications from any type of device (including their own), connecting from anywhere, at any time. Finally, many enterprise data centers managers are contemplating a utility computing model, which might include a private cloud, public cloud, or some mix of both, resulting in additional traffic across the wide area network.
+            <br>             
+        <b class="font2">The "consumerization of IT"</b>
+            <br>             
+                Users are increasingly employing mobile personal devices such as smartphones, tablets, and notebooks to access the corporate network. IT is under pressure to accommodate these personal devices in a fine-grained manner while protecting corporate data and intellectual property and meeting compliance mandates.
+            <br>             
+        <b class="font2">The rise of cloud services</b>
+            <br>             
+                Enterprises have enthusiastically embraced both public and private cloud services, resulting in unprecedented growth of these services. Enterprise business units now want the agility to access applications, infrastructure, and other IT resources on demand and à la carte. To add to the complexity, IT's planning for cloud services must be done in an environment of increased security, compliance, and auditing requirements, along with business reorganizations, consolidations, and mergers that can change assumptions overnight. Providing self-service provisioning, whether in a private or public cloud, requires elastic scaling of computing, storage, and network resources, ideally from a common viewpoint and with a common suite of tools.
+            <br>             
+        <b class="font2">"Big data" means more bandwidth</b>
+            <br>             
+                Handling today's "big data" or mega datasets requires massive parallel processing on thousands of servers, all of which need direct connections to each other. The rise of mega datasets is fueling a constant demand for additional network capacity in the data center. Operators of hyperscale data center networks face the daunting task of scaling the network to previously unimaginable size, maintaining any-to-any connectivity without going broke.
+        
+        <h3>Architectural components</h3>
+        <p class="font1">The following list defines and explains the architectural components:
+        </p>
+        <br>
+        <b class="font2">SDN Application</b>
+        <br>
+        SDN Applications are programs that explicitly, directly, and programmatically communicate their network requirements and desired network behavior to the SDN Controller via a northbound interface (NBI). In addition they may consume an abstracted view of the network for their internal decision-making purposes. An SDN Application consists of one SDN Application Logic and one or more NBI Drivers. SDN Applications may themselves expose another layer of abstracted network control, thus offering one or more higher-level NBIs through respective NBI agents.
+        <br>
+        <b class="font2">SDN Controller</b>
+        <br>
+        The SDN Controller is a logically centralized entity in charge of (i) translating the requirements from the SDN Application layer down to the SDN Datapaths and (ii) providing the SDN Applications with an abstract view of the network (which may include statistics and events). An SDN Controller consists of one or more NBI Agents, the SDN Control Logic, and the Control to Data-Plane Interface (CDPI) driver. Definition as a logically centralized entity neither prescribes nor precludes implementation details such as the federation of multiple controllers, the hierarchical connection of controllers, communication interfaces between controllers, nor virtualization or slicing of network resources.
+        <br>
+        <b class="font2">SDN Datapath</b>
+        <br>
+        The SDN Datapath is a logical network device that exposes visibility and uncontested control over its advertised forwarding and data processing capabilities. The logical representation may encompass all or a subset of the physical substrate resources. An SDN Datapath comprises a CDPI agent and a set of one or more traffic forwarding engines and zero or more traffic processing functions. These engines and functions may include simple forwarding between the datapath's external interfaces or internal traffic processing or termination functions. One or more SDN Datapaths may be contained in a single (physical) network element—an integrated physical combination of communications resources, managed as a unit. An SDN Datapath may also be defined across multiple physical network elements. This logical definition neither prescribes nor precludes implementation details such as the logical to physical mapping, management of shared physical resources, virtualization or slicing of the SDN Datapath, interoperability with non-SDN networking, nor the data processing functionality, which can include OSI layer 4-7 functions.
+        <br>
+        <b class="font2">SDN Control to Data-Plane Interface (CDPI)</b>
+        <br>
+        The SDN CDPI is the interface defined between an SDN Controller and an SDN Datapath, which provides at least (i) programmatic control of all forwarding operations, (ii) capabilities advertisement, (iii) statistics reporting, and (iv) event notification. One value of SDN lies in the expectation that the CDPI is implemented in an open, vendor-neutral and interoperable way.
+        <br>
+        <b class="font2">SDN Northbound Interfaces (NBI)</b>
+        <br>
+        SDN NBIs are interfaces between SDN Applications and SDN Controllers and typically provide abstract network views and enable direct expression of network behavior and requirements. This may occur at any level of abstraction (latitude) and across different sets of functionality (longitude). One value of SDN lies in the expectation that these interfaces are implemented in an open, vendor-neutral and interoperable way.
+        <br>
+        <b class="font2">"Big data" means more bandwidth</b>
+
+
+        <h3>SDN Control Plane</h3>
+        <p class="font1"></p>
+        <b class="font2">Centralized - Hierarchical - Distributed</b>
+        The implementation of the SDN control plane can follow a centralized, hierarchical, or decentralized design. Initial SDN control plane proposals focused on a centralized solution, where a single control entity has a global view of the network. While this simplifies the implementation of the control logic, it has scalability limitations as the size and dynamics of the network increase. To overcome these limitations, several approaches have been proposed in the literature that fall into two categories, hierarchical and fully distributed approaches. In hierarchical solutions,[24][25] distributed controllers operate on a partitioned network view, while decisions that require network-wide knowledge are taken by a logically centralized root controller. In distributed approaches,[26][27] controllers operate on their local view or they may exchange synchronization messages to enhance their knowledge. Distributed solutions are more suitable for supporting adaptive SDN applications. 
+        <br>
+        <b class="font2">Controller Placement</b>
+        A key issue when designing a distributed SDN control plane is to decide on the number and placement of control entities. An important parameter to consider while doing so is the propagation delay between the controllers and the network devices,[28] especially in the context of large networks. Other objectives that have been considered involve control path reliability,[29] fault tolerance,[30] and application requirements.[31]
+        
+        
+        <h3>Applications</h3>
+        <p class="font1"></p>
+        <b class="font2">SDMN</b>
+        <br>
+        Software-defined mobile networking (SDMN)[34][35] is an approach to the design of mobile networks where all protocol-specific features are implemented in software, maximizing the use of generic and commodity hardware and software in both the core network and radio access network.[36] It is proposed as an extension of SDN paradigm to incorporate mobile network specific functionalities.[37] Since 3GPP Rel.14, a Control User Plane Separation was introduced in the Mobile Core Network architectures with the PFCP protocol. 
+        <br>
+        <b class="font2">SD-WAN</b>
+        <br>
+        An SD-WAN is a Wide Area Network (WAN) managed using the principles of software-defined networking.[38] The main driver of SD-WAN is to lower WAN costs using more affordable and commercially available leased lines, as an alternative or partial replacement of more expensive MPLS lines. Control and management is administered separately from the hardware with central controllers allowing for easier configuration and administration.[39]
+        <br>
+        <b class="font2">SD-LAN</b>
+        <br>
+        An SD-LAN is a Local area network (LAN) built around the principles of software-defined networking, though there are key differences in topology, network security, application visibility and control, management and quality of service.[40] SD-LAN decouples control management, and data planes to enable a policy driven architecture for wired and wireless LANs. SD-LANs are characterized by their use of a cloud management system and wireless connectivity without the presence of a physical controller.[41]
+        <br>
+        <b class="font2">Security using the SDN paradigm</b>
+        <br>
+        SDN architecture may enable, facilitate or enhance network-related security applications due to the controller's central view of the network, and its capacity to reprogram the data plane at any time. While security of SDN architecture itself remains an open question that has already been studied a couple of times in the research community,[42][43][44][45] the following paragraphs only focus on the security applications made possible or revisited using SDN. 
+        <br>
+        Several research works on SDN have already investigated security applications built upon the SDN controller, with different aims in mind. Distributed Denial of Service (DDoS) detection and mitigation,[46][47] as well as botnet[48] and worm propagation,[49] are some concrete use-cases of such applications: basically, the idea consists in periodically collecting network statistics from the forwarding plane of the network in a standardized manner (e.g. using Openflow), and then apply classification algorithms on those statistics in order to detect any network anomalies. If an anomaly is detected, the application instructs the controller how to reprogram the data plane in order to mitigate it. 
+        <br>
+        Another kind of security application leverages the SDN controller by implementing some moving target defense (MTD) algorithms. MTD algorithms are typically used to make any attack on a given system or network more difficult than usual by periodically hiding or changing key properties of that system or network. In traditional networks, implementing MTD algorithms is not a trivial task since it is difficult to build a central authority able of determining - for each part of the system to be protected - which key properties are hid or changed. In an SDN network, such tasks become more straightforward thanks to the centrality of the controller. One application can for example periodically assign virtual IPs to hosts within the network, and the mapping virtual IP/real IP is then performed by the controller.[50] Another application can simulate some fake opened/closed/filtered ports on random hosts in the network in order to add significant noise during reconnaissance phase (e.g. scanning) performed by an attacker
+        <br>
+        Additional value regarding security in SDN enabled networks can also be gained using FlowVisor[52] and FlowChecker[53] respectively. The former tries to use a single hardware forwarding plane sharing multiple separated logical networks. Following this approach the same hardware resources can be used for production and development purposes as well as separating monitoring, configuration and internet traffic, where each scenario can have its own logical topology which is called slice. In conjunction with this approach FlowChecker[52] realizes the validation of new OpenFlow rules that are deployed by users using their own slice. 
+        <br>
+        SDN controller applications are mostly deployed in large-scale scenarios, which requires comprehensive checks of possible programming errors. A system to do this called NICE was described in 2012.[54] Introducing an overarching security architecture requires a comprehensive and protracted approach to SDN. Since it was introduced, designers are looking at possible ways to secure SDN that do not compromise scalability. One architecture called SN-SECA (SDN+NFV) Security Architecture.[55]
+        <br>
+        <b class="font2">Group Data Delivery Using SDN</b>
+        <br>
+        Distributed applications that run across datacenters usually replicate data for the purpose of synchronization, fault resiliency, load balancing and getting data closer to users (which reduces latency to users and increases their perceived throughput). Also, many applications, such as Hadoop, replicate data within a datacenter across multiple racks to increase fault tolerance and make data recovery easier. All of these operations require data delivery from one machine or datacenter to multiple machines or datacenters. The process of reliably delivering data from one machine to multiple machines is referred to as Reliable Group Data Delivery (RGDD). 
+        <br>
+        SDN switches can be used for RGDD via installation of rules that allow forwarding to multiple outgoing ports. For example, OpenFlow provides support for Group Tables since version 1.1[56] which makes this possible. Using SDN, a central controller can carefully and intelligently setup forwarding trees for RGDD. Such trees can be built while paying attention to network congestion/load status to improve performance. For example, MCTCP[57] is a scheme for delivery to many nodes inside datacenters that relies on regular and structured topologies of datacenter networks while DCCast[58] and QuickCast[59] are approaches for fast and efficient data and content replication across datacenters over private WANs. 
+        <h3>Relationship to NFV</h3>
+        <p class="font1">NFV Network Function Virtualization is a concept that complements SDN. Thus, NFV is not dependent on SDN or SDN concepts. NFV disunites software from hardware to enable flexible network deployment and dynamic operation. NFV deployments typically use commodity servers to run network services software versions that previously were hardware-based. These software-based services that run in an NFV environment are called Virtual Network Functions (VNF).[60] SDN-NFV hybrid program was provided for high efficiency, elastic and scalable capabilities NFV aimed at accelerating service innovation and provisioning using standard IT virtualization technologies.[60][61] SDN provides the agility of controlling the generic forwarding devices such as the routers and switches by using SDN controllers. On the other hand, NFV agility is provided for the network applications by using virtualized servers. It is entirely possible to implement a virtualized network function (VNF) as a standalone entity using existing networking and orchestration paradigms. However, there are inherent benefits in leveraging SDN concepts to implement and manage an NFV infrastructure, particularly when looking at the management and orchestration of VNFs, and that's why multivendor platforms are being defined that incorporate SDN and NFV in concerted ecosystems.[62]</p>
+        <h3>Relationship to DPI</h3>
+        <p class="font1">DPI Deep Packet Inspection provides network with application-awareness, while SDN provides applications with network-awareness.[63] Although SDN will radically change the generic network architectures, it should cope with working with traditional network architectures to offer high interoperability. The new SDN based network architecture should consider all the capabilities that are currently provided in separate devices or software other than the main forwarding devices (routers and switches) such as the DPI, security appliances [64]</p>
+	</div>
+{% endblock %}
+{% block js %}
+	<!-- Additional JS-->
+	<script src="{% static 'js/sonic/product.js' %}"></script>
+	<script src="{% static 'js/sonic/location.js' %}"></script>
+	<script src="{% static 'vendors/additional/js/wiki.js' %}"></script>
+{% endblock %} 

@@ -1,0 +1,195 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block title %}TMS-Products{% endblock %}</title>
+	{% include 'preset_style.html' %}
+	<link href="{% static 'vendors/additional/sonic.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+</head>
+{% include 'template_sonic.html' %}
+<div class="right_col common_font_family" role="main">
+	<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+	<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+	<div class="clearfix"></div><!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="col-12">
+					<div class="col-12" style="height:100px"><img src="{% static 'images/logo/edgecore.png' %}" style="position:absolute;width:200px; height:auto;top:15px"></div>
+					<div class="col-sm-12 col-md-8">
+						<div class="w3-container w3-light-grey w3-text-brown" style=" background-color: #f9f9f9!important;">
+							<h2 style="padding:20px">Enterprice Switch</h2>
+							<p class="introduction">Edgecore Networks provides a full range of managed switches to fulfill different deployment requirements, from small/medium business users, enterprises to carrier-level service providers, from simple web smart switches to Layer 2 and Layer 3 switches. Different products come with different port combinations, as well as PoE options, to meet market requirements, with the emphasis on scalability and flexibility. Most importantly, managed switches all come with Edgecore Networks' in-house developed EdgeCOSTM software, with optional ECView Pro network management system.</p>
+							<div class="connect_btn">
+								<a href="/sonic/wheretobuy" class="btn btn-primary" id="find-me">Where to Buy</a>
+								<a href="/sonic/sales_contact" target="_blank" class="btn btn-primary">Sales Contact</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-12" style="top:calc(50% - 15px);text-align: center;">
+						{% block bigPicture %}
+						<div class="ex1"><img src="{% static 'images/products/products.png' %}"></div>{% endblock %}
+					</div>
+				</div>
+			</div>
+			<div class="x_panel">
+				{% block showProduct %}
+				<div class="col-xs-12 col-sm-12 productSort">
+					<div class="row">
+						<a href="/sonic/products/10g">
+							<div class="col-sm-4 col-xs-4">
+							<div class="thumbnail div_G">
+								<img src="{%static 'images/products/10g/as5512-54x/as5512-54x-2.png' %}">
+								<div class="caption" style="text-align: center;">
+									<h2>10G</h2>
+									<p style="font-size: 13pt">Explore & Discover</p>
+								</div>
+							</div>
+						</div></a>
+						<div class="col-sm-4 col-xs-4">
+							<a href="/sonic/products/25g">
+							<div class="thumbnail div_G">
+								<img alt="..." src="{%static 'images/products/25g/as7312-54xs/as7312-54xs-2.png' %}">
+								<div class="caption" style="text-align: center;">
+									<h2>25G</h2>
+									<p style="font-size: 13pt">Explore & Discover</p>
+								</div>
+							</div></a>
+						</div>
+						<div class="col-sm-4 col-xs-4">
+							<a href="/sonic/products/40g">
+							<div class="thumbnail div_G">
+								<img alt="..." src="{%static 'images/products/40g/as6700-32x/as6700-32x-2.png' %}">
+								<div class="caption" style="text-align: center;">
+									<h2>40G</h2>
+									<p style="font-size: 13pt">Explore & Discover</p>
+								</div>
+							</div></a>
+						</div>
+						<div class="col-xs-12 col-sm-12 productSort">
+							<div class="row">
+								<div class="col-sm-4 col-xs-4">
+									<a href="/sonic/products/100g">
+									<div class="thumbnail div_G">
+										<img src="{%static 'images/products/100g/as7712-32x/as7712-32x-2.png' %}">
+										<div class="caption" style="text-align: center;">
+											<h2>100G</h2>
+											<p style="font-size: 13pt">Explore & Discover</p>
+										</div>
+									</div></a>
+								</div>
+								<div class="col-sm-4 col-xs-4">
+									<a href="/sonic/products/400g">
+									<div class="thumbnail div_G">
+										<img alt="..." src="{%static 'images/products/400g/as9716-32d/as9716-32d-2.png' %}">
+										<div class="caption" style="text-align: center;">
+											<h2>400G</h2>
+											<p style="font-size: 13pt">Explore & Discover</p>
+										</div>
+									</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>{% endblock %}
+			</div>
+			<div class="x_panel">
+				<h1 style="color:#20304b;text-align: center">Support</h1>
+				<div class="col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="col-sm-4 col-xs-12 support_div">
+							<div class="thumbnail support_item">
+								<img src="{%static 'images/icon/teach.jpg' %}">
+								<div class="caption" style="text-align: center;padding:10px">
+									<h2 class="title1">Learn from Video</h2>
+									<p class="font1">Explore help & how to</p>
+									<p class="font1">video from us on Youtube</p>
+									<div class="clickable common-font1">
+										<a href="https://www.youtube.com/results?search_query=as7712-32x" target="_blank"><h2 class="h2-hover">Watch Video</h2></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-12 support_div">
+							<div class="thumbnail support_item">
+								<img alt="..." src="{%static 'images/icon/asking.jpg' %}">
+								<div class="caption" style="text-align: center;padding:10px">
+									<h2 class="title1">Ask the Community</h2>
+									<p class="font1">Join the SONiC community</p>
+									<p class="font1">& ask questions for contribute</p>
+									<div class="clickable common-font1">
+										<a href="https://groups.google.com/forum/#!form/sonicproject" target="_blank"><h2 class="h2-hover">SONiC Wiki Page</h2></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-12 support_div">
+							<div class="thumbnail support_item">
+								<img alt="..." src="{%static 'images/icon/contact.jpg' %}">
+								<div class="caption" style="text-align: center;padding:10px">
+									<h2 class="title1">Contact us</h2>
+									<p>Contact us</p>
+									<p>when you have any quetion</p><a href="mailto:acctontms@gmail.com" target="_blank"><h2 class="h2-hover">Write email to us</h2></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="x_panel">
+					<h1 class="sonic_content_title">Knowledge Base</h1>
+					<div class="row">
+						<div class="col-sm-2 col-xs-3 kb" id="kbFirstChild">
+							<div class="clickable-pic"><a class="target=_blank" href="/sonic/accton/kb"><img class="thumbnail" alt="..." src="{%static 'images/kb/kb_base.svg' %}"></div>
+							<p class="kb_content">Knowledge Base</p></a>
+						</div>
+						<div class="col-sm-2 col-xs-3 kb">
+							<div class="clickable-pic"><a class="target=_blank" href="/sonic/accton/wiki"><img class="thumbnail" alt="..." src="{%static 'images/kb/kb_wiki.svg' %}"></div>
+								<p class="kb_content">Wiki</p></a>
+						</div>
+						<div class="col-sm-2 col-xs-3 kb">
+							<div class="clickable-pic"><a class="target=_blank" href="/sonic/accton/faq"><img class="thumbnail" src="{%static 'images/kb/kb_faq.svg' %}"></div>
+								<p class="kb_content">FAQs</p></a>
+						</div>
+						<div class="col-sm-2 col-xs-3 kb">
+								<div class="clickable-pic"><a href="/sonic/accton/forum"><img class="thumbnail" src="{%static 'images/kb/kb_forum.svg' %}"></div>
+								<p class="kb_content">Forum</p></a>
+						</div>
+						<div class="col-sm-2 col-xs-3 kb">
+								<div class="clickable-pic"><a href="/sonic/accton/resources/whitepaper"><img class="thumbnail" src="{%static 'images/kb/kb_wp.svg' %}"></div>
+								<p class="kb_content">White Paper</p></a>
+						</div>
+						<div class="col-sm-2 col-xs-3 kb">
+								<div class="clickable-pic"><a href="/sonic/accton/videos"><img class="thumbnail" src="{%static 'images/kb/kb_video.svg' %}"></div>
+								<p class="kb_content">Technical Videos</p></a>
+						</div>
+						<div class="col-sm-2 col-xs-3 kb">
+								<div class="clickable-pic"><a href="/sonic/accton/webinar"><img class="thumbnail" src="{%static 'images/kb/kb_web.svg' %}"></div>
+								<p class="kb_content">Webinar</p></a>
+						</div>
+						<div class="col-sm-2 col-xs-3 kb">
+								<div class="clickable-pic"><div class="clickable-pic"><a class="target=_blank" href="/sonic/accton/sonic_now"><img class="thumbnail" alt="..." src="{%static 'images/kb/kb_sonic.svg' %}"></div>
+								<p class="kb_content">SONiC Now</p></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>
+<!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+	{% include 'preset_js.html' %}
+</body>
+</html>

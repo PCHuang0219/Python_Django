@@ -1,0 +1,63 @@
+
+.youtube{
+    margin-left: 10% ;
+    margin-top: 3% ;
+
+}
+.youtube iframe{
+    height:30vw;
+    width:50vw;
+}
+.title::before{
+    content: '';
+}
+.title{
+    font-size: 18pt;
+}
+.list{
+    position: fixed;
+    right: 2% ;
+    top :45% ;
+}
+.jumbotron{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.list-group-item{
+    background: #FFE4B5;
+}
+.sub-title{
+    display: none;
+}
+.sub-list{
+    background: #FFB6C1;
+}
+.skip-frame{
+    border-style:solid;
+    border-color:#dddddd;
+    border-width:1px;
+    padding:10px;
+    width:60%;
+}
+.skip-frame h2{
+    color:#AFB0B0;
+}
+.kb-font1{
+    color:#6AB7E7;
+}
+.content{
+    padding:10px;
+}
+.right-frame{
+    border-style:solid;
+    border-color:#20304B;
+    border-width:2px;
+    padding:10px;
+    width:80%;
+    margin:30px;
+    border-radius:8px;
+}
+.answer{
+    background-color: #ECECEC;
+    padding:5px;
+}

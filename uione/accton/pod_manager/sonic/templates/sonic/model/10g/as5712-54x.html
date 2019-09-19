@@ -1,0 +1,175 @@
+{% extends 'SONiCProducts/products_template.html' %}
+{% load staticfiles %}
+{% block title %} TMS-AS5712-54X {% endblock %}
+
+{% block picture %}
+	<div class="slider-for">
+		<img src="{% static 'images/products/10g/as5712-54x/as5712-54x-1.png' %}" alt="">
+		<img src="{% static 'images/products/10g/as5712-54x/as5712-54x-2.png' %}" alt="">
+		<img src="{% static 'images/products/10g/as5712-54x/as5712-54x-3.png' %}" alt="">
+		<img src="{% static 'images/products/10g/as5712-54x/as5712-54x-4.png' %}" alt="">
+	</div>
+	<div class="slider-nav">
+		<img src="{% static 'images/products/10g/as5712-54x/as5712-54x-1.png' %}" alt="">
+		<img src="{% static 'images/products/10g/as5712-54x/as5712-54x-2.png' %}" alt="">
+		<img src="{% static 'images/products/10g/as5712-54x/as5712-54x-3.png' %}" alt="">
+		<img src="{% static 'images/products/10g/as5712-54x/as5712-54x-4.png' %}" alt="">
+	</div>
+{% endblock %}
+
+{% block productSummary %}
+<h2>AS5712-54X</h2>
+<h4>10GbE Data Center Switch</h4>
+<p>AS5712-54X has 48-Port 10G SFP+ with 6x40G QSFP+ uplinks with ONIE software installer. AS5712-54X embedded Broadcom Trident II 720Gbps and Intel Atom C2538 CPU as well as PHY-Less/Re-timer-Less, dual -48VDC 400W PSUs included and port-to-power airflow. AS5712-54X is 3-year Hardware Warranty.</p>
+{% endblock %}
+
+{% block Overview %}
+<p class="content2 font2">The Edgecore AS5710-54X/AS5712-54X switch meets the high-performance, availability, and network-scaling requirements of enterprise and cloud data centers. The AS5710-54X/AS5712-54X provides full line-rate switching at Layer 2 or Layer 3 across 48 x 10GbE ports and 6 x 40GbE uplinks. The switch can be deployed either as a Top-of-Rack switch, or as part of a 10GbE or 40GbE distributed spine, forming a non-blocking folded CLOS data center fabric. The switch is rack mountable in either a standard 19 inch rack, or with the Open Rack Switch Adapter in the 21 inch Open Rack.</p>
+<p class="content2 font2">The AS5710-54X/AS5712-54X hardware provides the high availability features required for data center operation, including; redundant, hot-swappable AC or -48 VDC PSUs or 12 VDC power input; fan with 4+1 redundant fan modules; and port-to-power or power-to-port airflow options. The AS5710-54X/AS5712-54X is an ideal Top-of-Rack switch for virtualized data centers, with its support of VXLAN and NVGRE tunneling functions in hardware.</p>
+{% endblock %}
+
+{% block specs %}
+	<table class="table table-bordered table-striped">
+		<colgroup>
+			<col class="col-xs-6">
+			<col class="col-xs-6">
+		</colgroup>
+		<tbody>
+			<tr>
+				<th><div class="specs_title">Ports</div></th>
+				<td class="common-style-font2 content">48</td>
+			</tr>
+			<tr>
+				<th><div class="specs_title">Predominant Port Type</div></th>
+				<td class="common-style-font2 content">10GbE SFP+</td>
+			</tr>
+			<tr>
+				<th><div class="specs_title">High Availability</div></th>
+				<td class="common-style-font2 content">Redundant Power Supply, Redundant Fans</td>
+			</tr>
+			<tr>
+				<th><div class="specs_title">Compatible Soft Option</div></th>
+				<td class="common-style-font2 content">Big Switch Networks - Big Monitoring Fabric , Big Switch Networks - Big Cloud Fabric , Cumulus Networks - Cumulus Linux , Pica8 - PicOS , Pluribus Networks - Netvisor® OS (ONVL) , Microsoft - SONiC , Open Compute Project - Open Network Linux</td>
+			</tr>
+		</tbody>
+	</table>
+{% endblock %}
+
+{% block features %}
+<div class="col-md-6 common-style-font2 content">
+		<div class="bs-example" data-example-id="simple-ul">
+			<ul>
+				<li>Cost-effective, bare-metal switch infrastructure for data center fabric.</li>
+				<li>48 x SFP+ switch ports, supporting 10GbE (DAC, 10GBASE-SR/LR) or 1GbE (1000BASE-T/SX/LX).</li>
+				<li>6 x 40 QSFP switch ports, each supporting 40GbE (DAC, 40GBASE-SR4/LR4) or 4 x 10GbE (DAC or fiber breakout cable).</li>
+				<li>Port Grouping to group 4 x 10G ports into one 40G port at the physical layer for maximum bandwidth utilization, and for 300m optical reach over MMF (Subject to NOS options).</li>
+				<li>Full line-rate Layer 2 or Layer 3 forwarding of 720 Gbps.</li>
+				<li>VXLAN and NVGRE tunneling support in hardware for network virtualization.</li>
+				<li>Rack mountable in standard 19" racks. Mountable in 21" Open Rack with the Open Rack Switch Adapter.</li>
+				<li>Supports hot/cold aisle with port-to-power and power-to-port airflow SKUs.</li>
+				<li>All ports on front; PSUs, fan modules on rear.</li>
+			</ul>
+		</div>
+	</div>
+<div class="col-md-6 common-style-font2 content">
+		<div class="bs-example" data-example-id="simple-ul">
+			<ul>
+				<li>Hot-swappable, load sharing, redundant AC or -48 VDC PSUs. 12 VDC power input option.</li>
+				<li>Hot swappable 4+1 redundant fan modules.</li>
+				<li>Management: Ethernet and console RJ-45 ports; USB storage port.</li>
+				<li>Hardware switch pre-loaded with Open Network Install Environment (ONIE) for automated loading of compatible open source and commerical NOS offerings. AS5710 SKU and AS5712 SKU compatible with Open Network Linux (ONL), the open-source, OCP reference NOS.</li>
+				<li>AS5710 SKU and AS5712 SKU compatible with Big Monitoring Fabric™ and Big Cloud Fabric™ SDN applications from Big Switch.</li>
+				<li>AS5712 SKU compatible with Cumulus® Linux® r2.5.1 and later version from Cumulus Networks®.</li>
+				<li>AS5712 SKU compatible with PicOS™ r2.6 and later version from Pica8 Inc.</li>
+				<li>AS5712 SKU compatible with Pluribus Netvisor ® OS (ONVL) version 2.5 and later from Pluribus Networks.</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block downloads %}
+	<table class="table Table table-hover">
+		<tbody>
+			<tr class="tr-only-hide">
+				<th>Category</th>
+				<th>Name</th>
+				<th>Rev</th>
+				<th>Release Notes</th>
+				<th>Date</th>
+				<th>Note</th>
+				<th>Download</th>
+			</tr>
+			<tr>
+				<td data-th="Category">Datasheet</td>
+				<td data-th="Name">AS5710_AS5712-54X DS R08</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-10-12</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/10g/as5712-54x/AS5710_AS5712-54X_DS_R08_20181002.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">User Manual</td>
+				<td data-th="Name">AS5712-54X Quick Start Guide R07</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-01-23</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/10g/as5712-54x/AS5710-54X_AS5712-54X_AS5812-54X_QSG_R07_20180119.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Certification</td>
+				<td data-th="Name">AS5712-54X_CE_DoC</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2016-07-11</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/10g/as5712-54x/AS5712-54X_AS5710-54X_CE_Declaration_of_Conformity_20160711.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Certification</td>
+				<td data-th="Name">Edgecore RoHS 2.0 REACH Declaration - AS5712-54X</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2017-06-26</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/10g/as5712-54x/0_Reach_Declaration_AS5712-54X_20160622.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Safety and Regulatory Information</td>
+				<td data-th="Name">AS5712-54X Safety and Regulatory Information R04</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2017-12-27</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/10g/as5712-54x/AS5710-54X_AS5712-54X_AS5812-54X_SRI_R04_20171227.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Firmware</td>
+				<td data-th="Name">SONiC image</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">n/a</td>
+				<td data-th="Note">
+					<a href="/sonic/accton/download"><span class="badge badge-pill badge-primary jumpDownload">More available</span>
+				</td>
+				<td data-th="Download">
+					<a id="SONiC_Image_Downloads" href="#"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+{% endblock %}
+
+								
+						

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DjangoForm</title>
+</head>
+<body>
+    body = {{ body }}
+    <br/>
+    path = {{ path }}
+    <br/>
+    form = {{ form }}
+    <br/>
+    bool value = {{ bool_value }}
+    <br/>
+    int value = {{ int_value }}
+    <br/>
+    string value = {{ str_value }}
+    <form action="/James Lo/" method="post">
+       {% csrf_token %}
+        <input type="submit" vlaue="submit">
+    </form>
+</body>
+</html>

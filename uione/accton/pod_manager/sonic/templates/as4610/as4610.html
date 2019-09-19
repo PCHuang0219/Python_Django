@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Accton Total Management System</title>
+	{% include 'preset_style.html' %}
+<!-- The following code works begin
+
+
+<script type="text/javascript">
+  function draw() {
+	console.log('draw two lines');
+
+      var canvas = document.getElementById('tutorial');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'rgb(200, 0, 0)';
+        ctx.fillRect(10, 10, 50, 50);
+
+        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+        ctx.fillRect(30, 30, 50, 50);
+      }
+    }
+</script>
+
+<style type="text/css">
+  canvas { border: 1px solid black; }
+</style>
+
+The following code works end -->
+
+
+</head>
+{% include 'template_common.html' %}
+
+		<div class="right_col" role="main">
+           
+			<div class="clearfix"></div>
+
+			<div class="title_left">
+                                
+				<p style="font-size: 14pt">Home --> AS4610</p>
+			</div>
+
+			<br /> 
+
+                        <div style="text-align: right; margin-bottom: 20px;">
+
+                                <button class="btn btn-primary" type="reset">Create VLAN</button>

@@ -1,0 +1,103 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TMS-Accton Whitepaper</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/kb.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/common.css' %}" rel="stylesheet">
+</head>
+{% include 'template_sonic.html' %}
+<div class="right_col common-font" role="main">
+	<div class="row">
+	<div class="col-8 col-sm-8" id="article_list">
+		<div class="col-12 col-sm-12 article">
+			<div class="row">
+			<div class="col-1 col-sm-1 user-info">
+				<img src="../../../../../static/images/cloud1.png" style="width:25px">
+				<p class="user-name">Anber</p>
+			</div>
+			<div class="col-7 col-sm-7 titile">
+				<h3>This is simple article titile</h3>
+				<p>Simple description ...</p>
+			</div>
+			<div class="col-2 col-sm-2 post-info">
+				<div class="comments">
+					<div class="commentbg">
+						<div class="mark"></div>8888
+					</div>
+				</div>
+				<div class="views">
+					<i class="fa fa-eye show">8888</i>
+				</div>
+				<div class="fa fa-clock-o show">
+					24min
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="col-12 col-sm-12 article">
+			<div class="row">
+			<div class="col-1 col-sm-1 user-info">
+				<img src="../../../../../static/images/cloud1.png" style="width:25px">
+				<p class="user-name">Anber</p>
+			</div>
+			<div class="col-7 col-sm-7 titile">
+				<h3>This is simple article titile</h3>
+				<p>Simple description ...</p>
+			</div>
+			<div class="col-2 col-sm-2 post-info">
+				<div class="comments">
+					<div class="commentbg">
+						<div class="mark"></div>
+					</div>
+				</div>
+				<div class="views">
+					<i class="fa fa-eye show">8888</i>
+				</div>
+				<div class="fa fa-clock-o show">
+					24min
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="col-2 col-sm-2 sort">
+		<ul class="list-group">
+			<li class="list-group-item" id="title" value="overview">Overview<span class="badge">4</span></li>
+			<li style="list-style: none; display: inline">
+				<div class="sub-title" id="overview">
+					<a href="#Overview">
+					<ul>
+						<li class="list-group-item sub-list">Accton</li>
+						<li style="list-style: none; display: inline"></li>
+						<li class="list-group-item sub-list">EdgeCore</li>
+						<li style="list-style: none; display: inline"></li>
+						<li class="list-group-item sub-list">SONiC</li>
+						<li style="list-style: none; display: inline"></li>
+						<li class="list-group-item sub-list">TMS</li>
+					</ul></a>
+				</div>
+			</li>
+			<li class="list-group-item">Edgecore</li>
+			<li class="list-group-item">TMS</li>
+			<li class="list-group-item">NTC</li>
+		</ul>
+	</div>
+</div>
+</div>
+<!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+	{% include 'preset_js.html' %}
+	<!-- Additional JS-->
+	<script src="{% static 'js/sonic/product.js' %}"></script>
+	<script src="{% static 'js/sonic/location.js' %}"></script>
+</body>
+</html>

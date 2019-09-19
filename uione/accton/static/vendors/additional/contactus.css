@@ -1,0 +1,23 @@
+.form-control{
+    border-radius:5px;
+}
+.tit{
+    width:100%;
+}
+.submitBtn{
+    height: 25px;
+    padding: 0 5%;
+    border-radius: 1vw;
+    line-height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14pt;
+    background-color:#224384;
+    color: #fcfdff;
+}
+.clickbtn{
+    margin:4%;
+}

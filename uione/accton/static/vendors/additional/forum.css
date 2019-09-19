@@ -1,0 +1,114 @@
+.article{
+    margin: 1% ;
+    padding-right: 0%;
+    padding-left: 0%;
+    background:#d1e7f5;
+    border-radius:10px;
+}
+.path{
+    float: left;
+    padding-top: 16px;
+}
+.user-info{
+    padding: 1% 0% 1% 0% ;
+    position: relative;
+    text-align:center; 
+    color:#040505;
+}
+.user-info > img {
+    border-radius:70%;
+    margin-bottom:5%;
+}
+.titile{
+    padding: 1% 0% 1% 0% ;
+    color: #040505;
+    font-size: 14px;
+    font-family: 'Open Sans Light', sans-serif;   
+    line-height: 25px;
+}
+.post-info{
+    padding: 1% 0% 0 0% ;
+    border-left: solid 1px black;
+    text-align: center;
+    color:#040505;
+}
+.comments{
+    border-bottom: solid 1px black;
+    padding: 3% 0 20% 0;
+}
+.commentbg{
+    background-color: #bdc3c7;
+    border-radius: 2px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Open Sans Bold', sans-serif; 
+    position: relative;
+    padding: 2% 4% 2% 4% ;
+    min-width:50px;
+    height:27px;
+    border-radius:6px;
+}
+.mark{
+    width: 11px;
+    height: 11px;
+    background-color: #bdc3c7;
+    position: absolute;
+    bottom: 0;
+    left: 37%;
+    margin-bottom: -5px;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); /* IE 9 */
+    -webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
+}
+.views{
+    border-bottom: solid 1px black;
+}
+.show{
+    padding: 10% 0 10% 0;
+}
+.sort{
+    margin-left: 10%;
+    z-index:10;
+    position: relative;
+    top: 20px;
+    right: 0px;
+    width:180px;
+
+}
+.sub-title{
+    display: none;
+}
+.topbar{
+    float: right;
+}
+.topbar-item{
+    font-size: 12pt;
+}
+.forum_font1{
+    font-size: 24pt;
+    line-height: 32px;
+    color:black;
+}
+.forum_font2{
+    font-size: 18pt;
+    color:black;
+    margin-left: 10%;
+    margin-bottom:10px;
+}
+.your_q img{
+    width:5%;
+}
+.col-xs-12 > nav {
+    text-align: center;
+}
+label{
+    font-size:24pt;
+    color: black;
+}
+.titile > h3 {
+    font-size: 18pt;
+}
+.forum-font{
+    font-family: 'Nunito', sans-serif;
+}

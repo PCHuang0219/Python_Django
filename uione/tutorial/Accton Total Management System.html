@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class=" " lang="en"><head>
+ <!-- Accton 2nd page (overview)              -->
+ <!-- Accton 2nd page (overview)              -->
+ <!-- Accton 2nd page (overview)              -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Accton Total Management System</title>
+
+<!-- Bootstrap -->
+<link href="Accton%20Total%20Management%20System_files/bootstrap.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="Accton%20Total%20Management%20System_files/font-awesome.css" rel="stylesheet">
+<!-- NProgress -->
+<link href="Accton%20Total%20Management%20System_files/nprogress.css" rel="stylesheet">
+<!-- iCheck -->
+<link href="Accton%20Total%20Management%20System_files/green.css" rel="stylesheet">
+
+<!-- bootstrap-progressbar -->
+<link href="Accton%20Total%20Management%20System_files/bootstrap-progressbar-3.css" rel="stylesheet">
+<!-- JQVMap -->
+<link href="Accton%20Total%20Management%20System_files/jqvmap.css" rel="stylesheet">
+<!-- bootstrap-daterangepicker -->
+<link href="Accton%20Total%20Management%20System_files/daterangepicker.css" rel="stylesheet">
+
+<!-- Custom Theme Style -->
+<link href="Accton%20Total%20Management%20System_files/custom.css" rel="stylesheet">
+</head>
+
+
+<body>
+<div class="container body">
+    <div class="row">    show raw data
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+        <!-- We need a browser address bar here, it shows the position that we are browsing now
+        +-------------------------------------------------------------------------------------+
+        +    Current position https://10.3.0.7:8091/redfish/v1/chassis                        +
+        +-------------------------------------------------------------------------------------+
+        -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Node Summary</h4>
+            </div>
+            <div class="panel-body">
+                Browse through nodes
+            </div>
+
+        </div>
+
+
+
+        <!-- here may be three buttons, one on the left, and two on the right.
+
+            button_home                                             button_action, button_help
+
+        -->
+
+        <!-- this is the table.
+          We need to use what?
+          Wynwynn uses the http address to do creation work.
+
+        -->
+        <div class="col-xs-9">
+            <table class="table table-bordered table-hover table-striped">
+            <thead class="thead-dark">
+                <tr><th>Tag name</th>
+                <th>Tag attribute</th>
+                <th>Note</th>
+            </tr></thead>
+                <!-- this page is /redfish/v1, the next page shouold be
+                     https://10/3/0/7:8091/redfish/v1/path?p=/redfish/v1/Chassis
+                     https://10.3.0.7:8091/redfish/v1/path?p=/redfish/v1/Managers
+                     https://10.3.0.7:8091/redfish/v1/
+                -->
+
+            <tbody>
+            
+                <tr>
+                    <td> Name </td>
+
+                    
+                        <td> Root Service </td>
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> Managers </td>
+
+                    
+
+                        
+                        <td> <a href="http://127.0.0.1:8000/redfish/v1/Managers">
+                        /redfish/v1/Managers</a></td>
+
+
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> @odata.id </td>
+
+                    
+                        <td> /redfish/v1 </td>
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> @odata.context </td>
+
+                    
+                        <td> /redfish/v1/$metadata#ServiceRoot </td>
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> UUID </td>
+
+                    
+                        <td> f13fbf02-24f0-11e7-8834-477481a358e8 </td>
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> Id </td>
+
+                    
+                        <td> RootService </td>
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> Chassis </td>
+
+                    
+
+                        
+                        <td> <a href="http://127.0.0.1:8000/redfish/v1/Chassis">
+                        /redfish/v1/Chassis</a></td>
+
+
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> RedfishVersion </td>
+
+                    
+                        <td> 1.0.2 </td>
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> @odata.type </td>
+
+                    
+                        <td> #ServiceRoot.1.0.0.ServiceRoot </td>
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> MessageRegistry </td>
+
+                    
+
+                        
+                        <td> <a href="http://127.0.0.1:8000/redfish/v1/MessageRegistry">
+                        /redfish/v1/MessageRegistry</a></td>
+
+
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+                <tr>
+                    <td> EventService </td>
+
+                    
+
+                        
+                        <td> <a href="http://127.0.0.1:8000/redfish/v1/EventService">
+                        /redfish/v1/EventService</a></td>
+
+
+                    
+
+                    <td>Note</td>
+                </tr>
+
+            
+
+
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- jQuery -->
+<script src="Accton%20Total%20Management%20System_files/jquery_007.js"></script>
+<!-- Bootstrap -->
+<script src="Accton%20Total%20Management%20System_files/bootstrap.js"></script>
+<!-- FastClick -->
+<script src="Accton%20Total%20Management%20System_files/fastclick.js"></script>
+<!-- NProgress -->
+<script src="Accton%20Total%20Management%20System_files/nprogress.js"></script>
+<!-- Chart.js -->
+<script src="Accton%20Total%20Management%20System_files/Chart.js"></script>
+<!-- gauge.js -->
+<script src="Accton%20Total%20Management%20System_files/gauge.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="Accton%20Total%20Management%20System_files/bootstrap-progressbar.js"></script>
+<!-- iCheck -->
+<script src="Accton%20Total%20Management%20System_files/icheck.js"></script>
+<!-- Skycons -->
+<script src="Accton%20Total%20Management%20System_files/skycons.js"></script>
+<!-- Flot -->
+<script src="Accton%20Total%20Management%20System_files/jquery_005.js"></script>
+<script src="Accton%20Total%20Management%20System_files/jquery_010.js"></script>
+<script src="Accton%20Total%20Management%20System_files/jquery_009.js"></script>
+<script src="Accton%20Total%20Management%20System_files/jquery.js"></script>
+<script src="Accton%20Total%20Management%20System_files/jquery_008.js"></script>
+<!-- Flot plugins -->
+<script src="Accton%20Total%20Management%20System_files/jquery_002.js"></script>
+<script src="Accton%20Total%20Management%20System_files/jquery_004.js"></script>
+<script src="Accton%20Total%20Management%20System_files/curvedLines.js"></script>
+<!-- DateJS -->
+<script src="Accton%20Total%20Management%20System_files/date.js"></script>
+<!-- JQVMap -->
+<script src="Accton%20Total%20Management%20System_files/jquery_006.js"></script>
+<script src="Accton%20Total%20Management%20System_files/jquery_011.js"></script>
+<script src="Accton%20Total%20Management%20System_files/jquery_003.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="Accton%20Total%20Management%20System_files/moment.js"></script>
+<script src="Accton%20Total%20Management%20System_files/daterangepicker.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="Accton%20Total%20Management%20System_files/custom.js"></script>
+
+
+</body></html>

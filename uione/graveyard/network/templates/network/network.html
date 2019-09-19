@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<div lang="en">
+<head>
+	<title>TMS-Network</title>
+	{% include 'preset_style.html' %}
+</head>
+{% include 'common_template.html' %}
+	<div class="right_col" role="main">
+		<div class="clearfix"></div>
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
+				<div class="x_panel">
+					<div class="x_title">
+						<h2>Network Command Line</h2>
+						<div class="clearfix"></div>
+						<div class="input-group">
+							<span class="input-group-addon" style="color: black">command</span> <input aria-describedby="basic-addon1" class="form-control" id="command" type="text">
+						</div>
+						<div>
+							<button class="btn btn-primary" onclick="postCommand()" type="button">send</button>
+						</div>
+						<div class="col-md-20" style="position:relative">
+							<h4 class="col-md-2">Log<small><br></small></h4>
+							<div class="panel panel-default; col-md-16" style="height:400px;overflow:scroll;background:#FFF9C4">
+								<!-- Default panel contents -->
+								<form id="log" name="log">
+									<div></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+		<!-- footer content -->
+		{% include 'main_footer.html' %}
+       	<!-- /footer content -->
+</div>
+	{% include 'preset_js.html' %}
+	<script src="{% static 'js/network/network.js' %}"></script> 
+</body>
+</html>
+
+
+
+
+
+

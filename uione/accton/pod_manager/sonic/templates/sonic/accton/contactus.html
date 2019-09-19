@@ -1,0 +1,338 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sales Contact</title>
+	{% include 'preset_style.html' %}
+	<link href="{% static 'vendors/additional/contactus.css' %}" rel="stylesheet">	
+</head>
+{% include 'template_sonic.html' %}
+<div class="right_col" role="main">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
+			<div class="x_panel">
+				<p style="font-size:30pt;color:#20304b;padding:10px">Contact Us</p>
+				<div class="col-md-12">
+					<div class="col-md-1 col-xs-2"><img src="{% static 'images/icon/location.png' %}" style="width:50%"></div>
+					<div class="col-md-11 col-xs-10">
+						<h5>智邦科技 新竹總部</h5>
+						<p>30077 新竹市科學工業園區研新三路1號</p>
+						<p>TEL : 03-577-0270 ／ FAX : 03-578-0764</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="col-md-2 col-xs-2"><img src="{% static 'images/icon/location.png' %}" style="width:50%"></div>
+					<div class="col-md-10 col-xs-10">
+						<h5>智邦科技　台北辦事處</h5>
+						<p>10694 台北市大安區光復南路102號13樓</p>
+						<p>TEL : 02-8773-8500</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="col-md-2 col-xs-2"><img src="{% static 'images/icon/location.png' %}" style="width:50%"></div>
+					<div class="col-md-10 col-xs-10">
+						<h5>智邦科技　台中辦事處</h5>
+						<p>40355 台中市西區五權路2之106號12樓</p>
+						<p>TEL : 04-2371-5665</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="col-md-2 col-xs-2"><img src="{% static 'images/icon/location.png' %}" style="width:50%"></div>
+					<div class="col-md-10 col-xs-10">
+						<h5>智邦科技　台南科學園區</h5>
+						<p>74147 台南市新市區南科三路3號3樓</p>
+						<p>TEL : 06-505-0000</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="col-md-2 col-xs-2"><img src="{% static 'images/icon/location.png' %}" style="width:50%"></div>
+					<div class="col-md-10 col-xs-10">
+						<h5>Santa Clara, USA Office</h5>
+						<p>1200 Crossman Ave. Suite 130 Sunnyvale,CA 94089</p>
+						<p>TEL : +1 408 747 0994 ／ FAX : +1 408 747 0982</p>
+					</div>
+				</div>
+			</div>
+			<div class="x_panel">
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group clearfix">
+						<label class="tit">First Name<span class="red">*</span>：</label> <input class="form-control validate[required]" id="first_name" name="first_name" type="text">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Last Name<span class="red">*</span>：</label> <input class="form-control validate[required]" id="last_name" name="last_name" type="text">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Company<span class="red">*</span>：</label> <input class="form-control validate[required]" id="companys" name="companys" type="text">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Job Title<span class="red">*</span>：</label> <input class="form-control validate[required]" id="job_title" name="job_title" type="text">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Gender<span class="red">*</span>：</label> <input checked="checked" id="sex01" name="sex" type="radio" value="M"> <label for="sex01">Male</label> <input id="sex02" name="sex" type="radio" value="F"> <label for="sex02">Female</label>
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Country<span class="red">*</span>：</label> <select class="form-control validate[required]" id="country" name="country">
+							<option selected="selected" value="">
+								Select ...
+							</option><!--<option value="">Taiwan</option>-->
+							<option value=" Afghanistan">
+								Afghanistan
+							</option>
+							<option value=" Argentina">
+								Argentina
+							</option>
+							<option value=" Australia">
+								Australia
+							</option>
+							<option value=" Austria">
+								Austria
+							</option>
+							<option value=" Belgium">
+								Belgium
+							</option>
+							<option value=" Bermuda">
+								Bermuda
+							</option>
+							<option value=" Brazil">
+								Brazil
+							</option>
+							<option value=" British Virgin Islands">
+								British Virgin Islands
+							</option>
+							<option value=" Brunei">
+								Brunei
+							</option>
+							<option value=" Cambodia">
+								Cambodia
+							</option>
+							<option value=" Canada">
+								Canada
+							</option>
+							<option value=" Canary Islands">
+								Canary Islands
+							</option>
+							<option value=" Cayman Islands">
+								Cayman Islands
+							</option>
+							<option value=" China">
+								China
+							</option>
+							<option value=" Colombia">
+								Colombia
+							</option>
+							<option value=" Denmark">
+								Denmark
+							</option>
+							<option value=" Egypt">
+								Egypt
+							</option>
+							<option value=" Finland">
+								Finland
+							</option>
+							<option value=" France">
+								France
+							</option>
+							<option value=" Georgia">
+								Georgia
+							</option>
+							<option value=" Germany">
+								Germany
+							</option>
+							<option value=" Greece">
+								Greece
+							</option>
+							<option value=" Hong Kong">
+								Hong Kong
+							</option>
+							<option value=" Hungary">
+								Hungary
+							</option>
+							<option value=" India">
+								India
+							</option>
+							<option value=" Indonesia">
+								Indonesia
+							</option>
+							<option value=" Iran">
+								Iran
+							</option>
+							<option value=" Iraq">
+								Iraq
+							</option>
+							<option value=" Ireland">
+								Ireland
+							</option>
+							<option value=" Israel">
+								Israel
+							</option>
+							<option value=" Italy">
+								Italy
+							</option>
+							<option value=" Jamaica">
+								Jamaica
+							</option>
+							<option value=" Japan">
+								Japan
+							</option>
+							<option value=" Jordan">
+								Jordan
+							</option>
+							<option value=" Kuwait">
+								Kuwait
+							</option>
+							<option value=" Laos">
+								Laos
+							</option>
+							<option value=" Luxembourg">
+								Luxembourg
+							</option>
+							<option value=" Malaysia">
+								Malaysia
+							</option>
+							<option value=" Mexico">
+								Mexico
+							</option>
+							<option value=" Mongolia">
+								Mongolia
+							</option>
+							<option value=" Myanmar">
+								Myanmar
+							</option>
+							<option value=" Netherlands">
+								Netherlands
+							</option>
+							<option value=" New Zealand">
+								New Zealand
+							</option>
+							<option value=" Nigeria">
+								Nigeria
+							</option>
+							<option value=" Norway">
+								Norway
+							</option>
+							<option value=" Pakistan">
+								Pakistan
+							</option>
+							<option value=" Panama">
+								Panama
+							</option>
+							<option value=" Peru (Perú)">
+								Peru (Perú)
+							</option>
+							<option value=" Philippines">
+								Philippines
+							</option>
+							<option value=" Poland">
+								Poland
+							</option>
+							<option value=" Portugal">
+								Portugal
+							</option>
+							<option value=" Qatar">
+								Qatar
+							</option>
+							<option value=" Romania">
+								Romania
+							</option>
+							<option value=" Russia">
+								Russia
+							</option>
+							<option value=" Saudi Arabia">
+								Saudi Arabia
+							</option>
+							<option value=" Singapore">
+								Singapore
+							</option>
+							<option value=" South Africa">
+								South Africa
+							</option>
+							<option value=" South Korea">
+								South Korea
+							</option>
+							<option value=" Spain">
+								Spain
+							</option>
+							<option value=" Sudan">
+								Sudan
+							</option>
+							<option value=" Sweden">
+								Sweden
+							</option>
+							<option value=" Switzerland">
+								Switzerland
+							</option>
+							<option value=" Syria">
+								Syria
+							</option>
+							<option value=" Taiwan">
+								Taiwan
+							</option>
+							<option value=" Thailand">
+								Thailand
+							</option>
+							<option value=" Turkey">
+								Turkey
+							</option>
+							<option value=" Ukraine">
+								Ukraine
+							</option>
+							<option value=" United Arab Emirates">
+								United Arab Emirates
+							</option>
+							<option value=" United Kingdom">
+								United Kingdom
+							</option>
+							<option value=" United States">
+								United States
+							</option>
+							<option value=" Venezuela">
+								Venezuela
+							</option>
+							<option value=" Vietnam">
+								Vietnam
+							</option>
+							<option value=" Yemen">
+								Yemen
+							</option>
+						</select>
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Address：</label> <input class="form-control" id="addresss" name="addresss" type="text">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Email<span class="red">*</span>：</label> <input class="form-control validate[required][custom[email]]" id="email" name="email" type="email">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Telephone<span class="red">*</span>：</label> <input class="form-control validate[required][custom[phone]]" id="tel2" name="tel2" type="text">
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="form-group clearfix">
+                          <label class="tit">Message<span class="red">*</span>：</label>
+                          <textarea name="description" id="description" cols="" rows="" class="form-textarea" style="width:100%; height:300px;"></textarea>
+					</div>
+					<div class="clickbtn">
+							<button id="submit" class="btn submitBtn" type="button">Submit</button>
+							<button id="clear"class="btn submitBtn" type="button">Clear</button>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+</div>
+	{% include 'preset_js.html' %}
+	<script src="{% static 'js/sonic/contact.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
