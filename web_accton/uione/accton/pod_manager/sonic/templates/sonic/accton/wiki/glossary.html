@@ -1,0 +1,50 @@
+{% extends 'wiki_template.html' %}
+{% load staticfiles %}
+
+{% block titile %}
+<title>Wiki-Glossary</title>
+{% endblock %}
+{% block style %}
+<!-- Additional CSS-->
+<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+<link href="{% static 'vendors/additional/wiki.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="tabcontent index-detail">
+    <h3 class="wikifont7">Glossary</h3>
+    <p>
+        <div class="col-md-12 wikifont5">
+            <div class="col-md-1">FRU</div>
+            <div class="col-md-11">
+            FRU is field replaceable unit. A Edgecore switch for example can be one FRU, same with power supplies or
+            linecards or fan trays or optical modules. It is kind of similar to SKU.
+            </div>
+        </div>
+        <div class="col-md-12 wikifont5">
+            <div class="col-md-1">DVT</div>
+            <div class="col-md-11">
+            DVT is device verification test, sometimes called evt or other #VT . This is for R&D to bringup and test
+            the stability of the hardware and software
+            </div>
+        </div>
+        <div class="col-md-12 wikifont5">
+            <div class="col-md-1">I&V</div>
+            <div class="col-md-11">
+            I&V is integration and verification test. Usually R&D is not involved here and some system or integrator
+            testers see if the unit works in the network setup.
+            </div>
+        </div>
+        <br>
+    </p>
+
+
+
+</div>
+{% endblock %}
+{% block js %}
+<!-- Additional JS-->
+<script src="{% static 'js/sonic/product.js' %}"></script>
+<script src="{% static 'js/sonic/location.js' %}"></script>
+<script src="{% static 'vendors/additional/js/wiki.js' %}"></script>
+{% endblock %}

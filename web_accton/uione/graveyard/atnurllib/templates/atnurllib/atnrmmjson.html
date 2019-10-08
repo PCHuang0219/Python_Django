@@ -1,0 +1,154 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Accton 2nd page (overview)              -->
+ <!-- Accton 2nd page (overview)              -->
+ <!-- Accton 2nd page (overview)              -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Accton Total Management System</title>
+
+<!-- Bootstrap -->
+<link href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+<!-- NProgress -->
+<link href="{% static 'vendors/nprogress/nprogress.css' %}" rel="stylesheet">
+<!-- iCheck -->
+<link href="{% static 'vendors/iCheck/skins/flat/green.css' %}" rel="stylesheet">
+
+<!-- bootstrap-progressbar -->
+<link href="{% static 'vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' %}" rel="stylesheet">
+<!-- JQVMap -->
+<link href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}" rel="stylesheet"/>
+<!-- bootstrap-daterangepicker -->
+<link href="{% static 'vendors/bootstrap-daterangepicker/daterangepicker.css' %}" rel="stylesheet">
+
+<!-- Custom Theme Style -->
+<link href="{% static 'build/css/custom.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container body">
+    <!-- A browser address bar here, it shows the position that we are at
+    +---------------------------------------------------------------------------------+
+    +    Current position https://10.3.0.7:8091/redfish/v1/chassis                    +
+    +------------------------------------------------------------------------------ -->
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Chassis</a></li>
+        <li><a href="#">Rack</a></li>
+        <li><a href="#">1</a></li>
+    </ol>
+
+    var 1 = {{ val_1 }}
+    <div class="row">
+        <!-- here may be three buttons, one on the left, and two on the right.
+            button_JsonView,         button_action_to_root, button_help
+        -->
+        <div class="panel panel-info panelContent">
+            <div class="panel-heading">
+
+        {#        <a href="http://127.0.0.1:8000/jsonform"> <button class="btn btn-info">JSON View</button></a>    #}
+             {#   need to get this to work <a href="http://127.0.0.1:8000/view?p=json"> <button class="btn btn-info">JSON View</button></a> #}
+                <a href="http://127.0.0.1:8000/"> <button class="btn btn-info">Back to View</button></a>
+                <a href="http://127.0.0.1:8000/"> <button class="btn btn-info">Back to top</button></a>
+                <a href="http://127.0.0.1:8000/help/" onclick="overlay()"> <button class="btn btn-info">Help</button></a>
+            </div>
+        </div>
+        <br/>
+    </div>
+
+
+    <div id="tmshelp">
+        <div>
+            "tmshelp"
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class = "col-xs-10">
+        <!-- this is the table.
+          We need to use what?
+          Wynwynn uses the http address to do the creation of table content.
+        -->
+            <div class="panel panel-info panelContent">
+                <div class="panel-heading">
+                    Node Summary(follow AMI convention)
+                </div>
+                <div class="panel-body">
+
+                    {
+                    <br/>
+                        {% for key, value in rmmdics.items %}
+                         &nbsp&nbsp&nbsp&nbsp  {{ key }}: "{{ value }}" </td>
+                            <br/>
+
+                            {% empty %}
+
+                            <br/>
+                            {% endfor %}
+                    }
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- jQuery -->
+<script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'vendors/fastclick/lib/fastclick.js' %}"></script>
+<!-- NProgress -->
+<script src="{% static 'vendors/nprogress/nprogress.js' %}"></script>
+<!-- Chart.js -->
+<script src="{% static 'vendors/Chart.js/dist/Chart.min.js' %}"></script>
+<!-- gauge.js -->
+<script src="{% static 'vendors/gauge.js/dist/gauge.min.js' %}"></script>
+<!-- bootstrap-progressbar -->
+<script src="{% static 'vendors/bootstrap-progressbar/bootstrap-progressbar.min.js' %}"></script>
+<!-- iCheck -->
+<script src="{% static 'vendors/iCheck/icheck.min.js' %}"></script>
+<!-- Skycons -->
+<script src="{% static 'vendors/skycons/skycons.js' %}"></script>
+<!-- Flot -->
+<script src="{% static 'vendors/Flot/jquery.flot.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.pie.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.time.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.stack.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.resize.js' %}"></script>
+<!-- Flot plugins -->
+<script src="{% static 'vendors/flot.orderbars/js/jquery.flot.orderBars.js' %}"></script>
+<script src="{% static 'vendors/flot-spline/js/jquery.flot.spline.min.js' %}"></script>
+<script src="{% static 'vendors/flot.curvedlines/curvedLines.js' %}"></script>
+<!-- DateJS -->
+<script src="{% static 'vendors/DateJS/build/date.js' %}"></script>
+<!-- JQVMap -->
+<script src="{% static 'vendors/jqvmap/dist/jquery.vmap.js' %}"></script>
+<script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
+<script src="{% static 'vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="{% static 'vendors/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'vendors/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+<!-- Custom Theme Scripts -->
+<script src="{% static 'build/js/custom.min.js' %}"></script>
+<!-- Accton TMS Scripts -->
+<script src="{% static 'build/js/tms.js' %}"></script>
+
+</body>
+</html>

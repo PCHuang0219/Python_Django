@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<div lang="en">
+<head>
+	<title>TMS-Job detail</title>
+	{% include 'preset_style.html' %}
+	<!-- jQuery -->
+</head>
+{% include 'template_ntc.html' %}
+	<div class="right_col" role="main">
+		<div class="clearfix"></div>
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
+				<div class="x_panel">
+					<div class="x_title">
+						<h2>Job Detail Settings</h2>
+						<div class="clearfix"></div>
+					</div>
+					<div class="x_content">
+						<!--<p class="text-muted font-13 m-b-30">message</p>-->
+						<div>
+							<table class="table">
+								<thead>
+									<tr class="tr-only-hide">
+										<th>#</th>
+										<th>Test Name</th>
+										<th>TOPO</th>
+										<th>Status</th>
+										<th>Result</th>
+										<th>Start time</th>
+										<th>End time</th>
+										<th>Log</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table><!--button== id="status_button" type="button">status</button-->
+							<a class="btn btn-primary" id="status_button" role="button" type="button">last page</a>
+						</div><br>
+						<div id="testCase" style="height: 350px ;overflow: auto"></div><br>
+						<table cellspacing="0" class="table table-striped table-bordered dt-responsive nowrap" id="datatable-responsive" width="100%">
+							<thead>
+								<tr></tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- footer content -->
+		<footer>
+			<div class="pull-left">Powered by Accton Technology &copy;</div>
+			<div class="clearfix"></div>
+		</footer>
+        	<!-- /footer content -->
+	{% include 'preset_js.html' %}
+	<script src="{% static 'js/Detail.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+

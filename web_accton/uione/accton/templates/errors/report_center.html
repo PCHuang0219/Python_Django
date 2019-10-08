@@ -1,0 +1,424 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Accton Total Management System</title>
+        {% include 'preset_style.html' %}
+        <!-- Additional -->
+        <link href="{% static 'vendors/additional/not_found_page.css' %}" rel="stylesheet">
+</head>
+
+<body class="nav-md common_font_family" style="background: none;">
+<div class="container body" style="padding-bottom:20px;">
+	<!-- top navigation header -->
+	<div id="top_nav"class="top_nav">
+		<div class="top_nav" id="top_nav">
+			<div class="nav_menu">
+				<div class="navbar nav_title" style="background: none; border: 0; width: 50%">
+					<a class="site_title" href="/" style="width: auto;">Accton | Total Management System</a>
+				</div>
+				<div class="col-sm-5 col-xs-5 form-group pull-right top_search">
+					<div class="input-group">
+						<input class="form-control" placeholder="Search for..." type="text">
+						<span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button>
+					</div>
+				</div>
+				<nav>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="">
+							<a aria-expanded="false" class="user-profile dropdown-toggle" data-toggle="dropdown" href="javascript:;">DC Manager</a>
+							<ul class="dropdown-menu dropdown-usermenu pull-right">
+								<li>
+									<a href="javascript:;">My POD Manager</a>
+								</li>
+								<li>
+									<a href="javascript:;">My Dashboard</a>
+								</li>
+								<li style="list-style: none">{% if request.user.is_authenticated %}</li>
+								<li>
+									<a href="#"><span class="glyphicon glyphicon-user"></span> Hello {{ request.user.first_name }}</a>
+								</li>
+								<li>
+									<a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+								</li>
+								<li style="list-style: none">{% else %}</li>
+								<li>
+									<a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+								</li>
+								<li style="list-style: none">{% endif %}</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	<!-- page content -->
+		<div style="background-color:#337ab7;height:250px;">
+			<h1 style="padding:140px 0 0 80px;margin:0;color:#ffffff;font-size:36px;">Report an Issue</h1>
+		</div>
+		<div class="right_col" role="main" style="margin-left: 0px; padding:120px;">
+			<div class="col-md-4" style="background-color:#bebebe;height:55px;">
+				<h1>Contact Accton</h1>
+			</div>
+			<div class="col-md-8" style="padding:0 0 0 5%">
+				<div class="form-group clearfix">
+						<label class="tit">Salutation<span class="red">*</span>：</label> <input class="form-control validate[required]" id="first_name" name="first_name" type="text">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">First Name<span class="red">*</span>：</label> <input class="form-control validate[required]" id="last_name" name="last_name" type="text">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Last Name<span class="red">*</span>：</label> <input class="form-control validate[required]" id="companys" name="companys" type="text">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">E-mail address<span class="red">*</span>：</label> <input class="form-control validate[required]" id="job_title" name="job_title" type="text">
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Your country of region<span class="red">*</span>：</label> <select class="form-control validate[required]" id="country" name="country">
+							<option selected="selected" value="">
+								Select ...
+							</option><!--<option value="">Taiwan</option>-->
+							<option value=" Afghanistan">
+								Afghanistan
+							</option>
+							<option value=" Argentina">
+								Argentina
+							</option>
+							<option value=" Australia">
+								Australia
+							</option>
+							<option value=" Austria">
+								Austria
+							</option>
+							<option value=" Belgium">
+								Belgium
+							</option>
+							<option value=" Bermuda">
+								Bermuda
+							</option>
+							<option value=" Brazil">
+								Brazil
+							</option>
+							<option value=" British Virgin Islands">
+								British Virgin Islands
+							</option>
+							<option value=" Brunei">
+								Brunei
+							</option>
+							<option value=" Cambodia">
+								Cambodia
+							</option>
+							<option value=" Canada">
+								Canada
+							</option>
+							<option value=" Canary Islands">
+								Canary Islands
+							</option>
+							<option value=" Cayman Islands">
+								Cayman Islands
+							</option>
+							<option value=" China">
+								China
+							</option>
+							<option value=" Colombia">
+								Colombia
+							</option>
+							<option value=" Denmark">
+								Denmark
+							</option>
+							<option value=" Egypt">
+								Egypt
+							</option>
+							<option value=" Finland">
+								Finland
+							</option>
+							<option value=" France">
+								France
+							</option>
+							<option value=" Georgia">
+								Georgia
+							</option>
+							<option value=" Germany">
+								Germany
+							</option>
+							<option value=" Greece">
+								Greece
+							</option>
+							<option value=" Hong Kong">
+								Hong Kong
+							</option>
+							<option value=" Hungary">
+								Hungary
+							</option>
+							<option value=" India">
+								India
+							</option>
+							<option value=" Indonesia">
+								Indonesia
+							</option>
+							<option value=" Iran">
+								Iran
+							</option>
+							<option value=" Iraq">
+								Iraq
+							</option>
+							<option value=" Ireland">
+								Ireland
+							</option>
+							<option value=" Israel">
+								Israel
+							</option>
+							<option value=" Italy">
+								Italy
+							</option>
+							<option value=" Jamaica">
+								Jamaica
+							</option>
+							<option value=" Japan">
+								Japan
+							</option>
+							<option value=" Jordan">
+								Jordan
+							</option>
+							<option value=" Kuwait">
+								Kuwait
+							</option>
+							<option value=" Laos">
+								Laos
+							</option>
+							<option value=" Luxembourg">
+								Luxembourg
+							</option>
+							<option value=" Malaysia">
+								Malaysia
+							</option>
+							<option value=" Mexico">
+								Mexico
+							</option>
+							<option value=" Mongolia">
+								Mongolia
+							</option>
+							<option value=" Myanmar">
+								Myanmar
+							</option>
+							<option value=" Netherlands">
+								Netherlands
+							</option>
+							<option value=" New Zealand">
+								New Zealand
+							</option>
+							<option value=" Nigeria">
+								Nigeria
+							</option>
+							<option value=" Norway">
+								Norway
+							</option>
+							<option value=" Pakistan">
+								Pakistan
+							</option>
+							<option value=" Panama">
+								Panama
+							</option>
+							<option value=" Peru (Perú)">
+								Peru (Perú)
+							</option>
+							<option value=" Philippines">
+								Philippines
+							</option>
+							<option value=" Poland">
+								Poland
+							</option>
+							<option value=" Portugal">
+								Portugal
+							</option>
+							<option value=" Qatar">
+								Qatar
+							</option>
+							<option value=" Romania">
+								Romania
+							</option>
+							<option value=" Russia">
+								Russia
+							</option>
+							<option value=" Saudi Arabia">
+								Saudi Arabia
+							</option>
+							<option value=" Singapore">
+								Singapore
+							</option>
+							<option value=" South Africa">
+								South Africa
+							</option>
+							<option value=" South Korea">
+								South Korea
+							</option>
+							<option value=" Spain">
+								Spain
+							</option>
+							<option value=" Sudan">
+								Sudan
+							</option>
+							<option value=" Sweden">
+								Sweden
+							</option>
+							<option value=" Switzerland">
+								Switzerland
+							</option>
+							<option value=" Syria">
+								Syria
+							</option>
+							<option value=" Taiwan">
+								Taiwan
+							</option>
+							<option value=" Thailand">
+								Thailand
+							</option>
+							<option value=" Turkey">
+								Turkey
+							</option>
+							<option value=" Ukraine">
+								Ukraine
+							</option>
+							<option value=" United Arab Emirates">
+								United Arab Emirates
+							</option>
+							<option value=" United Kingdom">
+								United Kingdom
+							</option>
+							<option value=" United States">
+								United States
+							</option>
+							<option value=" Venezuela">
+								Venezuela
+							</option>
+							<option value=" Vietnam">
+								Vietnam
+							</option>
+							<option value=" Yemen">
+								Yemen
+							</option>
+						</select>
+					</div>
+					<div class="form-group clearfix">
+						<label class="tit">Message<span class="red">*</span>：</label>
+						<textarea name="description" id="description" cols="" rows="" class="form-textarea" style="width:100%; height:150px;"></textarea>
+					</div>
+					<div style="border-top-color:#bebebe;border-top-style:solid;border-top-width:1px;">
+						<div class="col-xs-3" style="padding-top:20px;">
+							<button class="btn btn-primary" style="width:90%;" type="button">Submit</button>
+						</div>
+						<div class="col-xs-9"  style="padding-top:10px;">
+							<h5>Please indicate as much as possilble: product type,model number,software version,or Web page address.</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="container common-font main-footer">
+		<div class="row" style="padding-left:10vw;">
+			<div class="col-xs-12 col-sm-6">
+				<div class="col-xs-6">
+					<h4 class="footer-h4 font1">About Us</h4>
+					<ul class="footer-ul">
+						<li>
+							<a href="/sonic/about_us/introduction">Accton Corp</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/introduction#edgecore">Edgecore Corp</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/introduction#ignitenet">Ignitenent</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/arts_foundation">Accton Arts Foundation</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/charitable">Accton Charitable Foundation</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/news">News</a>
+						</li>
+						<li>
+							<a href="/sonic/about_us/investor">Investor Relationships</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-6">
+					<h4 class="footer-h4 font1">Solutions</h4>
+					<ul class="footer-ul">
+						<li>
+							<a href="/sonic">Open Networking Solutions</a>
+						</li>
+						<li>
+							<a href="/sonic/carrier_access">Carrier Access Solutions</a>
+						</li>
+						<li>
+							<a href="/sonic/iot">IoT Integration Solutions</a>
+						</li>
+						<li>
+							<a href="/sonic/sd_wan">SD-WAN Solutions</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<div class="col-xs-6">
+					<h4 class="footer-h4 font1">Support</h4>
+					<ul class="footer-ul">
+						<li>
+							<a href="/sonic/accton/download">Downloads</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/kb">Knowledge Base</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/wiki">Wiki</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/faq">FAQs</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/forum">Forum</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/resources/whitepaper">White Paper</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/videos">Technical videos</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/webinar">Webinar</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/sonic_now">SONiC Now</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-6">
+					<h4 class="footer-h4 font1">How to Buy</h4>
+					<ul class="footer-ul">
+						<li>
+							<a href="https://www.edge-core.com/where.php">Where to buy</a>
+						</li>
+						<li>
+							<a href="https://www.edge-core.com/contact.php">Contact Sales</a>
+						</li>
+						<li>
+							<a href="/sonic/accton/contact_us">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div><!-- /footer content -->
+		<div class="footer font2" style="padding-top:2vw;padding-left:11vw;color:#ffffff;">
+			Powered by Accton Technology &copy;
+		</div>
+		</div>
+
+
+{% include 'preset_js.html' %}
+</body>
+</html>

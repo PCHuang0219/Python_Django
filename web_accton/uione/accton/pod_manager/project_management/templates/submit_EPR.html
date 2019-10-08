@@ -1,0 +1,122 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TMS-Project Management</title>
+	{% include 'preset_style.html' %}
+	<style>
+        .content_area{padding-left:20px;}
+        #file{width:40%;margin-bottom:20px;}
+        .tableContent{padding-left:20px;}
+        #cancelBtn,
+        #saveEPR{float:right}
+		input[type="file"]{
+            display:ruby;
+        }
+		.tox-tinymce{height:500px !important;}
+	</style>
+</head>
+{% include 'template_pm.html' %}
+<div class="right_col" role="main">
+	<div class="clearfix"></div>
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
+			<div class="x_panel">
+                    <h1>NTC Submit EPR</h2>
+                    <div id="summary_area">
+                    </div>
+                    <div class="clearfix"></div>
+			</div>
+			<div class="x_panel">
+                <h2>Main</h2>
+                <div class="content_area">
+                    <div class="col-xs-12">
+                        Headline:<input id="headline" style="width:47vw;">
+                    </div>
+                    <br><br>
+                    <div class="col-xs-3">
+                        Severity:
+                        <select id="severity" style="width:150px">
+                            <option>1-Gate</option>
+                            <option>2-Critical</option>
+                            <option>3-Major</option>
+                            <option>4-Minor</option>
+                            <option>5-Enhancement</option>
+                    </select>
+                    </div>
+                    <div class="col-xs-2">
+                        CSC:
+                        <select id="CSC">
+                            <option>NA</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-7">
+                        Reproduce Rate:
+                        <input id="numerator" style="width:5vw;"> / <input id="denominator" style="width:5vw;">
+                    </div>
+                    <p>Test Problem</p>
+                    <textarea id="testProblem" style="width:70vw;height:8vw"></textarea>
+                </div>
+                <h2>Expected Result</h2>
+                <div class="content_area">
+                    <textarea id="expectedResult" style="width:70vw;height:8vw"></textarea>
+                </div>
+                <h2>Test Procedure</h2>
+                <div class="content_area">
+                    <textarea id="testProcedure" style="width:70vw;height:8vw"></textarea>
+                </div>
+                <h2>Attachments<a class="btn btn-primary" data-toggle="modal" data-target="#addAttachment" style="margin-left:30px;">Add Attachments</a></h2>
+                <div class="content_area">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">File Name</th>
+                                <th scope="col">File Size</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attachmentSummary">
+                        </tbody>
+                    </table>
+                </div>
+                <a href="/project_management/TR_Detail" id="cancelBtn" class="btn btn-primary">Cancel</a>
+                <a id="saveEPR" class="btn btn-primary">Save</a>
+            </div>
+            <div aria-hidden="true" class="modal" id="addAttachment" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title">Add Attachments
+                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button></h1>
+                        </div>
+                        <div class="modal-body">
+                            <div id="attachmentContent" class="form-group clearfix">
+                                <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    Description<span class="red">*</span>： 
+                                    <input id="description" style="width:30%;"> 
+                                    <input id="file" type="file">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-primary" id="createAttachment">Save</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+<!-- footer content -->
+<div class="clearfix"></div>
+{% include 'main_footer.html' %}
+	</div>
+</div>
+    {% include 'preset_js.html' %}
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/static/js/pm/EPR.js"></script>
+	<script src="https://cdn.tiny.cloud/1/hbeedhz4gcyisvxe94ul7y51ehaztiym80h2qna8jxr61ie3/tinymce/5/tinymce.min.js"></script> 
+	<script>tinymce.init({selector:'textarea.form-textarea'});</script>
+</body>
+</html>

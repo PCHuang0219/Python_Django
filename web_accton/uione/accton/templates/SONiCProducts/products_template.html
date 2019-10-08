@@ -1,0 +1,223 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{% block title %} TMS-AS5512-54X {% endblock %}</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/sonic.css' %}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/vendors/slick/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/vendors/slick/slick/slick.css"/>
+</head>
+{% include 'template_sonic.html' %}
+<div class="right_col common_style common_font_family" role="main">
+	<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+	<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+	<!-- ====     page content     ==== -->
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 system_T1_Table">
+			<div class="x_panel">
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pictureChoose">
+					{% block picture %}
+					<div class="big_picture"><img id="bigger_picture" src="{% static 'images/products/10g/as5512-54x/as5512-54x-1.png' %}"></div>
+					<div class="col-xs-12 col-sm-12">
+						<div class="col-xs-4 col-sm-4"><img class="img-thumbnail" src="{% static 'images/products/10g/as5512-54x/as5512-54x-1.png'%}"></div>
+						<div class="col-xs-4 col-sm-4"><img class="img-thumbnail" src="{% static 'images/products/10g/as5512-54x/as5512-54x-2.png'%}"></div>
+						<div class="col-xs-4 col-sm-4"><img class="img-thumbnail" src="{% static 'images/products/10g/as5512-54x/as5512-54x-3.png'%}"></div>
+					</div>{% endblock %}
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+					<div class="col-12 productSummary title">
+						<img src="{% static 'images/logo/edgecore.png' %}" style="width: 20%; height:auto;top:15px">
+						<div class="productIntroduction common-style-font2 content">
+							{% block productSummary %}
+							<h2>AS5512-54X</h2>
+							<div>10GbE Data Center Switch Bare-metal Hardware</div>
+							<p>The AS5512-54X provides full line-rate switching at Layer 2 or Layer 3 across 48 x 10GbE ports and 6 x 40GbE uplinks. The switch can be deployed either as a Top-of-Rack switch, or as part of a 10GbE or 40GbE distributed spine, forming a non-blocking folded-Clos data center fabric.</p>
+							<p>★​ Available in Taiwan and China only.</p>
+							{% endblock %}
+						</div>
+						<div class="contactToBuy">
+							<a href="/sonic/wheretobuy"><button class="btn btn-primary btn-sm btn1" id="find-me" type="button">Where to Buy</button></a>
+							<a href="/sonic/sales_contact" target="_blank"><button class="btn btn-primary btn-sm btn1" type="button">Sales Contact</button></a>
+							<a href="/sonic/buynow" target="_blank"><button class="btn btn-primary btn-sm btn1" type="button">Buy Now</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="x_panel">
+				<h1 class="sonic_content_title">Overview</h1>{% block Overview %}
+				<p class="content2 font2">The Edgecore AS5512-54X switch meets the high-performance, availability, and network-scaling requirements of enterprise and cloud data centers. The AS5512-54X provides full line-rate switching at Layer 2 or Layer 3 across 48 x 10GbE ports and 6 x 40GbE uplinks. The switch can be deployed either as a Top-of-Rack switch, or as part of a 10GbE or 40GbE distributed spine, forming a non-blocking folded-Clos data center fabric. The switch is rack mountable in either a standard 19 inch rack, or with the Open Rack Switch Adapter in a 21 inch Open Rack.</p>
+				<p class="content2 font2">The AS5512-54X hardware provides the high availability features required for data center operation, including; redundant, hot-swappable AC or -48 VDC PSUs or 12 VDC power input; fan tray with 4+1 redundant fans; and port-to-power or power-to-port airflow options. The AS5512-54X is an ideal Top-of-Rack switch for virtualized data centers, with its support of VXLAN and NVGRE tunneling functions in hardware.</p>{% endblock %}
+			</div>
+			<div class="x_panel">
+				<h1 class="sonic_content_title">Specs</h1>{% block specs %}
+				<table class="table table-bordered table-striped content font2">
+					<colgroup>
+						<col class="col-xs-6">
+						<col class="col-xs-6">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">
+								<p style="float:right">Ports</p>
+							</th>
+							<td>65</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<p style="float:right">Predominant Port Type</p>
+							</th>
+							<td>
+								100GbE QSFP28
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<p style="float:right">High Availability</p>
+							</th>
+							<td>Redundant Power Supply, Redundant Fans</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<p style="float:right">Compatible Soft Option</p>
+							</th>
+							<td>Microsoft - SONiC , Open Compute Project - Open Network Linux</td>
+						</tr>
+					</tbody>
+				</table>{% endblock %}
+			</div>
+			<div class="x_panel">
+				<h1 class="sonic_content_title">Features</h1>
+				<div class="col-md-12">
+					{% block features %}
+					<div class="col-md-6">
+						<div class="bs-example" data-example-id="simple-ul">
+							<ul>
+								<li>Cost-effective, bare-metal switch infrastructure for data center fabric.</li>
+								<li>48 x SFP+ switch ports, supporting 10GbE (DAC, 10GBASE-SR/LR) or 1GbE (1000BASE-T/SX/LX).</li>
+								<li>Port grouping of 4 x 10G ports into one 40G port at the physical layer for maximum bandwidth utilization, and for 300m optical reach over MMF.</li>
+								<li>Full line-rate Layer 2 or Layer 3.</li>
+								<li>Flexible operation mode support: legacy/SDN mode and Hybrid mode.</li>
+								<li>Support VM Switching, VXLAN and NVGRE tunneling support in hardware for network virtualization.</li>
+								<li>Rack mountable in standard 19" racks. Mountable in 21" Open Rack with the Open Rack Switch Adapter.</li>
+								<li>Supports hot/cold aisle with port-to-power and power-to-port airflow SKUs.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="bs-example" data-example-id="simple-ul">
+							<ul>
+								<li>All ports on front; PSUs, fan tray on rear.</li>
+								<li>Hot-swappable, load sharing, redundant AC or -48 VDC PSUs. 12 VDC power input option.</li>
+								<li>Hot swappable 4+1 redundant fans.</li>
+								<li>Management: Ethernet and console RJ-45 ports; USB storage port.</li>
+								<li>Hardware switch pre-loaded with Open Network Install Environment (ONIE) for automated loading of compatible independent SwitchOS software.</li>
+								<li>Compatible with EstiNOS 2.0 and later version from EstiNet Technologies Inc.</li>
+								<li>CPU and memory subsystem provided on factory-pluggable internal module for flexibility – AS5512-54X SKUs with Intel™ Atom® C2538 x86 processor, to allow switch to run scripts and applications built with standard Linux tools.</li>
+							</ul>
+						</div>
+					</div>{% endblock %}
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12">
+			<div class="x_panel">
+				<h1 class="sonic_content_title">Downloads</h1>{% block downloads %}
+				<table class="table Table table-hover common-style-font2 content">
+					<thead>
+						<tr>
+							<th scope="col">Category</th>
+							<th scope="col">Name</th>
+							<th scope="col">Rev</th>
+							<th scope="col">Download File Name</th>
+							<th scope="col">Release Notes</th>
+							<th scope="col">Date</th>
+							<th scope="col">Note</th>
+							<th scope="col">Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Datasheet</th>
+							<td>AS5512-54X DS R03</td>
+							<td>n/a</td>
+							<td>AS5512-54X_DS_R03_20180614.pdf</td>
+							<td>n/a</td>
+							<td>2018-06-14</td>
+							<td>description n/a</td>
+							<td>
+								<a href="{% static 'downloads/products/10g/as5512-54x/AS5512-54X_DS_R03_20180614.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">Firmware</th>
+							<td>SONiC image</td>
+							<td>n/a</td>
+							<td>sonic-broadcom.bin</td>
+							<td>n/a</td>
+							<td>n/a</td>
+							<td>description n/a</td>
+							<td>
+								<a id="SONiC_Image_Downloads" href="#"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>{% endblock %}
+			</div>
+		</div>
+	</div>
+	<div class="x_panel">
+			<h1 class="sonic_content_title">Knowledge Base</h1>
+			<div class="row">
+				<div class="col-sm-2 col-xs-3 kb" id="kbFirstChild">
+					<div class="clickable-pic"><a class="target=_blank" href="/sonic/accton/kb"><img class="thumbnail" alt="..." src="{%static 'images/kb/kbBase.png' %}"></div>
+					<p class="kb_content">Knowledge Base</p></a>
+				</div>
+				<div class="col-sm-2 col-xs-3 kb">
+					<div class="clickable-pic"><a class="target=_blank" href="/sonic/accton/wiki"><img class="thumbnail" alt="..." src="{%static 'images/kb/kbWiki.png' %}"></div>
+						<p class="kb_content">Wiki</p></a>
+				</div>
+				<div class="col-sm-2 col-xs-3 kb">
+					<div class="clickable-pic"><a class="target=_blank" href="/sonic/accton/faq"><img class="thumbnail" src="{%static 'images/kb/kbFaq.png' %}"></div>
+						<p class="kb_content">FAQs</p></a>
+				</div>
+				<div class="col-sm-2 col-xs-3 kb">
+						<div class="clickable-pic"><a href="/sonic/accton/forum"><img class="thumbnail" src="{%static 'images/kb/kbForum.png' %}"></div>
+						<p class="kb_content">Forum</p></a>
+				</div>
+				<div class="col-sm-2 col-xs-3 kb">
+						<div class="clickable-pic"><a href="/sonic/accton/resources/whitepaper"><img class="thumbnail" src="{%static 'images/kb/kbWp.png' %}"></div>
+						<p class="kb_content">White Paper</p></a>
+				</div>
+				<div class="col-sm-2 col-xs-3 kb">
+						<div class="clickable-pic"><a href="/sonic/accton/videos"><img class="thumbnail" src="{%static 'images/kb/kbVideo.png' %}"></div>
+						<p class="kb_content">Technical Videos</p></a>
+				</div>
+				<div class="col-sm-2 col-xs-3 kb">
+						<div class="clickable-pic"><a href="/sonic/accton/webinar"><img class="thumbnail" src="{%static 'images/kb/kbWeb.png' %}"></div>
+						<p class="kb_content">Webinar</p></a>
+				</div>
+				<div class="col-sm-2 col-xs-3 kb">
+						<div class="clickable-pic"><div class="clickable-pic"><a class="target=_blank" href="/sonic/accton/sonic_now"><img class="thumbnail" alt="..." src="{%static 'images/kb/kbSonic.png' %}"></div>
+						<p class="kb_content">SONiC Now</p></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>
+<!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+{% include 'preset_js.html' %}
+<!-- Additional JS-->
+<script src="{% static 'js/sonic/product.js' %}"></script>
+<script type="text/javascript" src="/static/vendors/slick/slick/slick.min.js"></script>
+</body>
+</html>

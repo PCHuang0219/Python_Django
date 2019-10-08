@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    ATNURLLIB.html( )
+<div class="container">
+
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-xs-6">
+
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img src="Images/tom.png" class="media-object" alt="tom" />
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Tom<small><i>July</i></small></h4>
+                </div>
+            </div>
+            <ul>
+                <li> dot 1</li>
+                <li> dot 2</li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="row">
+
+        <form>
+            <input type="checkbox">
+            <input>
+                {% now "F jS" %} <br />
+                {% now "F jS o" %} <br />
+                {% now "Y" as current_year %} <br />
+                Copyright {{ current_year }} <br />
+
+                {# waht is {% if value| <filter> <condition> <value> %} ???        #}
+
+            <label > </label>
+            <p3> Get response:</p3>
+            <br>
+            {{ bodytext }}
+        </form>
+    </div>
+    <br />
+    <br />
+
+
+    <div class="row">
+            <ul>
+                <li>Node Summary</li>
+                <li> {{ bodytext }}</li>
+                {{ "begin" }}{#
+                #} this text is never displayed
+                {{ "end" }}
+                #}()
+            </ul>
+    </div>
+
+
+    <br />
+    <br />
+    <br />
+
+
+<!-- bootstrap 27 panels -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10">
+            <h3>Basic Panel</h3>
+
+            <!-- <div class="panel panel-default sidebarContent">
+                <div class="panel panel-default customDiv">    -->
+                <div class="panel panel-default panelContent">
+                <div class="panel-heading">
+                    This is Panel-heading - default panel
+                </div>
+                <div class="panel-body">
+                    This is panel body, bootstrap is a free open-source
+                </div>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h2>Primary Panel(h2)</h2>
+                </div>
+                <!-- <div class="panel-body">
+                    Browse through nodes
+                </div> -->
+            </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    Info Panel
+                </div>
+                <div class="panel-body">
+                    Bootstrap panel has five sub-types
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- bootstrap tutorial 6 bootstrap nested rows and columns -->
+<!-- the key point is in static/build/css/custom.css        -->
+<!--  there are .sidebarContent and .mainContent styles     -->
+<!--    +---------+--------------------------------+
+        |         |                                |
+        |         |                                |
+        |         |                                |
+        |         |                                |
+        +---------+                                |
+        |         |                                |
+        |         |                                |
+        |         |                                |
+        |         |                                |
+        |         |                                |
+        |         |                                |
+        |         |                                |
+        |         |                                |
+        +---------+--------------------------------+
+                                                            -->
+<!--
+.sidebarContent{
+    margin-bottom:10px;
+    min-height:150px;
+    background-color:silver;
+    text-align:center;
+    font-size:large;
+}
+
+.mainContent{
+    margin-bottom:10px;
+    min-height:310px;
+    background-color:silver;
+    text-aligh:center;
+    font-size:large;
+}
+-->
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-3">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="sidebarContent">Side Bar 1</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="sidebarContent">Side Bar 2</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-9">
+            <div class="mainContent">Main Content Area</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-5">
+            <div class="customDiv">Column Size 5</div>
+        </div>
+
+        <div class="col-xs-7">
+
+            <div class="row">
+                <div class="col-xs-6 sidebarContent">
+                    col xs-6
+                </div>
+                <div class="col-xs-6">
+                    col xs-6
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<!-- testing h1 to h7  -->
+    <div class="row">    show raw data
+    </div>
+    <h1> This is H1 </h1>
+    <h2> This is H2 </h2>
+    <h3> This is H3 </h3>
+    <h4> This is H4 </h4>
+    <h5> This is H5 </h5>
+    <h6> This is H6 </h6>
+
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+                    <div class="media-left">
+                    <a href="#">
+                        <img src="images/cloud.png" class="media-object" alt="tom" />
+                    </a>
+                </div>
+
+    <br />
+
+<!-- Bootstrap tutorial 7: Bootstrap Image gallery -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-5">
+
+            <!-- <img src="images/data-analytics.png" class="center-block" alt="Data-Analytics.jpg"> -->
+            <!--                                                      center-block                   -->
+            <img src={% static "images/data-analytics.jpg"  %} class=" pull-left img-responsive " alt="Data-Analytics.jpg" />
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Image Gallery -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Bootstrap Image Gallery</h3>
+        </div>
+        <div class="col-xs-4">
+            <div class="customDiv">
+                <p> Desert</p>
+                <img src={% static "images/learn.jpg" %} />
+            </div>
+        </div>
+
+         <div class="col-xs-4">
+             <div class="customDiv">
+                 <!-- <p>Chrysanthemum</p>
+                 <img src={% static "images/learn.jpg" %} />  -->
+                 <a href="{% static "images/learn.jpg" %}">
+                     <p>Chrysanthemum</p>
+                     <img src={% static "images/learn.jpg" %} />
+                 </a>
+             </div>
+        </div>
+        <!-- wrong one
+         <div class="col-xs-4">
+             <div class="customDiv">
+                 <p>Chrysanthemum</p>
+             </div>
+            <img src={% static "images/learn.jpg" %} />
+         </div> -->
+
+         <div class="col-xs-4">
+             <div class="customDiv">
+                 <p>Chrysanthemum</p>
+                 <img src={% static "images/learn.jpg" %} />
+             </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">
+            <img src={% static "images/learn.jpg" %} />
+        </div>
+         <div class="col-xs-4">
+            <img src={% static "images/learn.jpg" %} />
+        </div>
+         <div class="col-xs-4">
+            <img src={% static "images/learn.jpg" %} />
+         </div>
+    </div>
+
+</div>
+
+
+
+
+
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>addr</th>
+            <th>zip</th>
+            </thead>
+            <tbody>
+            <tr>
+            <td>01</td>
+            <td>James Lo</td>
+            <td>a@abc.com</td>
+            <td>100 Kwang-Fu S Rd</td>
+            <td>105</td>
+            </tr>
+
+
+                    {% comment %}
+                    http://127.0.0.1:8000/redfish/v1/$metadata#ServiceRoot
+                    'Chassis': {'@odata.id': '/redfish/v1/Chassis'},
+                    Chassis     /redfish/v1/Chassis
+                                https://10.3.0.7:8091/redfish/v1/Chassis
+
+
+
+                    {% endcomment %}
+
+            <tr>
+            <td>02</td>
+            <td>K Lo</td>
+            <td>a@abc.com</td>
+            <td>100 Kwang-Fu S Rd</td>
+            <td>105</td>
+            </tr>
+            <tr>
+            <td>03</td>
+            <td>Adam Lo</td>
+            <td>a@abc.com</td>
+            <td>100 Kwang-Fu S Rd</td>
+            <td>105</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+</body>
+</html>

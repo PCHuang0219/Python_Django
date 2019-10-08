@@ -1,0 +1,80 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TMS-Accton Webinar</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/video.css' %}" rel="stylesheet">
+</head>
+{% include 'template_sonic.html' %}
+<div class="right_col" role="main">
+	<div class="x_panel">
+		<div class="col-sm-3">
+			<div id="typeSelect" class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">By Type<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="#">Support</a></li>
+					<li><a role="menuitem" href="#">Test</a></li>
+					<li><a role="menuitem" href="#">Introduction</a></li>
+					<li><a role="menuitem" href="#">Select All</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div id="bandwidthSelect" class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">By Bandwidth<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="#">Support</a></li>
+					<li><a role="menuitem" href="#">Test</a></li>
+					<li><a role="menuitem" href="#">Introduction</a></li>
+					<li><a role="menuitem" href="#">Select All</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div id="testSelect" class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">test<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="#">Support</a></li>
+					<li><a role="menuitem" href="#">Test</a></li>
+					<li><a role="menuitem" href="#">Introduction</a></li>
+					<li><a role="menuitem" href="#">Select All</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<button id="apply" class="btn btn-info" type="button">apply</button>
+		</div>
+		<div class="col-sm-4">
+			<div class="col-12"> SONiC: Enabling Fast Evolution in the Network </div>
+			<div class="youtube">
+				<iframe width=80% src="https://www.youtube.com/embed/DvFTCpwnUQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="col-12"> SONiC: Enabling Fast Evolution in the Network </div>
+			<div class="youtube">
+				<iframe width=80% src="https://www.youtube.com/embed/DvFTCpwnUQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="col-12"> SONiC: Enabling Fast Evolution in the Network </div>
+			<div class="youtube">
+				<iframe width=80% src="https://www.youtube.com/embed/DvFTCpwnUQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>
+<!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+	{% include 'preset_js.html' %}
+	<!-- Additional JS-->
+	<script src="{% static 'js/sonic/video.js' %}"></script>
+</body>
+</html>

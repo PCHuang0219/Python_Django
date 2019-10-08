@@ -1,0 +1,161 @@
+{% extends 'all_frame.html' %}
+{% block sideMenu %}
+<ul class="nav side-menu">
+	<!--
+    <li id="overview">
+            <a href="/overview" style="color:#fff;font-size:12pt;"><i class="fa fa-eye"></i>Overview</a>
+        </li>
+        <li id="components">
+            <a href="/components/1" style="color:#fff;font-size:12pt;"><i class="fa fa-cubes"></i> Components </a>
+            <ul class="child_menu" style="display: none;">
+                <li>
+                    <div class="checkbox">
+                        <label><input checked class="components_controller" type="checkbox" value="components_racks">&nbsp;&nbsp;Racks</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label><input checked class="components_controller" type="checkbox" value="components_blad es">&nbsp;&nbsp;Blades</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label><input checked class="components_controller" type="checkbox" value="components_storage">&nbsp;&nbsp;Storage</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label><input checked class="components_controller" type="checkbox" value="components_switches">&nbsp;&nbsp;Switches</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label><input checked class="components_controller" type="checkbox" value="components_nvme_drawers">&nbsp;&nbsp;NVMe Drawers</label>
+                    </div>
+                </li>
+            </ul>
+                                            <li><a href="/#">Racks</a></li>
+                                            <li><a href="/#">Blades</a></li>
+                                            <li><a href="/#">Storage</a></li>
+                                            <li><a href="/#">Switches</a></li>
+                                            <li><a href="/#">NVMe Drawers</a></li>
+                                        </ul>
+    
+        </li>
+        -->
+	<!--        <li id="system">
+            <a href="/system" style="color:#fff;font-size:12pt;"><i class="fa fa-group"></i> Systems </a>
+            <ul class="child_menu" style="display: none;">
+                <li>
+                    <div class="checkbox">
+                        <label><input checked class="system_controller" type="checkbox" value="system_composed_node">&nbsp;&nbsp;Composed Node</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label><input checked class="system_controller" type="checkbox" value="system_vlans">&nbsp;&nbsp;VLANs</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label><input checked class="system_controller" type="checkbox" value="system_volume">&nbsp;&nbsp;Volume Images</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label><input checked class="system_controller" type="checkbox" value="system_switches">&nbsp;&nbsp;Switches</label>
+                    </div>
+                </li>
+            </ul>
+            
+            /*                                    <a href="/system" style="color:#fff;font-size:12pt;"><i class="fa fa-group"></i> Systems </a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="/#">Composed Node</a></li>
+                                            <li><a href="/#">VLANs</a></li>
+                                            <li><a href="/#">Volume Images</a></li>
+                                            <li><a href="/#">Switches</a></li>
+                                        </ul>
+            */
+        </li>
+-->
+	<!--        <li id="manage">
+            <a href="/manage" style="color:#fff;font-size:12pt"><i class="fa fa-google-wallet"></i> Manage</a>
+        </li>
+-->
+	<li id="sonic" class="sideMenu">
+		<a href="/sonic" class="menutitle2 common-font1"><i class="fa"><img class="sonic_icon" src="/static/images/sonic_white.png"></i> SONiC</a>
+		<ul class="nav child_menu">
+			<li>
+				<a href="/sonic/supported-devices">Supported Products</a>
+			</li>
+			<li>
+				<a href="/sonic/advantage">Advantage</a>
+			</li>
+			<li>
+				<a href="/sonic/products">Products</a>
+			</li>
+			<li>
+				<a href="/sonic/roadmap">Roadmap</a>
+			</li>
+			<li>
+				<a href="/sonic/support">Support</a>
+			</li>
+		</ul>
+	</li>
+	<li id="monitor" class="sideMenu">
+		<a href="/monitor" class="menutitle2 common-font1"><i class="fa fa-desktop"></i>CCTV System</a>
+	</li>
+	<li id="test">
+		<a href="javascript:void(0)" class="menutitle2 common-font1"><i class="fa fa-group"></i> Network Test Center</a>
+		<ul class="nav child_menu"  style="display: block;">
+			<li>
+				<a href="/test/jobManagement">Job management</a>
+			</li>
+			<li>
+				<a href="/test/">Job submission</a>
+			</li>
+			<li>
+				<a href="/test/status">Job status</a>
+            </li>
+            <li>
+                <a href="/test/jenkinsViews">Jenkins Builds</a>
+            </li>
+            <li>
+                <a href="/test/labInformation">Lab Information</a>
+            </li>
+            <li>
+                <a href="/test/deviceManagement">Device Management</a>
+            </li>
+			<!-- <li>
+				<a href="/test/jobDetail">Job detail</a>
+			</li>
+			<li>
+				<a href="/test/jobLog">Job log</a>
+			</li> -->
+		</ul>
+	</li><!--        <li id="network">
+            <a href="/network" style="color:#fff;font-size:12pt;"><i class="fa fa-sitemap"></i> Network(ipmitool)</a>
+        </li>
+-->
+    <li id="project_management">
+        <a href="/project_management/" class="menutitle2 common-font1"><i class="fa fa-folder-open"></i>TMS Project Management</a>
+		<ul class="nav child_menu">
+			<li>
+				<a href="/project_management/att">AT&T</a>
+			</li>
+			<li>
+				<a href="/project_management/fb">Face Book</a>
+			</li>
+			<li>
+				<a href="/project_management/amozon">Amozon</a>
+			</li>
+		</ul>
+    </li>
+    <!-- <li id="dms" class="sideMenu">
+		<a href="/dms" class="menutitle2 common-font1"><i class="fa fa-desktop"></i>Document Management System</a>
+	</li> -->
+	<li id="tmsadmin" class="sideMenu">
+		<a href="/tmsadmin/" class="menutitle2 common-font1"><i class="fa fa-gears"></i>TMS Admin</a>
+	</li>
+</ul>
+{% endblock %}

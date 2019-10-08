@@ -1,0 +1,255 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Where to Buy</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/howtobuy.css' %}" rel="stylesheet">
+</head>
+{% include 'template_sonic.html' %}
+<div class="right_col common_style" role="main">
+	<div class="clearfix"></div>
+	<div class="row wheretobuy">
+	<ul id="chooseArea" class="nav nav-tabs">
+		<li id="area1" value="asia"><a href="#">Asia Pacific</a></li>
+		<li id="area2" value="emea"><a href="#">EMEA</a></li>
+		<li id="area3" value="n-america"><a href="#">North America</a></li>
+		<li id="area4" value="l-america"><a href="#">Latin America</a></li>
+		<li id="area5" value="rc"><a href="#">Russia and CIS</a></li>
+	</ul>
+	<div id="asia" class="distributors" style="display:bolck">
+		<div class="distributor">
+			<div class="col-xs-6"><a href="#ASIA_Distributors"><h2>Distributors</h2></a>
+			</div>
+			<div class="col-xs-6"><a href="#ASIA_SI"><h2>System Integrator/Value-added Reseller/Reseller</h2></a></div>
+			<a name="#ASIA_Distributors">
+				<h1>Distributors</h1>
+			</a>
+			<div class="distributor_data">
+				<div class="card col-md-3 col-sm-2">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							Australia
+						</div>
+						<div class="panel-body">
+							<img src="{% static 'images/wheretobuy/endy.jpg' %}"><br>
+							ENDY AUSTRALIA<br>
+							1/14 Wellington Street,<br>
+							Acacia Ridge Brisbane QLD 4110<br>
+							TEL: 1300 725 323 Press Option 1<br>
+							FAX: <br>
+							<a href="http://www.endy.com.au">http://www.endy.com.au</a><br>
+						</div>
+					</div>
+				</div>
+				<div class="card col-md-3 col-sm-2">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							Australia
+						</div>
+						<div class="panel-body">
+							<img src="{% static 'images/wheretobuy/newgen.png' %}"><br>
+							Newgen Systems<br>
+							Newgen Systems Pty Ltd Suite 401,<br>
+							737 Burwood Road Hawthorn East 3123<br>
+							TEL: +61 (0) 3 9894 5130<br>
+							FAX: +61 (0) 3 9894 5131<br>
+							<a href="http://www.newgensystems.com">http://www.newgensystems.com</a><br>
+						</div>
+					</div>
+				</div>
+				<div class="card col-md-3 col-sm-2">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							Bangladesh
+						</div>
+						<div class="panel-body">
+							<img src="{% static 'images/wheretobuy/richman.png' %}"><br>
+							Richman Informatics<br>
+							Navana DH Tower, Suite # 502,<br>
+							6 Panthopath, Dhaka-1215, Bangladesh<br>
+							TEL: +880 (2) 9143683<br>
+							FAX: <br>
+							<a href="http://www.richman.com.bd">http://www.richman.com.bd</a><br>
+						</div>
+					</div>
+				</div>
+				<div class="card col-md-3 col-sm-2">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							China
+						</div>
+						<div class="panel-body">
+							<img src="{% static 'images/wheretobuy/atan.png' %}"><br>
+							ATAN<br>
+							1F, 63, No.421, Hong Cao Rd.<br>
+							Shanghai 200233 China<br>
+							TEL: +86-21-64859922 ext:3806<br>
+							FAX: <br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="SI">
+			<a name="ASIA_SI">
+				<div class="col-xs-12">
+					<h1>System Integrator/Value-added Reseller/Reseller</h1>
+				</div>
+			</a>
+			<div class="reseller_data">
+				<div class="card col-md-3 col-sm-2">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							Brunei
+						</div>
+						<div class="panel-body">
+							<img src="{% static 'images/wheretobuy/cfk.png' %}"><br>
+							C. F. KING ENTERPRISE<br>
+							Unit 23, Bgn Awg Hj Matussin H.M. dan Hj Abdullah H.A. <br>
+							dan Adik-beradik Kg. Kiulap, Bandar Seri<br>
+							Begawan, Negara Brunei Darussalam BE1518<br>
+							TEL: +673 2237382, 2237383, 7188180<br>
+							FAX: +673 2237380, 2237381<br>
+							<a href="http://www.campura.com">http://www.campura.com</a><br>
+						</div>
+					</div>
+				</div>
+				<div class="card col-md-3 col-sm-2">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							Cambodia
+						</div>
+						<div class="panel-body">
+							<img src="{% static 'images/wheretobuy/campura.png' %}"><br>
+							No.63BIS, Street 608, Sangkart Beng Kok II, Khan Toul Kok, Phnom Penh, Cambodia.<br>
+							TEL: (855) 23 884 242<br>
+							FAX: (855) 23 884 814<br>
+							<a href="http://www.campura.com">http://www.campura.com</a><br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="emea" class="distributors">
+		<div class="distributor">
+			<div class="col-xs-6"><a href="#EMEA_Distributors">
+					<h2>Distributors</h2>
+				</a></div>
+			<div class="col-xs-6"><a href="#EMEA_SI">
+					<h2>System Integrator/Value-added Reseller/Reseller</h2>
+				</a></div>
+			<a name="EMEA_Distributors">
+				<h1>Distributors</h1>
+			</a>
+			<div class="distributor_data">
+				
+			</div>
+		</div>
+		<div class="SI">
+			<a name="EMEA_SI">
+				<div class="col-xs-12">
+					<h1>System Integrator/Value-added Reseller/Reseller</h1>
+				</div>
+			</a>
+			<div class="reseller_data">
+				
+			</div>
+		</div>
+	</div>
+		<div id="n-america" class="distributors">
+			<div class="distributor">
+				<div class="col-xs-6"><a href="#NA_Distributors">
+						<h2>Distributors</h2>
+					</a></div>
+				<div class="col-xs-6"><a href="#NA_SI">
+						<h2>System Integrator/Value-added Reseller/Reseller</h2>
+					</a></div>
+				<a name="NA_Distributors">
+					<h1>Distributors</h1>
+				</a>
+				<div class="distributor_data">
+					
+				</div>
+			</div>
+			<div class="SI">
+				<a name="NA_SI">
+					<div class="col-xs-12">
+						<h1>System Integrator/Value-added Reseller/Reseller</h1>
+					</div>
+				</a>
+				<div class="reseller_data">
+					
+				</div>
+			</div>
+		</div>
+		<div id="l-america" class="distributors">
+			<div class="distributor">
+				<div class="col-xs-6"><a href="#LA_Distributors">
+						<h2>Distributors</h2>
+					</a></div>
+				<div class="col-xs-6"><a href="#LA_SI">
+						<h2>System Integrator/Value-added Reseller/Reseller</h2>
+					</a></div>
+				<a name="LA_Distributors">
+					<h1>Distributors</h1>
+				</a>
+				<div class="distributor_data">
+					
+				</div>
+			</div>
+			<div class="SI">
+				<a name="LA_SI">
+					<div class="col-xs-12">
+						<h1>System Integrator/Value-added Reseller/Reseller</h1>
+					</div>
+				</a>
+				<div class="reseller_data">
+					
+				</div>
+			</div>
+		</div>
+		<div id="rc" class="distributors">
+			<div class="distributor">
+				<div class="col-xs-6"><a href="#RC_Distributors">
+						<h2>Distributors</h2>
+					</a></div>
+				<div class="col-xs-6"><a href="#RC_SI">
+						<h2>System Integrator/Value-added Reseller/Reseller</h2>
+					</a></div>
+				<a name="RC_Distributors">
+					<h1>Distributors</h1>
+				</a>
+				<div class="distributor_data">
+					
+				</div>
+			</div>
+			<div class="SI">
+				<a name="RC_SI">
+					<div class="col-xs-12">
+						<h1>System Integrator/Value-added Reseller/Reseller</h1>
+					</div>
+				</a>
+				<div class="reseller_data">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+{% include 'preset_js.html' %}
+<!-- Get Client IP-->
+<script src="http://pv.sohu.com/cityjson"></script>
+<script src="{% static 'js/sonic/wheretobuy.js' %}"></script>
+</body>
+
+</html>

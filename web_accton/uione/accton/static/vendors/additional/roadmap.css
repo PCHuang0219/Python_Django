@@ -1,0 +1,25 @@
+.presentationTitle{
+    color:#20304b;
+    text-align:left;
+    padding:5px;
+    border-bottom-style:solid;
+    border:1px solid #E6E9ED;
+}
+.presentationTable > thead > tr > th:first-child{
+    width: 80%;
+}
+.showDoc{
+    cursor:pointer;
+}
+.tr-only-hide > td {
+    border:0px !important;
+}
+td{
+  color:black;
+}
+.tr-only-hide > td {
+  color:#60718D;
+}
+td > a{
+  color: blue;
+}

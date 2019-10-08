@@ -1,0 +1,424 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Web Camera 001</title>
+
+<!-- Bootstrap -->
+<link href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+<!-- NProgress -->
+<link href="{% static 'vendors/nprogress/nprogress.css' %}" rel="stylesheet">
+<!-- iCheck -->
+<link href="{% static 'vendors/iCheck/skins/flat/green.css' %}" rel="stylesheet">
+
+<!-- bootstrap-progressbar -->
+<link href="{% static 'vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' %}" rel="stylesheet">
+<!-- JQVMap -->
+<link href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}" rel="stylesheet"/>
+<!-- bootstrap-daterangepicker -->
+<link href="{% static 'vendors/bootstrap-daterangepicker/daterangepicker.css' %}" rel="stylesheet">
+
+<!-- Custom Theme Style -->
+<link href="{% static 'build/css/custom.css' %}" rel="stylesheet">
+
+{% comment %}
+    <script type="text/javascript">
+      var video = document.querySelector("#video");
+
+      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+      if (navigator.getUserMedia) {
+        alert('hello');
+          navigator.getUserMedia( {
+              video : true
+          },
+          handleVideo, videoError);
+      }
+
+      function handleVideo(stream) {
+          video.src = window.URL.createObjectURL(stream);
+          video.play();
+      }
+
+      function videoError(e) {
+          // do something
+      }
+
+    </script>
+{% endcomment %}
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <table border="1" width="900" align="center">
+            <tr align="center">
+                <td>
+                    Web Camera
+                    <div id="camera" style="height:300px; width:400px; border-style:solid;">
+                        <video id="video" width="400" height="300"></video>
+                    </div>
+                </td>
+                <td>
+                    Photo Frame
+                    <div id="frame" style="height:300px; width:400px; border-style:solid;">
+                        <canvas id="canvas" width="400" height="300"></canvas>
+                    </div>
+                </td>
+            </tr>
+
+            <tr align="center">
+                <td colspan="2">
+                    <button id="snap" onclick="snap()">Snap Photo</button>
+                </td>
+            </tr>
+
+        </table>
+
+            <button class="btn btn-primary btn-lg pull-right" data-target="#loginModal"
+                    data-toggle="modal">Login</button>
+            <div class="modal fade" data-keyboard="false" data-backdrop="static" id="loginModal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">Login</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputUserName">User Name</label>
+                                    <input class="from-control" placeholder="Login Username"
+                                           type="text" id="inputUseran"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword">Password</label>
+                                    <input class="form-control" placeholder="Login Password"
+                                           type="password" id="inputPassword"/>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Login</button>
+                            <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery -->
+<script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'vendors/fastclick/lib/fastclick.js' %}"></script>
+<!-- NProgress -->
+<script src="{% static 'vendors/nprogress/nprogress.js' %}"></script>
+<!-- Chart.js -->
+<script src="{% static 'vendors/Chart.js/dist/Chart.min.js' %}"></script>
+<!-- gauge.js -->
+<script src="{% static 'vendors/gauge.js/dist/gauge.min.js' %}"></script>
+<!-- bootstrap-progressbar -->
+<script src="{% static 'vendors/bootstrap-progressbar/bootstrap-progressbar.min.js' %}"></script>
+<!-- iCheck -->
+<script src="{% static 'vendors/iCheck/icheck.min.js' %}"></script>
+<!-- Skycons -->
+<script src="{% static 'vendors/skycons/skycons.js' %}"></script>
+<!-- Flot -->
+<script src="{% static 'vendors/Flot/jquery.flot.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.pie.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.time.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.stack.js' %}"></script>
+<script src="{% static 'vendors/Flot/jquery.flot.resize.js' %}"></script>
+<!-- Flot plugins -->
+<script src="{% static 'vendors/flot.orderbars/js/jquery.flot.orderBars.js' %}"></script>
+<script src="{% static 'vendors/flot-spline/js/jquery.flot.spline.min.js' %}"></script>
+<script src="{% static 'vendors/flot.curvedlines/curvedLines.js' %}"></script>
+<!-- DateJS -->
+<script src="{% static 'vendors/DateJS/build/date.js' %}"></script>
+<!-- JQVMap -->
+<script src="{% static 'vendors/jqvmap/dist/jquery.vmap.js' %}"></script>
+<script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
+<script src="{% static 'vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="{% static 'vendors/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'vendors/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+<!-- Custom Theme Scripts -->
+<script src="{% static 'build/js/custom.min.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+https://stackoverflow.com/questions/48049285/webcam-video-stream-not-showing-in-html5-video-tag
+Webcam video stream not showing in html5 video tag
+Stackoverflow.com
+{% endcomment %}
+
+
+{% comment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Web Camera 001</title>
+
+
+    <script type="text/javascript">
+      var video = document.querySelector("#video");
+
+      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+      if (navigator.getUserMedia) {
+        alert('hello');
+          navigator.getUserMedia( {
+              video : true
+          },
+          handleVideo, videoError);
+      }
+
+      function handleVideo(stream) {
+          video.src = window.URL.createObjectURL(stream);
+          video.play();
+      }
+
+      function videoError(e) {
+          // do something
+      }
+
+    </script>
+
+
+</head>
+<body>
+
+
+    <table border="1" width="900" align="center">
+        <tr align="center">
+            <td>
+                Web Camera
+                <div id="camera" style="height:300px; width:400px; border-style:solid;">
+                    <video id="video" width="400" height="300"></video>
+                </div>
+            </td>
+            <td>
+                Photo Frame
+                <div id="frame" style="height:300px; width:400px; border-style:solid;">
+                    <canvas id="canvas" width="400" height="300"></canvas>
+                </div>
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td colspan="2">
+                <button id="snap" onclick="snap()">Snap Photo</button>
+            </td>
+        </tr>
+    </table>
+    <button class="btn btn-primary btn-lg pull-right" data-target="#loginModal"
+            data-toggle="modal">Login</button>
+
+
+</body>
+</html>
+{% endcomment %}
+
+
+
+{% comment %}
+check out the following link
+https://stackoverflow.com/questions/48049285/webcam-video-stream-not-showing-in-html5-video-tag
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Web Camera 001</title>
+
+
+    <script type="text/javascript">
+      var video = document.querySelector("#video");
+
+      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+      if (navigator.getUserMedia) {
+        alert('hello');
+          navigator.getUserMedia( {
+              video : true
+          },
+          handleVideo, videoError);
+      }
+
+      function handleVideo(stream) {
+          video.src = window.URL.createObjectURL(stream);
+          video.play();
+      }
+
+      function videoError(e) {
+          // do something
+      }
+
+    </script>
+
+
+</head>
+<body>
+
+
+    <table border="1" width="900" align="center">
+        <tr align="center">
+            <td>
+                Web Camera
+                <div id="camera" style="height:300px; width:400px; border-style:solid;">
+                    <video id="video" width="400" height="300"></video>
+                </div>
+            </td>
+            <td>
+                Photo Frame
+                <div id="frame" style="height:300px; width:400px; border-style:solid;">
+                    <canvas id="canvas" width="400" height="300"></canvas>
+                </div>
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td colspan="2">
+                <button id="snap" onclick="snap()">Snap Photo</button>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+
+</body>
+</html>
+{% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DjangoForm</title>
+</head>
+<body>
+    <form action="/James Lo/" method="post">
+       {% csrf_token %}
+       {{ form }}
+        <input type="submit" vlaue="submit">
+    </form>
+    <hr>
+    <img src="{% static 'images/learn.jpg' %}" width="360" height="360" alt="Image"/>
+    <hr>
+    <!--
+    <video width="320" height="240" controls>
+        <source src="{% static 'videos/movie.mp4' %}" type="video/mp4">
+        <source src="{% static 'videos/Animation.mp4' %}" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+    <hr>
+    -->
+
+    <img src="{% static 'images/images.jpeg' %}" alt="Live Cam" height="200" width="200">
+    <meta http-equiv="refresh" content="3">
+
+
+
+
+
+
+
+
+    <div id="container">
+        <video autoplay="true" id="videoElement">
+
+        </video>
+    </div>
+    <script>
+            var video = document.querySelector("#videoElement");
+
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+    if (navigator.getUserMedia) {
+        navigator.getUserMedia({video: true}, handleVideo, videoError);
+    }
+
+    function handleVideo(stream) {
+        video.src = window.URL.createObjectURL(stream);
+    }
+
+    function videoError(e) {
+        alert("error");
+    }
+    </script>
+
+</body>
+</html>
+
+
+
+{% endcomment %}
+
+

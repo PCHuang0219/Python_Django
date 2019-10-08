@@ -1,0 +1,176 @@
+.downloadbtn{
+    height: 30px;
+    padding: 0 5%;
+    border-radius: 10vw;
+    line-height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 12pt;
+    background-color:#224384;
+    color: #fcfdff;
+
+}
+/*.downloadbtn:hover{
+    color: #ffffff;
+}*/
+.choose-edition{
+    color:#20304b;
+    padding:10px;
+    font-size: 24pt;
+    font-weight: 1000;
+}
+.introduction{
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+.money{
+    margin-bottom: 20px;
+
+}
+.money_bold{
+    padding-bottom: 15px;
+    font-size: 18pt;
+    color: #000000;
+    font-weight: 500;
+
+}
+.introduction1{
+    font-size: 14pt;
+    margin-bottom: 20px;
+    font-weight:bold;
+}
+.version-box{
+    padding: 1% 5% 1% 5%;
+}
+.version-box > div > div > div > button {
+    float: right;
+}
+.download_panel1{
+    border-style:groove;
+    border-width:1pt;    
+    min-height: 200px;
+}
+
+.download_panel1 img{
+    width:90%;
+    padding: 3% 0 0 4%;
+}
+.download_font1{
+    font-size: 18px;
+}
+.download_font2{
+    font-size: 14px;
+    color: #000000;
+
+}
+.download_panel1 p{
+    padding:2% 2% 2% 5%;
+    font-size: 14px;
+    line-height: 20px;
+}
+.do-animate .fusion-animated {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.fusion-animated {
+    visibility: hidden;
+}
+.fusion-reading-box-container {
+    z-index: 1;
+    position: relative;
+    margin-bottom: 84px;
+}
+.downloadchoice{
+    margin: 11px;
+    border-style:groove;
+    border:2px #ccc solid;
+    border-radius:15px;
+    box-shadow: 0 0 30px #d8d8d8;
+    background-color:#ffffff;
+    padding:15px;
+}
+.downloadchoice1{
+    margin: 11px;
+    border-style:groove;
+    border:2px #81bf41 solid;
+    border-radius:15px;
+    background-color:#eee;
+}
+.most-popular {
+    font-size: 12pt;
+    background-color: #81bf41 ;
+    color: #ffffff ;
+    padding: 0.5vw 1.0vw ;
+    text-align: center ;
+    display: inline-block;
+    vertical-align: 7px;
+    margin-left: 3px;
+}
+.downloadTitle{
+    border-bottom-style:solid;
+    border-color: black;
+    margin-bottom: 1%;
+}
+.downloadTitle p{
+    color:#20304b;
+    text-align:center;
+    padding:2%;
+    font-size:24pt;
+}
+.lead{
+    margin-bottom: 0;
+    color: #000000;
+
+}
+.performanceFrame{
+    border-color: #81bf41;
+    box-shadow:0 0 30px #d8d8d8;
+}
+.product-tagline{
+    font-family:fantasy;
+    font-size: 12pt;
+}
+#accton_log{
+    width:80%;
+    padding:10% 0% 10% 0;
+}
+.build_data{
+    font-size:18px;
+    padding-bottom:2%;
+}
+.fa-file-code-o{
+    float:right;
+    padding-right:10px;
+    margin: 4px 0 0 ;
+}
+.fa-tasks{
+    float:right;
+    padding-right:15px;
+    margin: 4px 0 0 ;
+}
+.performance_source{
+    color:black;
+}
+.build_version{
+    padding-left:15px !important;
+}
+@media (max-width: 768px){
+    #accton_log{
+        width:20%;
+    }
+    .download_font1{
+        font-size:18pt;
+    }
+    .build_data{
+        font-size:16px;
+    }
+    
+}
+h1{
+    text-align: center;
+}

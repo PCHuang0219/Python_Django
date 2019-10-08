@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TMS-Forum</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/forum.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/common.css' %}" rel="stylesheet">
+</head>
+{% include 'template_sonic.html' %}
+    <div class="right_col" role="main">
+        <div class="col-12 col-sm-12">
+            <form>
+                <div class="form-group">
+                <label for="exampleFormControlInput1">Article Title</label>
+                <input id="article_title" class="form-control" style="height:50px">
+                </div>
+                <div class="form-group">
+                <label for="exampleFormControlTextarea1">Article content</label>
+                <textarea class="form-control" id="article_content" rows="8"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Tag</label>
+                    <input class="form-control" id="article_tag" placeholder="#Tag1#Tag2">
+                </div>
+            </form>
+            <button type="button" class="btn btn-primary" style="float:right" id="submit">Post</button>
+        </div>
+	<div class="clearfix"></div>
+</div>
+</div>
+</div>
+	{% include 'main_footer.html' %}
+	{% include 'preset_js.html' %}
+	<!-- Additional JS-->
+    <script>
+            $.ajaxSetup({
+                data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+            });
+    </script>
+	<script src="{% static 'js/sonic/forum/newArticle.js' %}"></script>
+    
+</body>
+</html>

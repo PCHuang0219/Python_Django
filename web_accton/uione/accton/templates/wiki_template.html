@@ -1,0 +1,77 @@
+{% load staticfiles %} 
+<!DOCTYPE html>
+<html>
+<head>
+    {% block titile %}
+        <title>TMS-Wiki</title>
+    {% endblock %}
+
+    {% include 'preset_style.html' %}
+
+    {% block style %}
+        <!-- Additional CSS-->
+        <link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+        <link href="{% static 'vendors/additional/wiki.css' %}" rel="stylesheet">
+    {% endblock %}
+</head>
+<body style="background-color: white;">
+    <div class="main_container">
+        <div class="col-lg-2 col-sm-4 col-xs-4 col-md-2 left_col">
+            <div class="sidenav">
+                <a href="/"><img src="{%static '/images/icon/accton.png' %}" style="width:90%"></a>
+                <div class="wikifont4">Accton Wiki</div>
+                <a href="/sonic/accton/wiki/wiki_mainpage">Main page</a>
+                <a href="#">Featured content</a> 
+                <a href="#">Current events</a>
+                <div class="wikifont4">Interaction</div>
+                <a href="#">Help</a>
+                <a>About Wikipedia</a>
+                <a>Community portal</a>
+                <div class="wikifont4">Contents</div>
+                <a href="/sonic/accton/wiki/data_center">Data center network architectures</a>
+                <a href="/sonic/accton/wiki/leaf-spine">Leaf-spine architecture</a>
+                <a href="/sonic/accton/wiki/network_switch">Network Switch</a>
+                <a href="/sonic/accton/wiki/network_operating_system">Network operating System</a>
+                <a href="/sonic/accton/wiki/sonic_wiki">SONiC</a>
+                <a href="/sonic/accton/wiki/onie">ONIE</a>
+                <a href="/sonic/accton/wiki/open_source_sdn">Open Source SDN</a>
+                <a href="/sonic/accton/wiki/index_wiki">Index</a>
+                <a href="/sonic/accton/wiki/glossary">Glossary</a>
+            </div>
+        </div>
+        <div class="right-col" role="main" style="margin-left: 15%">
+        <!--ul class="tab nav nav-tabs nav-justified">
+        <li class="active" role="presentation"><button class="tablink" onclick="openPage('Article', this, '#999')" >Article</button></li>
+        <li role="presentation"><button class="tablink" onclick="openPage('Talk', this, '#999')">Talk</button></li>
+        <li role="presentation"><button class="tablink" onclick="openPage('Read', this, '#999')">Read</button></li>
+        <li role="presentation"><button class="tablink" onclick="openPage('Edit', this, '#999')">Edit</button></li>
+        </ul-->
+            <div class="main col-xs-12 col-sm-12">
+                <div class="col-sm-12 col-12" style="padding:3%">
+                    <div class="col-sm-6 col-6 green_border" id="green_border">
+                        <a class="X" href="#" onclick="hideBanner()" title="Hide"><img class="pull-right" alt="Hide" border="0" src="{%static '/images/icon/close.png' %}" style="width:2%;float:right;"></a>
+                        <p><img src="{%static '/images/icon/accton.png' %}" style="padding:0.5vw"> Accton Wiki loves your feedback. Upload documents/photo/acrticles to help Accto Wiki and win fantastic prizes!</p>
+                    </div>
+                </div>
+
+        {% block body %}
+        {% endblock %}
+
+            <!-- footer content -->
+            <footer>
+                <div class="clearfix"></div>
+                <div class="pull-right">
+                    Powered by Accton Technology &copy;
+                </div>
+                <div class="clearfix"></div>
+            </footer><!-- /footer content -->
+            </div>
+        </div>
+    </div>
+
+    {% block js %} 
+    
+    {% endblock %} 
+    {% include 'preset_js.html' %}
+</body>
+</html>

@@ -1,0 +1,115 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TMS-Telco-vOLT</title>
+    {% include 'preset_style.html' %}
+    <!-- Additional CSS-->
+    <link href="{% static 'vendors/additional/telco_solution.css' %}" rel="stylesheet">    
+</head>
+
+{% include 'template_sonic.html' %}
+<div class="right_col" role="main">
+	<div class="clearfix"></div>
+	<div class="row solution">
+		<div class="col-12 title1_solution">
+			<h1>vOLT Solutions</h1>
+		</div>
+		<div class="x_panel solution">
+			<div class="col-12 title2_solution">
+				<h1>Introduction</h1>
+			</div>
+			<p class="content_solution">This paper is intended as an introduction to vOLT (virtualized Optical Line Terminator) white box appliances and the network concepts they are intended for. Optical Line Terminators are used within GPON point to multipoint residential services defined under FTTx services. vOLT takes this to the next step by creating an OLT that can plug into and operate in an SDN/NFV cloud type environment.<br>
+			<br>
+			Disaggregation utilizing SDN networks is a common design driving current data network designs. Disaggregation removes the reliance on provider-specific networking software and replaces proprietary appliances with generic hardware boxes specifically built to operate using open standards. For optical networked premise equipment using GPON networks, a concept known as a Virtualized Optical Line Terminator (vOLT) is now realized in on-going test deployments. Utilizing a vOLT within optical networks means that network designers can take any manufacturer’s so-called “white-box” OLT product, sized as a 1RU “pizza box”, off-the-shelf and insert it seamlessly into their network. Once installed in the network, the vOLT can be integrated utilizing open SDN software platforms being developed through multiple projects under the Open Network Foundation (ONF) umbrella.<br>
+			<br>
+			Why implement vOLT as compared to a legacy OLT solution? The answer lies in the general re-thought of data centers which previously and currently are made up of multiple disparate equipment vendors and equipment types (usually cumbersome card-populated chassis PON systems). This complicates staff training and duties, and balloons capital expenditures whenever new capacity or features are added. Further cluttering matters, is the hefty configuration of the network done on a per appliance basis, obscuring network clarity and adding to operational costs. Legacy networks are also extremely rigid and lethargic (inelastic) in regards to upgrades, expansion, and service additions which can take weeks, months, or even years to complete. Implementing a disaggregated GPON network means an optical operator can implement expansions in literally minutes and possibly even seconds.</p>
+			<div class="col-12 title2_solution">
+				<h1>R-CORD</h1>
+			</div>
+			<p class="content_solution">As noted earlier, vOLTs are white box appliances and as such they need a software framework to reside in to forward traffic on the data plane according to the subscriber traffic requirements and the operators specifications. A recent prominent innovation for this has been defined as R-CORD or Residential Central Office “Re-architected” Datacenter. The conspicuous word is “re-architected”. This means a complete shift from the diverse, proprietary, inflexible and purpose-built architectures (large truck delivered multi-chassis) of the past to a mixture of commodity servers and white box appliances interconnected through a leaf and spine arranged switching matrix. Onboard those devices, one can find the combined technologies of SDN and NFV (Network Functions Virtualization) that provides a flexible unified office. R-CORD is one definition of this idea and a working open software framework that is currently under trials by multiple operators. vOLT falls under R-CORD as the white box appliance defined to terminate Optical Distribution links and thus aggregate the subscriber connections. Further, CORD replaces the management function typically scattered throughout a central office’s multiple chassis management cards into generic servers. The server’s functions are divided into ONOS platforms and XOS platforms. ONOS or Open Network Operating System provides the open platform for SDN that can provide an operator with high-availability, modularity, and abstraction layers required for the vOLT appliances resulting in greatly reduced OPEX costs.<br>
+			<br>
+			To provide flexible subscriber services, another open platform XOS is also specified; which in short is an “Everything As A Service” or X-Operating System. XOS is an orchestrator of the NFV services that are both subscriber essential and added value. Operators can flexibly use XOS platforms to provide the NFV components of their R-CORD office.</p>
+			<div class="col-xs-12 photo_demo">
+				<img src="{% static '/images/solution/Telco_vOLT01.jpg' %}" style="width:45%">
+				<p class="content_solution">Using XOS NFV servers gives an operator a method to instantly provision their remote optical subscriber’s essential services and optional enhanced services from commodity servers within the R-CORD cloud. In this way, XOS allows an operator to expand capacity and add new services quickly and cheaply, easily keeping up with demand and technology changes.</p>
+			</div>
+			<div class="col-12 title2_solution">
+				<h1>VOLTHA</h1>
+			</div>
+			<p class="content_solution">An important project in association with the CORD development and under the Open Network Foundation is VOLTHA. This is the Hardware Abstraction (HA) element framework which gives control and provision access to vOLTs through its management interfaces. VOLTHA manages this access by virtualizing the PON hardware in the vOLT from ONOS and XOS. Open system developers from operators and vendors alike, can use VOLTHA to access the vOLT as a virtualized network device from their own SDM system, as defined under CORD and ONF. A vOLT is essentially a PON type device, and so is made up of a vendors PON components i.e. the ASICs and Ports that interface with the optical lines from ONUs and splitters. VOLTHA provides the segregation of the underlying hardware from the control system for the PON network. On the south side of the VOLTHA interface, it communicates with the Vendor protocols. This is the case with the first vOLT whitebox appliance the ASXvOLT16, (from Edgecore) which uses MAC and switching chips from Broadcom. On the ASXvOLT16, the north side of the VOLTHA layer provides control access to its Broadcom silicon by presenting a hardware abstraction in the form of APIs that the SDN and NFV controller layers can mesh with.</p>
+			<div class="col-12 title2_solution">
+				<h1>vOLT Architecture</h1>
+			</div>
+			<p class="content_solution">Up to this point only GPON has been discussed, however the general solution for vOLTs has been defined to support a 10 Gb/s PON service. This is in-line with keeping up with bandwidth demand as network speed continues to soar ever higher. The base design for the vOLT defines an underlying Open Network Linux (ONL) platform. A passive optical network (PON) system that operates at a nominal line rate of 10 Gb/s downstream and upstream supporting either XGS-PON or NG-PON protocol suites as defined by ITU. Because of this, the design of vOLT equips it with XFP (10G SFP transceiver capable) ports that provide the aggregation for PON terminal units. Upstream egress ports that support QSFP28 transceivers capable of either 40 or 100 Gb/s are also specified.</p>
+			<div class="col-xs-12 photo_demo">
+				<img src="{% static '/images/solution/Telco_vOLT02.jpg' %}" style="width:45%">
+				<p class="content_solution">As mentioned already, an available XGS-PON vOLT being trialed successfully is the Edgecore ASXvOLT16. Its data plane flows are realized using Broadcom’s StrataDNX™ switching silicon and multiple Broadcom proprietary ASICs that includes ingress MAC chips (Maple) and an egress MAC chip (QUMRAN). These chips are managed through the Broadcom drivers using the vendor’s BAL API (Broadcom Application Layer). Ultimately, the configuration and control of subscriber traffic data flows comes from an ONOS SDN controller by means of the VOLTHA layer which abstracts the underlying BAL API.<br>
+				<br>
+				For integration, testing and troubleshooting, the proprietary BAL layer provides a local CLI interface to the vOLT. Subscriber services are instantiated for each PON subscriber using commodity servers running XOS within the R-CORD structure. Subscribers can use bare-metal CPE devices, so their essential functions such as DHCP and NAT can be managed from an instantiation within a virtual container. These virtual containers exist on Central Office servers defined as a vSG or virtual Subscriber Gateway. Control and subscriber services are offloaded from the vOLTs, resulting in a commodity type server device that can be added or subtracted from the network with little effort.</p>
+			</div>
+			<div class="col-12 title2_solution">
+				<h1>vOLT Key Takeaways</h1>
+			</div>
+			<p class="content_solution">Below is a summary table of some of the key takeaways or benefits which can be realized by using vOLT within the R-CORD and VOLTHA frameworks:</p>
+			<ul>
+				<li class="content_solution">Fixed wireless Internet access. The Gigabit data rates of 5G mmWave could completely replace a number of Internet access technologies with hybrid fiber and wireless networks connecting subscriber homes. Although not truly a mobile system, it could provide competition to existing Wi-Fi systems that provide this type of fixed wireless access.</li>
+				<li class="content_solution">Outdoor urban/suburban small cells. An expected deployment scenario for 5G mmWave would be to provide increased capacity in high-demand public spaces and venues. With cell sizes around 100m, small 5G mmWave access points can be placed on poles or buildings to provide the required coverage.</li>
+				<li class="content_solution">Mission-critical control applications. Autonomous vehicles, vehicle-to-vehicle communications, drone communications, and other latency-sensitive, high-reliability applications provide another possible deployment scenarios for 5G mmWave with a projected network latency of less than a millisecond.</li>
+				<li class="content_solution">Indoor hotspot cells. Shopping malls, offices, and other indoor areas require a high-density of 5G mmWave micro cells. These small cells will potentially support download speeds of up to 20 Gbps, providing seamless access to cloud data and the ability to support multiple applications, as well as various forms of entertainment and multimedia.</li>
+				<li class="content_solution">Internet of Things. The general connectivity of objects, sensors, appliances and other devices for data collection, control, and analysis. Potentially could cover smart home applications, security, energy management, logistics and tracking, healthcare, and a multitude of other industrial operations.</li>
+			</ul>
+			<table class="table Table content_solution">
+				<thead>
+					<tr class="tr-only-hide">
+						<td></td>
+						<td>Traditional PON</td>
+						<td>vOLT with VOLTHA</td>
+						<td>CORD Benefits</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td data-th="">Orchestration (XOS)(e.g. services added or subtracted)</td>
+						<td data-th="Traditional PON">Proprietary connectivity to OSS/BSS</td>
+						<td data-th="vOLT with VOLTHA">Open Orchestration</td>
+						<td data-th="CORD Benefits">Flexible and instant creation of virtual services. Demand and technology improvements can be kept up with by using virtual methods through the “cloudification” of the network (Services, subscriber gear (CPE) and OLT are all virtualized above the controller layer.)</td>
+					</tr>
+					<tr>
+						<td data-th="">Management Platform(Proprietary vs. Open)</td>
+						<td data-th="Traditional PON">Proprietary Management Software</td>
+						<td data-th="vOLT with VOLTHA">Open Control Software (ONOS)</td>
+						<td data-th="CORD Benefits">Network centric view of data flow – data flows can be controlled with a bird’s eye view for optimal flows.Reduced OPEX using the same control platform across the entire network – the days of multiple different proprietary control platforms are over.</td>
+					</tr>
+					<tr>
+						<td data-th="">Hardware Adapters(Proprietary vs. Open)</td>
+						<td data-th="Traditional PON">None – end-to-end proprietary software.</td>
+						<td data-th="vOLT with VOLTHA">Open Common vOLTHA</td>
+						<td data-th="CORD Benefits">Any underlying vOLT hardware can be used with vOLTHA – think of it as similar to a plug and play environment.</td>
+					</tr>
+					<tr>
+						<td data-th="">Hardware(Proprietary Chassis vs. Open Commodity 1 RU Blades)</td>
+						<td data-th="Traditional PON">Proprietary Single Vendor Hardware</td>
+						<td data-th="vOLT with VOLTHA">Open – Any Vendor Hardware</td>
+						<td data-th="CORD Benefits">Hardware becomes a commodity – reduced CAPEX when hardware vendors produce generic PON equipment controlled through openFlow.</td>
+					</tr>
+				</tbody>
+			</table>
+			<p></p>
+			<div class="col-12 title2_solution">
+				<h1>Conclusion</h1>
+			</div>
+			<p class="content_solution">Recent news indicates AT&Ts (a leading force behind vOLT) vOLT trials using R-CORD and VOLTHA have been successfully completed. Costs at this early stage have already been shown to be on an equal basis with legacy GPON systems and can only decline. The first VOLTHA standard is officially released by AT&T and ONF’s ONOS, XOS, and ONP software is readily accessible for any operator. “Cloudification” of operator’s data office architecture is fully underway despite the huge initial complexity of the paradigm shift. Edgecore’s ASXvOLT16 has been a highly fruitful inaugural vOLT. It could be the network-proven white box vOLT appliance that will be the archetype for all future developments.</p>
+		</div>
+	</div>
+</div><!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+{% include 'preset_js.html' %}
+</body>
+
+</html>

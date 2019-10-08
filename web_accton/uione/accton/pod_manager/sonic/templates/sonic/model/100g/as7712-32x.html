@@ -1,0 +1,175 @@
+{% extends 'SONiCProducts/products_template.html' %}
+{% load staticfiles %}
+{% block title %} TMS-AS7712-32X {% endblock %}
+
+{% block picture %}
+	<div class="slider-for">
+		<img src="{% static 'images/products/100g/as7712-32x/as7712-32x-1.png' %}" alt="">
+		<img src="{% static 'images/products/100g/as7712-32x/as7712-32x-2.png' %}" alt="">
+		<img src="{% static 'images/products/100g/as7712-32x/as7712-32x-3.png' %}" alt="">
+		<img src="{% static 'images/products/100g/as7712-32x/as7712-32x-4.png' %}" alt="">
+	</div>
+	<div class="slider-nav">
+		<img src="{% static 'images/products/100g/as7712-32x/as7712-32x-1.png' %}" alt="">
+		<img src="{% static 'images/products/100g/as7712-32x/as7712-32x-2.png' %}" alt="">
+		<img src="{% static 'images/products/100g/as7712-32x/as7712-32x-3.png' %}" alt="">
+		<img src="{% static 'images/products/100g/as7712-32x/as7712-32x-4.png' %}" alt="">
+	</div>
+{% endblock %}
+
+{% block productSummary %}
+<h2>AS7712-32X</h2>
+<h4>100GbE Data Center Switch</h4>
+<p>AS7712-32X is a 32-Port 100G QSFP28 switch with ONIE software installer. AS7712-32X embedded Broadcom Tomahawk 3.2Tbps and Intel  Atom C2538 CPU as well as dual 110-230VAC 650W PSUs included and power-to-port airflow. AS7712-32X has 3-year Hardware Warranty.</p>
+{% endblock %}
+
+{% block Overview %}
+<p class="content2 font2">The Edgecore AS7712-32X switch is Top-of-Rack (TOR) or spine switch for high-performance data centers. In a compact 1RU form factor, the switch provides line-rate L2 and L3 switching across the 32x QSFP28 ports, supporting up to 32 x 40/100 GbE, 64 x 50 GbE, or 128 x 10/25 GbE connections. The AS7712-32X can be deployed as a TOR switch supporting 10/25/50 GbE to servers with 40/50/100 GbE uplinks, or as a spine switch supporting 40/50/100 GbE spine interconnects. This open network switch is loaded with the Open Network Install Environment (ONIE) which supports the installation of compatible Network Operating System software, including the open source options Open Network Linux and OpenSwitch, plus commercial NOS offerings.</p>
+{% endblock %}
+
+{% block specs %}
+<table class="table table-bordered table-striped">
+	<colgroup>
+		<col class="col-xs-6">
+		<col class="col-xs-6">
+	</colgroup>
+	<tbody>
+		<tr>
+			<th><div class="specs_title">Ports</div></th>
+			<td class="common-style-font2 content">32</td>
+		</tr>
+		<tr>
+			<th><div class="specs_title">Predominant Port Type</div></th>
+			<td class="common-style-font2 content">100GbE QSFP28</td>
+		</tr>
+		<tr>
+			<th><div class="specs_title">High Availability</div></th>
+			<td class="common-style-font2 content">Redundant Power Supply, Redundant Fans</td>
+		</tr>
+		<tr>
+			<th><div class="specs_title">Compatible Soft Option</div></th>
+			<td class="common-style-font2 content">Big Switch Networks - Big Monitoring Fabric , Big Switch Networks - Big Cloud Fabric , Cumulus Networks - Cumulus Linux , Inﬁnera - CNOS , IP Infusion - OcNOS , Ixia - Vision Edge OS , Pica8 - PicOS , Pluribus Networks - Netvisor® OS (ONVL) , SnapRoute - CN-NOS , Microsoft - SONiC , Open Compute Project - Open Network Linux</td>
+		</tr>
+	</tbody>
+</table>
+{% endblock %}
+
+{% block features %}
+<div class="col-md-6 common-style-font2 content">
+		<div class="bs-example" data-example-id="simple-ul">
+			<ul>
+				<li>Cost-effective, bare-metal switch infrastructure for data center fabric.</li>
+				<li>Deploy as Top-of-Rack switch supporting 10 or 25 GbE to servers, with 40 or 50 or 100 GbE uplinks.</li>
+				<li>Deploy as spine switch supporting 40, 50, or 100 GbE ToR and spine interconnects.</li>
+				<li>32 x QSFP28 switch ports, each supporting 1 x 100 GbE or 1 x 40 GBE, or via breakout cables, 2 x 50 GbE or 4 x 25 GbE or 4 x 10 GbE.</li>
+				<li>Layer 2 or Layer 3 forwarding of 3.2 Tbps (full duplex).</li>
+				<li>Supports hot/cold aisle with port-to-power and power-to-port airflow SKUs.</li>
+				<li>All ports on front; PSUs and fans accessible from rear.</li>
+				<li>Hot-swappable, load-sharing, redundant AC or -48V DC or 12V DC PSUs.</li>
+				<li>5+1 redundant, hot-swappable fan modules.</li>
+				<li>Energy Efficiency: 310 W typical power consumption without pluggable optics.</li>
+			</ul>
+		</div>
+	</div>
+<div class="col-md-6 common-style-font2 content">
+		<div class="bs-example" data-example-id="simple-ul">
+			<ul>
+				<li>Bare-Metal hardware switch pre-loaded with diagnostics software and with Open Network Install Environment (ONIE) for automated loading of compatible open source and commerical NOS offerings.</li>
+				<li>AS7712 SKU and AS7716 SKU compatible with Open Network Linux (ONL), an open-source, OCP reference NOS.</li>
+				<li>AS7712 SKU compatible with future release of Big Monitoring Fabirc 5.6.0 and later version from Big Switch Networks .</li>
+				<li>AS7712 SKU compatible with Cumulus® Linux® 3.1 and later versions.</li>
+				<li>AS7712 SKU compatible with PicOS™ 2.7.1 and later version from Pica8 Inc.</li>
+				<li>AS7712 SKU compatible with OcNOS™ 1.2 and later version from IP Infusion.</li>
+				<li>AS7712 SKU compatible with Ixia Vision Edge OS™ 4.7.3 and later.</li>
+				<li>AS7712 SKU compatible with SnapRoute CN-NOS software.</li>
+				<li>AS7712 SKU compatible with Inﬁnera CNOS.</li>
+				<li>AS7716 SKU compatible with Pluribus Netvisor® OS (ONVL) version 2.5 and later from Pluribus Networks.</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block downloads %}
+	<table class="table Table table-hover">
+		<tbody>
+			<tr class="tr-only-hide">
+				<th>Category</th>
+				<th>Name</th>
+				<th>Rev</th>
+				<th>Release Notes</th>
+				<th>Date</th>
+				<th>Note</th>
+				<th>Download</th>
+			</tr>
+			<tr>
+				<td data-th="Category">Datasheet</td>
+				<td class="common-style-font2 content">AS7712_AS7716-32X DS R15</td>
+				<td data-th="Rev">n/a</td>
+				<td class="common-style-font2 content">AS7712_AS7716-32X_DS_R15_20190415.pdf</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2019-04-15</td>
+				<td data-th="Note">description n/a</td>
+				<td class="common-style-font2 content">
+					<a href="{% static 'downloads/products/100g/as7712-32x/AS7712_AS7716-32X_DS_R15_20190415.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">User Manual</td>
+				<td data-th="Name">AS7712-32X Quick Start Guide-R04</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-06-07</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/100g/as7712-32x/AS7512-32X_AS7712-32X_AS7716-32X_QSG_R04_20180531.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Certification</td>
+				<td data-th="Name">AS7712-32X_CE_DoC</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-03-05</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/100g/as7712-32x/AS7712-32X_CE_Declaration_of_Conformity_03052018.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Certification</td>
+				<td data-th="Name">Edgecore RoHS 2.0 & REACH Declaration - AS7712-32X</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-09-07</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/100g/as7712-32x/Edgecore_RoHS_2_0_Reach_Declaration_AS7712-32X.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Safety and Regulatory Information</td>
+				<td data-th="Name">AS7712-32X Safety and Regulatory Information R03</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-01-23</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/100g/as7712-32x/AS7712-32X_AS7716-32X_SRI_R03_20171219.pdf' %}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Firmware</td>
+				<td data-th="Name">SONiC image</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">n/a</td>
+				<td data-th="Note">
+					<a href="/sonic/accton/download"><span class="badge badge-pill badge-primary jumpDownload">More available</span>
+				</td>
+				<td data-th="Download">
+					<a id="SONiC_Image_Downloads" href="#"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+{% endblock %}

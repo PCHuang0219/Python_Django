@@ -1,0 +1,169 @@
+{% extends 'SONiCProducts/products_template.html' %}
+{% load staticfiles %}
+{% block title %} TMS-AS6712-4.X {% endblock %}
+
+{% block picture %}
+	<div class="slider-for">
+		<img src="{% static 'images/products/40g/as6712-32x/as6712-32x-1.png' %}" alt="">
+		<img src="{% static 'images/products/40g/as6712-32x/as6712-32x-2.png' %}" alt="">
+		<img src="{% static 'images/products/40g/as6712-32x/as6712-32x-3.png' %}" alt="">
+		<img src="{% static 'images/products/40g/as6712-32x/as6712-32x-4.png' %}" alt="">
+	</div>
+	<div class="slider-nav">
+		<img src="{% static 'images/products/40g/as6712-32x/as6712-32x-1.png' %}" alt="">
+		<img src="{% static 'images/products/40g/as6712-32x/as6712-32x-2.png' %}" alt="">
+		<img src="{% static 'images/products/40g/as6712-32x/as6712-32x-3.png' %}" alt="">
+		<img src="{% static 'images/products/40g/as6712-32x/as6712-32x-4.png' %}" alt="">
+	</div>
+{% endblock %}
+
+{% block productSummary %}
+<h2>AS6712-32X</h2>
+<h4>40GbE Data Center Switch</h4>
+<p>AS6712-32X is a 32-Port 40G QSFP+ switch with ONIE software installer. AS6712-32X embedded Broadcom Trident II 1.28Tbps and Intel Atom C2538 CPU as well as dual 110-230VAC 400W PSUs included and port-to-power airflow. AS6712-32X is 3-year Hardware Warranty.</p>
+{% endblock %}
+
+{% block Overview %}
+<p class="content2 font2">The Edgecore AS6712-32X is a Top-Rack or spine switch for high-performance data centers. In a compact 1RU form factor, the switch provides line-rate L2 and L3 switching across 32 x QSFP+ ports, supporting 32 x 40 GbE connections or 96 x 10 GbE + 8 x 40G connections. The AS6712-32X can be deployed as a TOR switch supporting 10 GbE or 40 GbE server connections, or as a spine switch supporting 10 GbE or 40 GbE spine interconnects. The AS6712-32X is a bare-metal switch loaded with the Open Network Install Environment (ONIE), which supports the installation ofcompatible open source and commercial Network Operating Systems for different network use cases and requirements.</p>
+{% endblock %}
+
+{% block specs %}
+<table class="table table-bordered table-striped">
+	<colgroup>
+		<col class="col-xs-6">
+		<col class="col-xs-6">
+	</colgroup>
+	<tbody>
+		<tr>
+			<th><div class="specs_title">Ports</div></th>
+			<td class="common-style-font2 content">32</td>
+		</tr>
+		<tr>
+			<th><div class="specs_title">Predominant Port Type</div></th>
+			<td class="common-style-font2 content">40GbE QSFP+</td>
+		</tr>
+		<tr>
+			<th><div class="specs_title">High Availability</div></th>
+			<td class="common-style-font2 content">Redundant Power Supply, Redundant Fans</td>
+		</tr>
+		<tr>
+			<th><div class="specs_title">Compatible Soft Option</div></th>
+			<td class="common-style-font2 content">	Big Switch Networks - Big Monitoring Fabric , Big Switch Networks - Big Cloud Fabric , Cumulus Networks - Cumulus Linux , Pica8 - PicOS , Pluribus Networks - Netvisor® OS (ONVL) , Open Compute Project - Open Network Linux</td>
+		</tr>
+	</tbody>
+</table>
+{% endblock %}
+
+{% block features %}
+<div class="col-md-6 common-style-font2 content">
+		<div class="bs-example" data-example-id="simple-ul">
+			<ul>
+				<li>Cost-effective, bare-metal switch infrastructure for data center fabric.</li>
+				<li>32 fixed x 40GbE QSFP+ switch ports in compact 1RU form factor, each supporting 40 GbE or 4 x 10 GbE via breakout cables. Maximum 24 x 40GbE QSFP+ switch ports support breakout cables.</li>
+				<li>Layer 2 or Layer 3 forwarding of 1.28 Tbps full duplex.</li>
+				<li>Supports hot/cold aisle with port-to-power and power-to-port airflow SKUs.</li>
+				<li>All ports on front. PSUs and fans inserted from rear.</li>
+				<li>Hot swappable, load-sharing redudundant AC PSUs.</li>
+				<li>4+1 redundant, hot-swappable fans modules.</li>
+			</ul>
+		</div>
+	</div>
+<div class="col-md-6 common-style-font2 content">
+		<div class="bs-example" data-example-id="simple-ul">
+			<ul>
+				<li>Energy Efficiency: 227 W typical power consumption under line rate traffic using 24 x passive QSFP DAC, 8 x 40GBASE-SR4.</li>
+				<li>Hardware switch pre-loaded with Open Network Install Environment (ONIE) for automated loading of compatible open source and commerical NOS offerings.</li>
+				<li>Compatible with Open Network Linux (ONL), an open-source, OCP reference NOS.</li>
+				<li>Compatible with Cumulus® Linux® r2.5.3 and later version from Cumulus Networks®.</li>
+				<li>Compatible with PicOS™ r2.6.4 and later version from Pica8 Inc.</li>
+				<li>Compatible with Switch Light OS from Big Switch Networks and their Big Monitoring Fabric™ and Big Cloud Fabric™ SDN applications.</li>
+				<li>Compatible with Pluribus Netvisor ® OS (ONVL) version 2.5 and later from Pluribus Networks.</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block downloads %}
+	<table class="table Table table-hover">
+		<tbody>
+			<tr class="tr-only-hide">
+				<th>Category</th>
+				<th>Name</th>
+				<th>Rev</th>
+				<th>Download File Name</th>
+				<th>Release Notes</th>
+				<th>Date</th>
+				<th>Note</th>
+				<th>Download</th>
+			</tr>
+			<tr>
+				<td data-th="Category">Datasheet</th>
+				<td data-th="Name">AS6712-32X DS R08</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-10-12</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/40g/as6712-32x/AS6712-32X_DS_R08_20181002.pdf'%}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">User Manual</th>
+				<td data-th="Name">AS6712-32X Quick Start Guide-R03</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-01-23</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/40g/as6712-32x/AS6712-32X_AS6812-32X_QSG-EN_R03_20171228.pdf'%}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Category">Certification</td>
+				<td data-th="Name">AS6712-32X_CE_DoC</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2017-06-26</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/40g/as6712-32x/AS6712-32X_CE_Declaration_of_Conformity_20170626.pdf'%}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+ 			<tr>
+				<td data-th="Category">Certification</td>
+				<td data-th="Name">Edgecore RoHS 2.0 & REACH Declaration - AS6712-32X</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2017-06-26</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/40g/as6712-32x/0 _Reach_Declaration_AS6712-32X.pdf'%}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+ 			<tr>
+				<td data-th="Category">Safety and Regulatory Information</td>
+				<td data-th="Name">AS6712-32X Safety and Regulatory Information R03</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">2018-01-23</td>
+				<td data-th="Note">description n/a</td>
+				<td data-th="Download">
+					<a href="{% static 'downloads/products/40g/as6712-32x/AS6712-32X_AS6812-32X_SRI_R03_20171228.pdf'%}"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+ 			<tr>
+				<td data-th="Category">Firmware</td>
+				<td data-th="Name">SONiC image</td>
+				<td data-th="Rev">n/a</td>
+				<td data-th="Release Notes">n/a</td>
+				<td data-th="Date">n/a</td>
+				<td data-th="Note">
+					<a href="/sonic/accton/download"><span class="badge badge-pill badge-primary jumpDownload">More available</span>
+				</td>
+				<td data-th="Download">
+					<a id="SONiC_Image_Downloads" href="#"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+{% endblock %}

@@ -1,0 +1,34 @@
+sort,sub_sort,title,filename,path
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"Self Healing Networks - LinkedIn’s Journey to SONiC and Beyond by Zaid Ali Kahn, LinkedIn",Self-Healing Network Linkedin Keynote.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"SONiC OS Virtualization and Data Plane Emulation Work by Yongfeng Liu, Alibaba Group",SONiC Dataplane Emulation Alibaba.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"SONiC in Microsoft Azure: Enabling Mission Critical Applications by Alberto Gonzalez Prieto and Weixi Chen,Microsoft",SONiC in Azure Mission Critical Application - MSFT.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"SONIC Extension Infrastructure by Matty Kadosh, Mellanox",SONiC Extension Infrastructure - MLNX.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"Using NBI images for SONiC system on Cisco Platforms by Ashoka Kallappa and Jiahua Wang, Cisco",Using NBI Image for SONiC System - Cisco.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"Developer's Overview of Sonic by Praveen Chaudhary, LinkedIn",Developer Overview of SONiC - LNKD.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"Cloud-grade Routing as a Micro-service for Open Networking Platforms by Vinay Nallamothu, Juniper",Cloud-grade Routing as a Micro-service for Open Networking Platforms - Juniper.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"SONiC unit test and function test enhancement by Taskin Ucpinar, Edgecore",SONiC unit test and function test enhancement - Edgecore.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"Opportunities and Obstacles in Open Source Networking by Sandeep Madhavan, Dell",Opportunities and Obstacles in Open Source Networking - Dell.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Workshop,"SONiC Hackathon Setup Introduction by Shuotian Cheng, Microsoft",Hackathon Environment.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Hackathon Slides,Network Fabric Configuration for SONiC by team Aviz,Aviz_AIMS_SONiC_Hackathon_v3.0.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Hackathon Slides,Manage SONiC using Kubernetes by team Kubers,2019-OCP-hackathon-Kubers.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Hackathon Slides,ConfigValidator by team Soniers,ConfigValidator Hackathon.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Hackathon Slides,Virtual Switch Platform X by team X,Virtual Switch X Hackathon.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Hackathon Slides,Enhanced SAI Shell by team Weekend Warrior,OCP-2019-Hackathon-SONiC-WeekendWarriors.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Hackathon Slides,SONiC Robustness Monitor(RM) by team INV,INV_robustness monitor Hackathon.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Hackathon Slides,SONiC Web-based Network Management System by team WebNMS,SONiC_webnms Hackathon.pdf,downloads/document
+SONiC Pre Summit Workshop and Hackathon 2019,Hackathon Slides,FRR Route Reconciliation by team Cape-tain Johan,Cape-tain Johan Hackathon.pdf,downloads/document
+SONiC Workshop in Beijing Oct 2018,,SONiC Introduction and Roadmap by Xin Liu,SONiC Introduction and Roadmap.pdf,downloads/document
+SONiC Workshop in Beijing Oct 2018,,SONiC Deployment by Yongfeng Liu,SONiC Deployment – Alibaba.pdf,downloads/document
+SONiC Workshop in Beijing Oct 2018,,Taking SONiC Beyond BGP with Mellanox Spectrum by Dror Goldenberg,Taking SONiC Beyond BGP with Mellanox Spectrum – MLNX.pdf,downloads/document
+SONiC Workshop in Beijing Oct 2018,,Sonic CLI Framework and Best Practice by Yongcan Wang,Sonic CLI Framework and Practice – Alibaba.pdf,downloads/document
+SONiC Workshop in Beijing Oct 2018,,SONiC Architect adn Platform Management Service by Ying Xie,SONiC Architect adn Platform Management Service – MSFT.pdf,downloads/document
+SONiC Workshop in Beijing Oct 2018,,SONiC Powered by Programmable Dataplane by Glow Yang,SONiC Powered by Programmable Dataplane – Barefoot.pdf,downloads/document
+OCP Summit 2018 and SONiC SAI Workshop Slide Collection,,SONiC OCP2018 SONiC Network Telemetry from User Perspective (03/22/2018),SONIC Network Telemetry-final.pdf,downloads/document
+OCP Summit 2018 and SONiC SAI Workshop Slide Collection,,SONiC OCP2018 Configuration (03/22/2018),Sonic_workshop_config_model.pdf,downloads/document
+OCP Summit 2018 and SONiC SAI Workshop Slide Collection,,SONiC OCP2018 WAN (03/22/2018),SONiC OCP2018 WAN.pdf,downloads/document
+OCP Summit 2018 and SONiC SAI Workshop Slide Collection,,SONiC OCP2018 Telemetry Proposal by Broadcom (03/22/2018),OCP-SAI-Telemetry_BRCM_Proposal.pdf,downloads/document
+OCP Summit 2018 and SONiC SAI Workshop Slide Collection,,SONiC OCP2018 SAI Programmability (03/22/2018),SAIf2f_SAI_programability_4.pdf,downloads/document
+OCP Summit 2018 and SONiC SAI Workshop Slide Collection,,SONiC OCP2018 Programmable Forwarding Planes (03/22/2018),"Barefoot-SAI-Workshop-03-21-2018-v4.pdf
+",downloads/document
+OCP Summit 2018 and SONiC SAI Workshop Slide Collection,,SONiC OCP2018 Closing & Roadmap (03/22/2018),SONiC SAI workshop.pdf,downloads/document
+OCP Summit 2016 SONiC Presentation,,OCP Summit 2016 SONiC Presentation,SAI-SONiC-OCP-Summit-Mar16-shared.pdf,downloads/document

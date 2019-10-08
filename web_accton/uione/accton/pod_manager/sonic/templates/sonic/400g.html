@@ -1,0 +1,38 @@
+{% extends 'SONiCProducts/products.html' %}
+{% load staticfiles %}
+
+{% block title %}
+TMS-Products-400G
+{% endblock %}
+
+{% block bigPicture %}
+<div class="productOverview"><img id="bigger_picture" src="{% static 'images/products/400g/as8000/as8000-2.png' %}"></div>
+{% endblock %}
+
+
+{% block showProduct %}
+<div class="col-xs-12 col-sm-12 productSort">
+		<div class="row title">
+			<div class="col-sm-3 col-xs-4">
+				<a href="/sonic/products/400g/as8000">
+				<div class="thumbnail div_G">
+					<img src="{%static 'images/products/400g/as8000/as8000-1.png' %}">
+					<div class="caption" style="text-align: center;">
+						<h2>AS8000</h2>
+						<p style="font-size: 13pt">Explore & Discover</p>
+					</div>
+				</div></a>
+			</div>
+			<div class="col-sm-3 col-xs-4">
+				<a href="/sonic/products/400g/as9716-32d">
+				<div class="thumbnail div_G">
+					<img alt="..." src="{%static 'images/products/400g/as9716-32d/as9716-32d-1.png' %}">
+					<div class="caption" style="text-align: center;">
+						<h2>AS9716-32D</h2>
+						<p style="font-size: 13pt">Explore & Discover</p>
+					</div>
+				</div></a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

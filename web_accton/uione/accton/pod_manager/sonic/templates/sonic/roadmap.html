@@ -1,0 +1,495 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TMS-SONiC Roadmap</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="/static/vendors/additional/roadmap.css" rel="stylesheet">
+</head>
+
+{% include 'template_sonic.html' %}
+<div class="right_col common_style" role="main">
+	<div class="clearfix"></div>
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
+			<div class="x_panel">
+				<h1>Roadmap</h1>
+				<div class="col-md-12" style="text-align: center;"><img src="/static/images/roadmap_full.png" style="width:90%;padding-bottom: 3%;"></div>
+				<h1 style="text-align: center;padding:20px">SONiC Releases</h1>
+				<table class="table Table table-hover">
+					<tbody>
+						<tr class="tr-only-hide">
+							<td>Release Series</td>
+							<td>Status</td>
+							<td>Initial Release Date</td>
+							<td>SAI Version</td>
+							<td>Note</td>
+						</tr>
+						<tr>
+							<td data-th="Release Series">
+								<a href="/sonic/accton/download">SONiC.201903</a>
+							</td>
+							<td data-th="Status">
+								<a href="">Development</a>
+							</td>
+							<td data-th="Initial Release Date">04/30/2019<br>
+							(Scheduled)</td>
+							<td data-th="SAI Version">1.4</td>
+							<td data-th="Note">
+								<a href=""></a>link to SONiC 201903 build page
+							</td>
+						</tr>
+						<tr>
+							<td data-th="Release Series">SONiC.201811</td>
+							<td data-th="Status">Maintained</td>
+							<td data-th="Initial Release Date">11/30/18</td>
+							<td data-th="SAI Version">1.3</td>
+							<td data-th="Note">
+								<a href="">link to SONiC 201811 build page</a>
+							</td>
+						</tr>
+						<tr>
+							<td data-th="Release Series">SONiC.201807</td>
+							<td data-th="Status">Maintained</td>
+							<td data-th="Initial Release Date">07/30/18</td>
+							<td data-th="SAI Version">1.3</td>
+							<td data-th="Note"></td>
+						</tr>
+						<tr>
+							<td data-th="Release Series">SONiC.201803</td>
+							<td data-th="Status">Maintained</td>
+							<td data-th="Initial Release Date">03/15/18</td>
+							<td data-th="SAI Version">1.2</td>
+							<td data-th="Note"></td>
+						</tr>
+						<tr>
+							<td data-th="Release Series">SONiC.201712</td>
+							<td data-th="Status">Maintained</td>
+							<td data-th="Initial Release Date">12/15/2017</td>
+							<td data-th="SAI Version">1.0</td>
+							<td data-th="Note"></td>
+						</tr>
+						<tr>
+							<td data-th="Release Series">SONiC.201709</td>
+							<td data-th="Status">Maintained</td>
+							<td data-th="Initial Release Date">9/15/2017</td>
+							<td data-th="SAI Version">0.9.4</td>
+							<td data-th="Note"></td>
+						</tr>
+						<tr>
+							<td data-th="Release Series">SONiC.201705</td>
+							<td data-th="Status">Maintained</td>
+							<td data-th="Initial Release Date">5/15/2017</td>
+							<td data-th="SAI Version">0.9.4</td>
+							<td data-th="Note"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="presentations">
+					<h1 style="color:#20304b;text-align:center;padding:20px;font-size: 24px !important">Presentations</h1>
+
+					<div class="presentationTitle" value="SONiC_SAI"><h3>SONiC/SAI pre-Summit Workshop and Hackathon 2019</h3></div>
+
+					<div id="SONiC_SAI" style="display:none">
+						<div class="x_panel">
+
+							<h3 style="color:#20304b;text-align:center;">Workshop</h3>
+							<div class="x_panel">
+								<table class="table table-hover presentationTable">
+									<tbody>
+										<tr>
+											<th>Release Series</th>
+											<th>Initial Release Date</th>
+											<th>Overview</th>
+											<th>Download</th>
+										</tr>
+										<tr>
+											<th scope="row">Self Healing Networks - LinkedIn’s Journey to SONiC and Beyond by Zaid Ali Kahn, LinkedIn</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Self-Healing Network Linkedin Keynote.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONiC OS Virtualization and Data Plane Emulation Work by Yongfeng Liu, Alibaba Group</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SONiC Dataplane Emulation Alibaba.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONiC in Microsoft Azure: Enabling Mission Critical Applications by Alberto Gonzalez Prieto and Weixi Chen,Microsoft</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SONiC in Azure Mission Critical Application - MSFT.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONIC Extension Infrastructure by Matty Kadosh, Mellanox</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SONiC Extension Infrastructure - MLNX.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Using NBI images for SONiC system on Cisco Platforms by Ashoka Kallappa and Jiahua Wang, Cisco</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Using NBI Image for SONiC System - Cisco.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Developer's Overview of Sonic by Praveen Chaudhary, LinkedIn</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Developer Overview of SONiC - LNKD.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Cloud-grade Routing as a Micro-service for Open Networking Platforms by Vinay Nallamothu, Juniper</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Cloud-grade Routing as a Micro-service for Open Networking Platforms - Juniper.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONiC unit test and function test enhancement by Taskin Ucpinar, Edgecore</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SONiC unit test and function test enhancement - Edgecore.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Opportunities and Obstacles in Open Source Networking by Sandeep Madhavan, Dell</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Opportunities and Obstacles in Open Source Networking - Dell.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONiC Hackathon Setup Introduction by Shuotian Cheng, Microsoft</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Hackathon Environment.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<h3 style="color:#20304b;text-align: center;padding:20px">Hackathon Slides</h3>
+							<div class="x_panel">
+								<table class="table table-hover presentationTable">
+									<thead>
+										<tr>
+											<th scope="col">Release Series</th>
+											<th scope="col">Initial Release Date</th>
+											<th scope="col">Overview</th>
+											<th scope="col">Download</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">Network Fabric Configuration for SONiC by team Aviz</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Aviz_AIMS_SONiC_Hackathon_v3.0.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Manage SONiC using Kubernetes by team Kubers</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/2019-OCP-hackathon-Kubers.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">ConfigValidator by team Soniers</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/ConfigValidator Hackathon.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Virtual Switch Platform X by team X</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Virtual Switch X Hackathon.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Enhanced SAI Shell by team Weekend Warrior</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/OCP-2019-Hackathon-SONiC-WeekendWarriors.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONiC Robustness Monitor(RM) by team INV</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/INV_robustness monitor Hackathon.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONiC Web-based Network Management System by team WebNMS</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SONiC_webnms Hackathon.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">FRR Route Reconciliation by team Cape-tain Johan</th>
+											<td>04/30/2019<br>
+											(Scheduled)</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Cape-tain Johan Hackathon.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="presentationTitle" value="Beijing"><h3>SONiC Workshop in Beijing 2018 October</h3></div>
+					<div id="Beijing" style="display:none">
+						<div class="x_panel">
+							<h3 style="color:#20304b;text-align:center;">Workshop</h3>
+							<div class="x_panel">
+								<table class="table table-hover presentationTable">
+									<thead>
+										<tr>
+											<th scope="col">Release Series</th>
+											<th scope="col">Initial Release Date</th>
+											<th scope="col">Overview</th>
+											<th scope="col">Download</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">SONiC Introduction and Roadmap by Xin Liu</th>
+											<td>03/22/2018</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SONiC Introduction and Roadmap.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONiC Deployment by Yongfeng Liu</th>
+											<td>03/22/2018</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SONiC Deployment – Alibaba.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Taking SONiC Beyond BGP with Mellanox Spectrum by Dror Goldenberg</th>
+											<td>03/22/2018</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Taking SONiC Beyond BGP with Mellanox Spectrum – MLNX.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Sonic CLI Framework and Best Practice by Yongcan Wang</th>
+											<td>03/22/2018</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/Sonic CLI Framework and Practice – Alibaba.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONiC Architect adn Platform Management Service by Ying Xie</th>
+											<td>03/22/2018</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SONiC Architect adn Platform Management Service – MSFT.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">SONiC Powered by Programmable Dataplane by Glow Yang</th>
+											<td>03/22/2018</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SONiC Powered by Programmable Dataplane – Barefoot.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="presentationTitle" value="OCP"><h3>OCP Summit 2018 and SONiC SAI Workshop Slide Collection</h3></div>
+					<div id="OCP" style="display:none">
+						<div class="x_panel">
+							<h3 style="color:#20304b;text-align:center;">Workshop</h3>
+							<div class="x_panel">
+								<table class="table table-hover presentationTable">
+									<thead>
+										<tr>
+											<th scope="col">Release Series</th>
+											<th scope="col">Initial Release Date</th>
+											<th scope="col">Overview</th>
+											<th scope="col">Download</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr>
+												<th scope="row">SONiC OCP2018 SONiC Network Telemetry from User Perspective</th>
+												<td>04/30/2019<br>
+												(Scheduled)</td>
+												<td><i class="fa fa-eye showDoc">click</i></td>
+												<td>
+													<a href="/static/downloads/document/SONIC Network Telemetry-final.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">SONiC OCP2018 Configuration</th>
+												<td>04/30/2019<br>
+												(Scheduled)</td>
+												<td><i class="fa fa-eye showDoc">click</i></td>
+												<td>
+													<a href="/static/downloads/document/Sonic_workshop_config_model.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">SONiC OCP2018 WAN</th>
+												<td>04/30/2019<br>
+												(Scheduled)</td>
+												<td><i class="fa fa-eye showDoc">click</i></td>
+												<td>
+													<a href="/static/downloads/document/SONiC OCP2018 WAN.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">SONiC OCP2018 Telemetry Proposal by Broadcom</th>
+												<td>04/30/2019<br>
+												(Scheduled)</td>
+												<td><i class="fa fa-eye showDoc">click</i></td>
+												<td>
+													<a href="/static/downloads/document/OCP-SAI-Telemetry_BRCM_Proposal.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">SONiC OCP2018 SAI Programmability</th>
+												<td>04/30/2019<br>
+												(Scheduled)</td>
+												<td><i class="fa fa-eye showDoc">click</i></td>
+												<td>
+													<a href="/static/downloads/document/SAIf2f_SAI_programability_4.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">SONiC OCP2018 Programmable Forwarding Planes</th>
+												<td>04/30/2019<br>
+												(Scheduled)</td>
+												<td><i class="fa fa-eye showDoc">click</i></td>
+												<td>
+													<a href="/static/downloads/document/Barefoot-SAI-Workshop-03-21-2018-v4.pdf
+													"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">SONiC OCP2018 Closing & Roadmap</th>
+												<td>04/30/2019<br>
+												(Scheduled)</td>
+												<td><i class="fa fa-eye showDoc">click</i></td>
+												<td>
+													<a href="/static/downloads/document/SONiC SAI workshop.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+												</td>
+											</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="presentationTitle" value="2016"><h3>OCP Summit 2016 SONiC Presentation</h3></div>
+					<div id="2016" style="display:none">
+						<div class="x_panel">
+							<h3 style="color:#20304b;text-align:center;">Workshop</h3>
+							<div class="x_panel">
+								<table class="table table-hover presentationTable">
+									<thead>
+										<tr>
+											<th scope="col">Release Series</th>
+											<th scope="col">Initial Release Date</th>
+											<th scope="col">Overview</th>
+											<th scope="col">Download</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										<tr>
+											<th scope="row">OCP Summit 2016 SONiC Presentation</th>
+											<td>05/16/2016</td>
+											<td><i class="fa fa-eye showDoc">click</i></td>
+											<td>
+												<a href="/static/downloads/document/SAI-SONiC-OCP-Summit-Mar16-shared.pdf"><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>
+<!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+	{% include 'preset_js.html' %}
+	<script src="/static/js/roadmap.js"></script>
+</body>
+</html>
+
+
+
+
+
+
