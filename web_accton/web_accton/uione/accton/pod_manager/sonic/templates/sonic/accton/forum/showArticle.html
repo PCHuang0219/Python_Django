@@ -1,0 +1,158 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TMS-Forum</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/forum.css' %}" rel="stylesheet">
+    <link href="{% static 'vendors/additional/common.css' %}" rel="stylesheet">
+	<link href="{% static 'css/sonic/showArticle.css' %}" rel="stylesheet">
+</head>
+{% include 'template_sonic.html' %}
+    <div class="right_col" role="main">
+        <div class="container">
+            <div >
+                <div class="col-12 col-sm-12" id="main">
+                    <h3 id="article_id" style="display: none">000</h3>
+                    <h3 id="article_title">do you know ?</h3>
+                    <div id="article_content">
+                        <p>*8</p>
+                        <p>775</p>
+                    </div>
+                    <div id="asker">
+                        <div id="ask-time">time</div>
+                        <img width="40" height="40" src="https://webkit.org/demos/srcset/image-src.png"></img>
+                        <p id="asker-name">asker</p>
+                    </div>
+                    <div id="tag-list">
+                    </div>
+                    <div class="border-top my-3"></div>
+                    <div id="answer-number">
+                        2 Answers
+                    </div>
+                    <div class="border-top my-3"></div>
+                    <div id="message-list">
+                        <div class="row message"> 
+                            <div class="col-12 col-sm-12">
+                                <div class="col-1 col-sm-1 awesome" >
+                                    <button>
+                                        <svg aria-hidden="true" class="svg-icon m0 iconArrowUpLg" width="12" height="12" viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg>
+                                    </button>
+                                    <div>8</div>
+                                    <button>
+                                        <svg aria-hidden="true" class="svg-icon m0 iconArrowDownLg" width="12" height="12" viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="col-11 col-sm-11 message-content">
+                                    <div class="content">
+                                        <span>hello<a>john</a></span>
+                                    </div>
+                                    <div>
+                                        <div class="time col-12 col-sm-12">
+                                            <div>answered 1 hour ago</div>
+                                        </div>
+                                        <div class="replier">
+                                            <img width="40" height="40" src="https://webkit.org/demos/srcset/image-src.png"></img>
+                                            <div>replier</div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row reply">
+                                <div class="col-1 col-sm-1">
+                                </div>
+                                <div class="col-11 col-sm-11">
+                                    <div class="reply-awesome">
+                                        <span>778</span>
+                                    </div>
+                                    <div class="reply-message-content">
+                                        <div class="content">
+                                            <span>hello – <a>john</a><span class="reply-date"> Jun 18 '14 at 20:12</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-comment">
+                                Your Answer
+                            </div>
+                            <div class="comment-form">
+                                <form>
+                                    <textarea class="form-control" id="message_content" rows="2"></textarea>
+                                </form> 
+                                <button type="button" class="btn btn-primary btn-sm" id="send-answer">SEND</button>
+                            </div>
+                        </div>
+                        <div class="row message"> 
+                            <div class="col-12 col-sm-12">
+                                <div class="col-1 col-sm-1 awesome" >
+                                    <button>
+                                        <svg aria-hidden="true" class="svg-icon m0 iconArrowUpLg" width="12" height="12" viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg>
+                                    </button>
+                                    <div>8</div>
+                                    <button>
+                                        <svg aria-hidden="true" class="svg-icon m0 iconArrowDownLg" width="12" height="12" viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="col-11 col-sm-11 message-content">
+                                    <div class="content">
+                                        <span>hello<a>john</a></span>
+                                    </div>
+                                    <div>
+                                        <div class="time col-12 col-sm-12">
+                                            <div>answered 1 hour ago</div>
+                                        </div>
+                                        <div class="replier">
+                                            <img width="40" height="40" src="https://webkit.org/demos/srcset/image-src.png"></img>
+                                            <div>replier</div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row reply">
+                                <div class="col-1 col-sm-1">
+                                </div>
+                                <div class="col-11 col-sm-11">
+                                    <div class="reply-awesome">
+                                        <span>778</span>
+                                    </div>
+                                    <div class="reply-message-content">
+                                        <div class="content">
+                                            <span>hello – <a>john</a><span class="reply-date"> Jun 18 '14 at 20:12</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-comment">
+                                add a comment
+                            </div>
+                            <div class="comment-form">
+                                <form>
+                                    <textarea class="form-control" id="message_content" rows="2"></textarea>
+                                </form> 
+                                <button type="button" class="btn btn-primary btn-sm" id="send-reply">SEND</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="add-comment" style="font-size:30px;padding:0 20px 0 10px;">
+                            Add Your Answer
+                        </div>
+                        <div class="col-12 col-sm-12">
+                            <form><textarea class="form-control" id="message_content" rows="2" style="height:150px;"></textarea></form> 
+                            <button type="button" class="btn btn-primary btn-sm send-btn" id="send">SEND</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	{% include 'main_footer.html' %}
+	{% include 'preset_js.html' %}
+	
+	<!-- Additional JS-->
+    <script src="{% static 'js/sonic/forum/showArticle.js' %}"></script>
+</body>
+</html>

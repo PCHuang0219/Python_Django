@@ -172,7 +172,7 @@ let getTestLog = function(){
         data = data["job_log"]
         for(var i = 0; i < data.length;i++)
         {
-            html += "<div>" + data[i] +" "+ "</div>"
+            html += data[i] + "<br>"
         }
         $("#log").append(html);
     });

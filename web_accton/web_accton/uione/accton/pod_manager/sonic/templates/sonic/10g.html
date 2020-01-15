@@ -1,0 +1,58 @@
+{% extends 'SONiCProducts/products.html' %}
+{% load staticfiles %}
+
+{% block title %}
+TMS-Products-10G
+{% endblock %}
+
+{% block bigPicture %}
+<div class="productOverview"><img id="bigger_picture" src="{% static 'images/products/10g/as5512-54x/as5512-54x-2.png' %}"></div>
+{% endblock %}
+
+
+{% block showProduct %}
+	<div class="col-xs-12 col-sm-12 productSort">
+		<div class="row title">
+			<div class="col-sm-3 col-xs-6">
+				<a href="/sonic/products/10g/as5512-54x">
+				<div class="thumbnail div_G">
+					<img src="{%static 'images/products/10g/as5512-54x/as5512-54x-1.png' %}">
+					<div class="caption" style="text-align: center;">
+						<h2>AS5512-54X</h2>
+						<p style="font-size: 13pt">Explore & Discover</p>
+					</div>
+				</div></a>
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<a href="/sonic/products/10g/as5712-54x">
+				<div class="thumbnail div_G">
+					<img alt="..." src="{%static 'images/products/10g/as5712-54x/as5712-54x-1.png' %}">
+					<div class="caption" style="text-align: center;">
+						<h2>AS5712-54X</h2>
+						<p style="font-size: 13pt">Explore & Discover</p>
+					</div>
+				</div></a>
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<a href="/sonic/products/10g/as5812-54t">
+				<div class="thumbnail div_G">
+					<img alt="..." src="{%static 'images/products/10g/as5812-54t/as5812-54t-1.png' %}">
+					<div class="caption" style="text-align: center;">
+						<h2>AS5812-54T</h2>
+						<p style="font-size: 13pt">Explore & Discover</p>
+					</div>
+				</div></a>
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<a href="/sonic/products/10g/as5812-54x">
+				<div class="thumbnail div_G">
+					<img src="{%static 'images/products/10g/as5812-54x/as5812-54x-1.png' %}">
+					<div class="caption" style="text-align: center;">
+						<h2>AS5812-54X</h2>
+						<p style="font-size: 13pt">Explore & Discover</p>
+					</div>
+				</div></a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

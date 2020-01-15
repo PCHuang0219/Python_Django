@@ -11,7 +11,7 @@ let getTestLog = function(){
     $.ajax({
         type: "get",
         url: "http://"+ Config.ip_address + Config.port + "/test/jobDetail/testLog/",
-        data:{job_id: localStorage.getItem("jobId"),test_id: localStorage.getItem("testId")},
+        data:{job_id: getUrlParameter("jobId"),test_id: getUrlParameter("testId")},
         dataType: "json",
         success: function(data, status){
             $("#test_name").text(data["test_name"]);

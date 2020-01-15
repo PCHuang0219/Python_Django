@@ -1,0 +1,164 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Accton Total Management System</title>
+	{% include 'preset_style.html' %}
+	<style>
+		.saveValue,
+		.editValue{
+			margin:0 10px;
+			font-weight:bold;
+			padding-top:6px;
+		}
+		.textbox1{
+			margin-left: 8px;
+			height:32px;
+			border-radius:5px;
+			background:  #f9f9f9;
+		}
+		.button-text{
+			font-weight: bold;
+		}
+		.savePictureBar{
+			/* position:absolute; */
+			left:10px;
+			top:308px;
+			z-index:100;
+			background:#000000;
+			width:300px;
+			height:40px;
+			opacity:0.5;
+		}
+		.pictureText{
+			color:  #C3CAD6;
+			opacity:1;
+			margin-top:8px;
+			cursor:pointer;
+		}
+		.pt-area{
+			text-align: right;
+			padding-right: 20px;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			color:  #C3CAD6;
+			opacity:1; 
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:  #C3CAD6;
+        }
+        /* 以上两个属性分别针对火狐浏览器不同版本 */
+
+        input:-ms-input-placeholder { /* IE */
+            color:  #C3CAD6;
+        }
+
+        input::-webkit-input-placeholder{/* webkit内核的浏览器，如谷歌，edge */
+			color:  #C3CAD6;
+			opacity:1; 	
+        }
+		.content1{
+			font-weight: 100;
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+	</style>
+</head>
+<body class="nav-md" style="background: none;">
+<div class="container body">
+	<div class="main_container">
+		<!-- top navigation -->
+		<div class="top_nav" style="margin-left: 0px;">
+			<div class="nav_menu">
+   			<div class="navbar nav_title" style="background: none; border: 0;"><a href="/" class="site_title" style="color: #2A3F54 !important; width: 390px;">Accton | Total Management System</a></div>
+			<nav>
+				<ul class="nav navbar-nav navbar-right">
+					<li class=""><a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">DC Manager</a>
+					<ul class="dropdown-menu dropdown-usermenu pull-right">
+						<li><a href="javascript:;"> My POD Manager</a></li>
+						<li><a href="javascript:;"> My Dashboard</a></li>
+								{% if request.user.is_authenticated %}
+                					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Hello {{ request.user.first_name }}</a></li>
+                					<li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            					{% else %}
+                					<li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+           					{% endif %}
+					</ul>
+					</li>
+				</ul>
+			</nav>
+			</div>
+        </div>
+		<div id="main" style="margin-left:10px">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-4 col-xs-8" >
+				<div id="SelectPicture personal-padding" style="float: right;padding-right:60px;padding-top:80px">
+					<img id="target" height="300" width="300" src="{%static '/images/default-person.jpg'%}">
+					<div class="savePictureBar">
+						<div class="col-xs-6"></div>
+						<div class="col-xs-6 pt-area">
+							<label id="uploadPicture">
+								<input id="src" type="file" accept="image/*" name="filetoupload" placeholder="file to upload" style="margin-top:20px;display:none;">
+								<div id="text">
+									<p class="pictureText">Upload Picture</p>
+								</div>
+							</label>
+							<div id="savePicture" style="display:none">
+								<div class="col-xs-6">
+									<p id="uploadpicturebtn" class="pictureText">Save</p>
+								</div>
+								<div class="col-xs-6">
+									<p id="canceluploadbtn" class="pictureText">Cancel</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-8" style="padding-top:48px">
+				<form>
+					<div class="col-xs-12 form-group personal-padding" style="margin-top:20px;">
+						<label class="col-xs-12" for="InputEmail1" style="color:#6AB7E7;">User ID</label>
+						<!-- <div class="col-xs-2"></div> -->
+						<label id="user_name" class="col-xs-4 content1" for="InputEmail1"></label>
+					</div>
+					<div class="col-xs-12 form-group personal-padding">
+						<label class="col-xs-12" for="Inputbirthday1" style="color:#6AB7E7;">First Name</label>
+						<!-- <div class="col-xs-2"></div> -->
+						<input id="first_name" class="col-xs-4 textbox1" for="Inputbirthday1" disabled >
+						<a class="col-md-2 editValue">Edit</a>
+					</div>
+					<div class="col-xs-12 form-group personal-padding">
+						<label class="col-xs-12" for="Inputbirthday1" style="color:#6AB7E7;">Last Name</label>
+						<!-- <div class="col-xs-2"></div> -->
+						<input id="last_name" class="col-xs-4 textbox1" for="Inputbirthday1" disabled>
+						<a class="col-md-2 editValue">Edit</a>
+					</div>
+					<div class="col-xs-12 form-group personal-padding">
+						<label class="col-xs-12" style="color:#6AB7E7;">E-mail</label>
+						<!-- <div class="col-xs-2"></div> -->
+						<label id="email" class="col-xs-4 content1" for="Inputbirthday1"></label>
+					</div>
+					<div class="col-xs-12 form-group personal-padding">
+						<label class="col-xs-12" for="InputName1" style="color:#6AB7E7;">User Role</label>
+						<!-- <div class="col-xs-2"></div> -->
+						<label id="user_type" class="col-xs-4 content1" for="InputName1"></label>
+					</div>
+					<div class="col-xs-12 form-group personal-padding">
+						<a href="/accounts/password-change/" style="font-size:18px">
+							<img src="{% static '/images/tms_password.svg' %}" style="padding-right:8px">Change Password
+						</a>
+					</div>
+				</form>
+			</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'preset_js.html' %}
+<script src="{% static 'js/personal_settings/main.js' %}"></script>
+		
+</body>
+</html>

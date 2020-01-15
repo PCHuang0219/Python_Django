@@ -12,7 +12,7 @@ function addLoadEvent(func){
 }
 
 let getCurrentPath=function(){
-    var path = location.pathname ;
+    var path = window.location.href ;
     updatePath(path);
 }
 
@@ -24,7 +24,13 @@ let updatePath=function(path){
     roadmap = path.split("/")
     let html = '<li class="breadcrumb-item"><a href="/">Home</a></li>';
     let link = '';
-    for (let i=1 ; i<roadmap.length ; i++){
+    if (roadmap[roadmap.length]){
+        argument = roadmap.length - 1 ;
+    }
+    else{
+        argument = roadmap.length - 2 ; 
+    }
+    for (let i=3 ; i<roadmap.length - 1 ; i++){
         if (roadmap[i] != ''){
             link += roadmap[i] ;
             substr = roadmap[i].substr(0,1);
@@ -63,7 +69,8 @@ let updatePath=function(path){
             if (roadmap[i] == "Pm"){
                 roadmap[i] = "Project Management"
             }
-            html += '<li class="breadcrumb-item"><a href=/'+link+'>'+roadmap[i]+'</a></li>';
+            // html += '<li class="breadcrumb-item"><a href=/'+link+'>'+roadmap[i]+'</a></li>';
+            html += '<li class="breadcrumb-item"><a onclick=history.go(' + (i-argument) + ')>'+roadmap[i]+'</a></li>';
             if (roadmap[i+1] != ''){
                 link += '/';
             }
@@ -86,6 +93,22 @@ let goTop=function(){
         }
     });
 }
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
 addLoadEvent(getCurrentPath);
 addLoadEvent(goTop);
-
+addLoadEvent(getUrlParameter);

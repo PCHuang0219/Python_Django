@@ -1,0 +1,109 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TMS-Telco-Radom</title>
+    {% include 'preset_style.html' %}
+    <!-- Additional CSS-->
+    <link href="{% static 'vendors/additional/telco_solution.css' %}" rel="stylesheet">    
+</head>
+
+{% include 'template_sonic.html' %}
+<div class="right_col" role="main">
+    <div class="clearfix"></div>
+    <div class="row solution">
+        <div class="col-12 title1_solution">
+            <h1>ROADM Solutions - Cassini</h1>
+        </div>
+        <div class="x_panel solution">
+        <p class="content_solution">
+            Authorized by <a href="https://telecominfraproject.com/">TELECOM INFRA PROJECT</a><br><br>
+            <a href="https://www.edge-core.com/productsInfo.php?cls=291&cls2=347&cls3=348&id=606" >Cassini</a> is the industry's highest capacity and first modular open packet transponder for data center interconnect and service provider backhaul ROADM solutions. 
+        </p>
+        <div class="col-xs-12 photo_demo">
+            <img src="{% static '/images/solution/Telco_radom01.png' %}" style="width:50%">
+            <img src="{% static '/images/solution/Telco_radom02.png' %}" style="width:50%">
+            <p>Picture: Cassini Open Packet Transponder from Edgecore Networks</p>
+        </div>
+        <div class="col-12 title2_solution">
+                <h1>Overview</h1>
+            </div>
+            <p class="content_solution">
+                <a href="https://www.edge-core.com/productsInfo.php?cls=291&cls2=347&cls3=348&id=606" >Cassini</a> is a 1.5-RU open packet optical transponder, whose design was contributed to Telecom Infra Project (TIP) by Edgecore Networks and which is now generally available as a commercial open network product from Edgecore. It is the industry's highest capacity and first modular open packet transponder offering a flexible mix of 100 Gigabit Ethernet (GbE) packet switching ports and 100/200 Gbps coherent optical interfaces for data center interconnect and service provider backhaul use cases.
+                <br><br>
+                As an open network platform, Cassini supports disaggregated software options including OcNOSTM from IP Infusion, a whitebox switching NOS optimized for service provider and data center interconnect applications. Its availability on the Cassini packet optical transponder can help network operators easily extend and migrate existing metro and long-haul Dense Wavelength Division Multiplexing (DWDM) networks to add new 100G capacities, and extend inter-DC L2 and L3 services. Later in 2019, Fujitsu carrier grade NOS will be supported on Cassini as well.
+                <br><br>
+                Combined with the Transponder Abstraction Interface (TAI), which greatly simplifies the integration work between a network operating system and the underlying optical hardware, operators are equipped with more flexibility and faster time to deliver for the quick replacement of individual components, rather than replacing entire monolithic solutions.
+            </p>
+            <div class="col-12 title2_solution">
+                <h1>In the network</h1>
+            </div>
+            <div class="col-xs-12 photo_demo">
+                    <img src="{% static '/images/solution/Telco_radom03.png' %}" style="width:65%">
+                </div>
+                <div class="col-12 title2_solution">
+                        <h1>At a glance</h1>
+                    </div>
+            <p class="content_solution">
+                <ul class="content_solution">
+                    What: An open and disaggregated packet-optical transponder with modular optical interface design. Cassini integrates 100GbE L2/L3 switching with L1 optical transport functions as line-card modules, and covers data center interconnect, metro and access backhaul use cases. It is currently the industry's highest capacity open packet transponder.
+                    <li class="content_solution">1.5RU form factor with system throughput of 3.2Tbps based on Broadcom StrataXGS™ Tomahawk™ Plus switching silicon</li>
+                    <li class="content_solution">16 fixed 100 Gigabit Ethernet QSFP28 ports</li>
+                    <li class="content_solution">8 line card slots to incorporate a flexible mix of 100/200 Gbps ACO/DCO coherent DSP and optical transceivers from Acacia Communications, Fujitsu Optical Components and Lumentum or additional 100GbE ports.</li>
+                    <li class="content_solution">MACsec security on client-side and DCO line cards to enable secure encrypted connections.</li>
+                </ul>
+                <ul class="content_solution">
+                    Why:
+                    <li class="content_solution">
+                            Pay as you grow / Modularity: Cassini offers the ability to start small and ramp up on capacity as needed with the optical components designed as add-in pluggable modules.
+                    </li>
+                    <li class="content_solution">
+                        Flexibility: Cassini provides a wider choice of technologies including different 100/200 Gbps coherent optical interfaces (ACO/DCO) and variable number of 100GbE client ports.
+                    </li>
+                    <li class="content_solution">
+                            TAI-enabled ease of NOS integration: TAI significantly reduces network systems development and integration of optical subsystems and modules from months to weeks allowing faster time to market and deployment.
+                    </li>
+                </ul>
+                <ul class="content_solution">
+                        How: via TIP, through the Open Optical & Packet Transport group (OOPT).
+                </ul>
+                <ul class="content_solution">
+                        Who: Multi-partner effort by Edgecore Networks, IP Infusion, Lumentum, Fujitsu Optical Components, and NTT Electronics.
+                </ul>
+                <ul class="content_solution">
+                        mpact: Cost savings for operators due to reduced device cost and optimal form factor for Data Center Internconnect and service provide backhaul use cases.
+                </ul>
+            </p>
+
+            <div class="col-12 title2_solution">
+                <h1>General availability</h1>
+            </div>
+            <p class="content_solution">
+                <a href="https://www.edge-core.com/productsInfo.php?cls=291&cls2=347&cls3=348&id=606" >Cassini</a> iis generally available now from Edgecore Networks as an open network hardware product. Open source software options using SONiC packet switching software and ONF ODTN optical line management software are also available. Commercial software options, include IP Infusion OcNOSTM available in February 2019, and Fujitsu carrier grade NOS planned for late 2019 availability.
+                <br><br>
+                <ul class="content_solution">
+                        What next
+                        <li class="content_solution">Join the Open Optical Packet Transport Project Group, DCSG sub-group: <a href="https://oopt.telecominfraproject.com/">telecominfraproject.com/open-optical-packet-transport/</a> to learn and contribute  </li>
+                        <li class="content_solution">Contact us with questions or comments: <a href="mailto:OOPT-Info@telecominfraproject.com">OOPT-Info@telecominfraproject.com</a> </li>
+                </ul>
+            </p>
+             <div class="col-xs-12 photo_demo">
+            <img src="{% static '/images/solution/Telco_radom04.png' %}" style="width:100%">
+        </div>
+            <p class="content_solution">
+                    Copyright © 2019 Telecom Infra Project, Inc. All rights reserved.The Telecom Infra Project logo is a trademark of Telecom Infra Project, Inc. in the United States or other countries, and is registered in one or more countries. THIS DOCUMENT IS PROVIDED “AS IS” AND WITHOUT ANY WARRANTY OF ANY KIND.
+            </p>
+</div>
+</div>
+</div>
+<!-- footer content -->
+<footer>
+    <div class="container">
+        <div class="pull-left">Powered by Accton Technology &copy;</div>
+    </div>
+</footer>
+{% include 'preset_js.html' %}
+</body>
+
+</html>

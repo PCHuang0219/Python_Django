@@ -1,0 +1,71 @@
+{% extends 'wiki_template.html' %}
+{% load staticfiles %}
+
+{% block titile %}
+	<title>Wiki-Index</title>
+{% endblock %}
+{% block style %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/wiki.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	<div class="tabcontent">
+		<h3 class="wikifont7">Index</h3>
+		<p>
+			<div class="col-md-12 wikifont6">
+				<div class="col-md-3">
+					Cassini
+				</div>
+				<div class="col-md-3">
+					ONL
+				</div>
+				<div class="col-md-3">
+					SONiC
+				</div>
+				<div class="col-md-3">
+					Data center network architectures
+				</div>
+			</div>
+			<div class="col-md-12 wikifont6">
+				<div class="col-md-3">
+					Leaf-spine architecture
+				</div>
+				<div class="col-md-3">
+					Network switch
+				</div>
+				<div class="col-md-3">
+					Network operating system
+				</div>
+				<div class="col-md-3">
+					ONIE
+				</div>
+			</div>
+			<div class="col-md-12 wikifont6">
+				<div class="col-md-3">
+					Software-defined networking
+				</div>
+				<a href="/sonic/accton/wiki/glossary#FUR"><div class="col-md-3">
+					FUR
+				</div></a>
+				<a href="/sonic/accton/wiki/glossary#DVT"><div class="col-md-3">
+					DVT
+				</div></a>
+				<a href="/sonic/accton/wiki/glossary#I&V"><div class="col-md-3">
+					I&V
+				</div></a>
+			</div>
+		<br>
+		</p>
+
+
+		
+	</div>
+{% endblock %}
+{% block js %}
+	<!-- Additional JS-->
+	<script src="{% static 'js/sonic/product.js' %}"></script>
+	<script src="{% static 'js/sonic/location.js' %}"></script>
+	<script src="{% static 'vendors/additional/js/wiki.js' %}"></script>
+{% endblock %} 

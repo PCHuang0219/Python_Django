@@ -1,0 +1,83 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sales Contact</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/howtobuy.css' %}" rel="stylesheet">
+</head>
+{% include 'template_sonic.html' %}
+	<div class="right_col common_style" role="main">
+	<div class="row">
+	<img src="/static/images/logo/edgecore.png" style="margin-left:20px">
+	<div style="padding:0 10px 0 10px">
+		<h1 style="font-size:36px;border-bottom-color:black;border-bottom-style:solid;padding-bottom:15px;">Global Locations</h1>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-6 col-xs-12 bottom-line">
+			<div class="font1">
+				<p class="office_location">Headquarters</p>
+				No.1, Creation Rd.3, Hsinchu Science Park, Hsinchu,30077, Taiwan, R.O.C<br><br>
+				<i class="glyphicon glyphicon-earphone"></i> TEL: +886-3-5638888<br>
+				<i class="glyphicon glyphicon-envelope"></i> MAIL: sales@edge-core.com
+			</div>
+		</div>
+		<div class="col-md-6 col-xs-12 bottom-line">
+			<div class="font1">
+				<p class="office_location">Taipei Office</p>
+				13F., No.102, Guangfu S. Rd., Da'an Dist., Taipei City<br><br>
+				<i class="glyphicon glyphicon-earphone"></i> TEL: +886-2-27112036<br>
+				<i class="glyphicon glyphicon-envelope"></i> MAIL: sales@edge-core.com
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-6 col-xs-12 bottom-line">
+			<div class="font1">
+				<p class="office_location">United States Office</p>
+				20 Mason Irvine, CA 92618<br><br>
+				<i class="glyphicon glyphicon-earphone"></i> TEL: +1(877) 828-CORE(877-828-2673)<br>
+				<i class="glyphicon glyphicon-envelope"></i> MAIL: sales@edge-core.com
+			</div>
+		</div>
+		<div class="col-md-6 col-xs-12 bottom-line">
+			<div class="font1">
+				<p class="office_location">Singapore Office</p>
+				15 Enggor Street, #10-04 Realty Centre, Singapore 079716<br><br>
+				<i class="glyphicon glyphicon-earphone"></i> TEL: +65 63387667<br>
+				<i class="glyphicon glyphicon-envelope"></i> MAIL: sales@edge-core.com
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-6 col-xs-12 bottom-line">
+			<div class="font1">
+				<p class="office_location">EMEA Office</p>
+				Austriacka 4, 64-100 Leszno, Poland<br><br>
+				<i class="glyphicon glyphicon-earphone"></i> TEL: +48 880 848 030<br>
+				<i class="glyphicon glyphicon-envelope"></i> MAIL: emeasales@edge-core.com
+			</div>
+		</div>
+		<div class="col-md-6 col-xs-12 bottom-line">
+			<div class="font1">
+				<p class="office_location">India Contact</p>
+				15 Enggor Street, #10-04 Realty Centre, Singapore 079716<br><br>
+				<i class="glyphicon glyphicon-earphone"></i> TEL: +91-91089-31030<br>
+				<i class="glyphicon glyphicon-envelope"></i> MAIL: sales@edge-core.com
+			</div>
+		</div>
+	</div>
+</div>	
+</div>
+<!-- footer content -->
+<footer>
+	<div class="container">
+		<div class="pull-left">Powered by Accton Technology &copy;</div>
+	</div>
+</footer>
+	{% include 'preset_js.html' %}
+	<script src="{% static 'js/sonic/wheretobuy.js' %}"></script>
+</body>
+</html>
+

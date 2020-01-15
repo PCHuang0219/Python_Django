@@ -1,0 +1,506 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TMS-FAQ</title>
+	{% include 'preset_style.html' %}
+	<!-- Additional CSS-->
+	<link href="{% static 'vendors/additional/product.css' %}" rel="stylesheet">
+	<link href="{% static 'vendors/additional/faq.css' %}" rel="stylesheet">
+
+</head>
+{% include 'template_sonic.html' %}
+<div class="right_col" role="main">
+	<div class="clearfix"></div>
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 system_T1_Table faq-font" >
+			<div class="x_panel">
+				<div class="col-12" style="height:100px"><img src="{% static 'images/logo/edgecore.png' %}" style="position:absolute;width:170px;top:15px"></div>
+				<div class="panel col-xs-12 col-sm-12">
+					<a aria-controls="generalfaq" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#generalfaq" role="button">
+					<div class="panel-heading" id="headingOne" role="tab">
+						<p class="main_sort">General FAQ<i class="fa fa-angle-up"></i></p>
+					</div></a>
+					<div aria-labelledby="headingOne" class="panel-collapse collapse in" id="generalfaq" role="tabpanel">
+						<div class="panel-body question">
+							<details>
+								<summary>
+									<b class="summary">What is SONiC?</b>
+								</summary>
+								<p class="answer">SONiC is a collection of networking software components required to have a fully functional L3 device. It is designed meet the requirements of a cloud data center. It is fully open-sourced at OCP.</p>
+							</details>
+							<details>
+								<summary>
+									<b class="summary">What is SAI? What's the relationship between SONiC and SAI?</b>
+								</summary>
+								<p class="answer">SAI stands for "Switch Abstraction Interface". It is a common API that is supported by many switch ASIC vendors. SONiC uses SAI to program the ASIC. This enabled SONiC to work across multiple ASIC platforms naturally.</p>
+							</details>
+							<details>
+								<summary>
+									<b class="summary">Is SONiC a Linux distribution?</b>
+								</summary>
+								<p class="answer">No. SONiC is Linux-based, but is not a distribution by itself. Today, SONiC runs on Debian Jessie. SONiC has also been ported to Ubuntu (as a snap).</p>
+							</details>
+							<details>
+								<summary>
+									<b class="summary">How can I get SONiC?</b>
+								</summary>
+								<p class="answer">If you clone the sonic-buildimage repo and follow the instructions there, you should be able to produce the SONiC image yourself. Our Jenkins server also produces a regular build. So you can download the image there as well. The list of supported devices and ASICs are maintained here.</p>
+							</details>
+							<details>
+								<summary>
+									<b class="summary">How can I get the SONiC source code?</b>
+								</summary>
+								<p class="answer">SONiC is fully open-sourced on GitHub, and distributed under Apache License. It is maintained as multiple repositories instead of a single big repo for manageability reasons. The list of SONiC source code repos is maintained here.</p>
+							</details>
+							<details>
+								<summary>
+									<b class="summary">Why are certain SAI implementations only distributed in binary form?</b>
+								</summary>
+								<p class="answer">SAI defines the common API supported by multiple ASIC vendors. The SAI implementation depends on each individual vendor's SDK, which may not be open-sourced itself. Therefore, depending on the vendor's license model, SONiC may or may not be allowed to open source the SAI implementation.</p>
+							</details>
+							<details>
+								<summary>
+									<b class="summary">Does SONiC offer Linux options, and/or can it be customized?</b>
+								</summary>
+								<p class="answer">Today (March, 2017) SONiC requires Linux kernel 3.16. We built and tested on Debian Linux, but theoretically any distribution could be supported. It is fully open sourced and can be customized by users. A contributor’s guide is posted to cover how to add documentation and code as well as report and fix bugs.</p>
+							</details>
+							<details>
+								<summary>
+									<b class="summary">Which hardware platforms and ASIC chipsets are you running SONiC on?</b>
+								</summary>
+								<p class="answer">SONiC supports all the ASICs that are supported by SAI. Those ASICs are available via various switch hardware through both ODMs and OEMs. Currently, SONiC focuses on single ASIC devices. You can find a full list of supported devices and platforms here.</p>
+							</details>
+							<div class="collapse_all" value="q1">
+								<p style="text-align: center;">show more ...</p>
+							</div>
+							<div id="q1" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">Does SONiC have its own hardware?</b>
+									</summary>
+									<p class="answer">No. SONiC is purely a software solution.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">How can I port SONiC to a new device?</b>
+									</summary>
+									<p class="answer">Yes, SONiC is deployed in Microsoft production data centers.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Is SONiC deployed in Microsoft data centers today?</b>
+									</summary>
+									<p class="answer">Please follow the porting guide.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">How many devices are running SONiC?</b>
+									</summary>
+									<p class="answer">The deployment is growing from one data center to cross regions. We plan to rapidly expand SONiC deployment over the coming months.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">How is SONiC supported?</b>
+									</summary>
+									<p class="answer">SONiC is a community supported product. Microsoft is committed to engage with the community to keep SONiC relevant, reliable and stable. We use it in our own production network. Microsoft has no plans to sell SONiC to customers or provide any network engineering or development support.</p>
+								</details>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel col-xs-12 col-sm-12">
+					<a aria-controls="400g" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#400g" role="button">
+					<div class="panel-heading" id="headingTwo" role="tab">
+						<p class="main_sort">Edgecroe 400G<i class="fa fa-angle-down"></i></p>
+					</div></a>
+					<div aria-labelledby="headingTwo" class="panel-collapse collapse" id="400g" role="tabpanel">
+						<div class="panel-body question">
+							<div class="model" value="as8000">
+								<p>AS8000</p>
+							</div>
+							<div id="as8000" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS8000?</b>
+									</summary>
+									<p class="answer">Minipack is based on an internal main switch board with Broadcom StrataXGS Tomahawk™ III Switch Series silicon capable of line rate 12.8Tbps Layer2 and Layer3 switching.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+							<div class="model" value="as9716-32d">
+								<p>AS9716-32d</p>
+							</div>
+							<div id="as9716-32d" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS9716-32d?</b>
+									</summary>
+									<p class="answer">The AS9716-32d can be deployed as a spine switch supporting 100/400 GbE spine interconnects.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel col-xs-12 col-sm-12">
+					<a aria-controls="100g" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#100g" role="button">
+					<div class="panel-heading" id="headingThree" role="tab">
+						<p class="main_sort">Edgecroe 100G<i class="fa fa-angle-down"></i></p>
+					</div></a>
+					<div aria-labelledby="headingThree" class="panel-collapse collapse" id="100g" role="tabpanel">
+						<div class="panel-body">
+							<div class="question">
+								<div class="model" value="as7712-32x">
+									<p>AS7712-32X</p>
+								</div>
+								<div id="as7712-32x" style="display:none">
+									<details>
+										<summary>
+											<b class="summary">What are the usages of AS7712-32X?</b>
+										</summary>
+										<p class="answer">The AS7712-32X can be deployed as a TOR switch supporting 10/25/50 GbE to servers with 40/50/100 GbE uplinks, or as a spine switch supporting 40/50/100 GbE spine interconnects.</p>
+									</details>
+									<details>
+										<summary>
+											<b class="summary">Where can I buy?</b>
+										</summary>
+										<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+										Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+									</details>
+								</div>
+								<div class="model" value="as7726-32x">
+									<p>AS7726-32X</p>
+								</div>
+								<div id="as7726-32x" style="display:none">
+									<details>
+										<summary>
+											<b class="summary">What are the usages of AS7726-32X?</b>
+										</summary>
+										<p class="answer">The AS7726-32X can be deployed as a TOR switch supporting 10/25/50 GbE to servers with 40/50/100 GbE uplinks, or as a spine switch supporting 40/50/100 GbE spine interconnects.</p>
+									</details>
+									<details>
+										<summary>
+											<b class="summary">Where can I buy?</b>
+										</summary>
+										<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+										Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+									</details>
+								</div>
+								<div class="model" vlaue="as7816-64x">
+									<p>AS7816-64X</p>
+								</div>
+								<div id="as7816-64x" style="display:none">
+									<details>
+										<summary>
+											<b class="summary">What are the usages of AS7816-64X?</b>
+										</summary>
+										<p class="answer">The AS7816-64X can be deployed as a TOR switch supporting 10/25 GbE to servers with 40/100 GbE uplinks, or as a spine switch supporting 40/100 GbE spine interconnects.</p>
+									</details>
+									<details>
+										<summary>
+											<b class="summary">Where can I buy?</b>
+										</summary>
+										<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+										Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+									</details>
+								</div>
+								<div class="model" value="wedge100bf-32x">
+									<p>Wedge100bf-32X</p>
+								</div>
+								<div id="wedge100bf-32x" style="display:none">
+									<details>
+										<summary>
+											<b class="summary">What are the usages of Wedge100bf-32X?</b>
+										</summary>
+										<p class="answer">The Wedge100BF-32X can be deployed as a TOR switch supporting 25/50 GbE to servers with 40/50/100 GbE uplinks, or as a spine switch supporting 40/50/100 GbE spine interconnects.</p>
+									</details>
+									<details>
+										<summary>
+											<b class="summary">Where can I buy?</b>
+										</summary>
+										<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+										Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+									</details>
+								</div>
+								<div class="model" value="wedge100bf-65x">
+									<p>Wedge100bf-65X</p>
+								</div>
+								<div id="wedge100bf-65x" style="display:none">
+									<details>
+										<summary>
+											<b class="summary">What are the usages of Wedge100bf-65X?</b>
+										</summary>
+										<p class="answer">The Wedge100BF-65X can be deployed as a TOR switch supporting 25/50 GbE to servers with 40/50/100 GbE uplinks, or as a spine switch supporting 40/50/100 GbE spine interconnects.</p>
+									</details>
+									<details>
+										<summary>
+											<b class="summary">Where can I buy?</b>
+										</summary>
+										<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+										Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+									</details>
+								</div>
+								<div class="model" value="wedge100s-32x">
+									<p>Wedge100s-32X</p>
+								</div>
+								<div id="wedge100s-32x" style="display:none">
+									<details>
+										<summary>
+											<b class="summary">What are the usages of Wedge100S-32X?</b>
+										</summary>
+										<p class="answer">The Wedge100S switch provides 32 QSFP28 ports that can each run at 100 GbE/40 GbE, or as 4 x 25 GbE/ 4 x 10 GbE/2 x 50 GbE through breakout cables.</p>
+									</details>
+									<details>
+										<summary>
+											<b class="summary">Where can I buy?</b>
+										</summary>
+										<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+										Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+									</details>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel col-xs-12 col-sm-12">
+					<a aria-controls="40g" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#40g" role="button">
+					<div class="panel-heading" id="headingThree" role="tab">
+						<p class="main_sort">Edgecroe 40G<i class="fa fa-angle-down"></i></p>
+					</div></a>
+					<div aria-labelledby="headingThree" class="panel-collapse collapse" id="40g" role="tabpanel">
+						<div class="panel-body question">
+							<div class="model" value="as6700-32x">
+								<p>AS6700-32X</p>
+							</div>
+							<div id="as6700-32x" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS6700-32x?</b>
+									</summary>
+									<p class="answer">The AS6700-32X can be deployed as a TOR switch supporting 10 GbE or 40 GbE server connections, or as a spine switch, supporting 10 GbE or 40 GbE spine interconnects.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+							<div class="model" vlaue="as6701-32x">
+								<p>AS6701-32X</p>
+							</div>
+							<div id="as6701-32x" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS6701-32x?</b>
+									</summary>
+									<p class="answer">The AS6712-32X can be deployed as a TOR switch supporting 10 GbE or 40 GbE server connections, or as a spine switch supporting 10 GbE or 40 GbE spine interconnects.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+							<div class="model" value="as6712-32x">
+								<p>AS6712-32X</p>
+							</div>
+							<div id="as6712-32x" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS6712-32x?</b>
+									</summary>
+									<p class="answer">The AS6701-32X can be deployed as a TOR switch supporting 10 GbE or 40 GbE server connections, or as a spine switch, supporting 10 GbE or 40 GbE spine interconnects.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+							<div class="model" value="as6812-32x">
+								<p>AS6812-32X</p>
+							</div>
+							<div id="as6812-32x" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS6812-32X?</b>
+									</summary>
+									<p class="answer">The AS6812-32X can be deployed as a TOR switch supporting10 GbE or 40 GbE server connections, or as a spine switch supporting 10 GbE or 40 GbE spine interconnects.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel col-xs-12 col-sm-12">
+					<a aria-controls="25g" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#25g" role="button">
+					<div class="panel-heading" id="headingThree" role="tab">
+						<p class="main_sort">Edgecroe 25G<i class="fa fa-angle-down"></i></p>
+					</div></a>
+					<div aria-labelledby="headingThree" class="panel-collapse collapse" id="25g" role="tabpanel">
+						<div class="panel-body question">
+							<div class="model" value="as7312-54xs">
+								<p>AS7312-54XS</p>
+							</div>
+							<div id="as7312-54xs" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS7312-54xs?</b>
+									</summary>
+									<p class="answer">The AS7312-54XS can be deployed as a TOR switch supporting 10/25 GbE to servers with 40/100 GbE uplinks, or as a spine switch supporting 40/100 GbE spine interconnects.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+							<div class="model" value="as7326-56x">
+								<p>AS7326-56X</p>
+							</div>
+							<div id="as7326-56x" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS7326-56x?</b>
+									</summary>
+									<p class="answer">The AS7326-56X can be deployed as a TOR switch supporting 10/25 GbE to servers with 40/50/100 GbE uplinks.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel col-xs-12 col-sm-12">
+					<a aria-controls="10g" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#10g" role="button">
+						<div class="panel-heading" id="headingThree" role="tab">
+							<p class="main_sort">Edgecroe 10G<i class="fa fa-angle-down"></i></p>
+						</div></a>
+					<div aria-labelledby="headingThree" class="panel-collapse collapse" id="10g" role="tabpanel">
+						<div class="panel-body question">
+							<div class="model" value="as5512-54x">
+								<p>AS5512-54X</p>
+							</div>
+							<div id="as5512-54x" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS5512-54x?</b>
+									</summary>
+									<p class="answer">The switch can be deployed either as a Top-of-Rack switch, or as part of a 10GbE or 40GbE distributed spine, forming a non-blocking folded-CLOS data center fabric.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+							<div class="model" value="as5712-54x">
+								<p>AS5712-54X</p>
+							</div>
+							<div id="as5712-54x" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS5712-54x?</b>
+									</summary>
+									<p class="answer">The switch can be deployed either as a Top-of-Rack switch, or as part of a 10GbE or 40GbE distributed spine, forming a non-blocking folded-CLOS data center fabric.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+									</details>
+							</div>
+							<div class="model" value="as5812-54t">
+								<p>AS5812-54T</p>
+							</div>
+							<div id="as5812-54t" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS5812-54t?</b>
+									</summary>
+									<p class="answer">The switch can be deployed either as a Top-of-Rack switch, or as part of a 10GbE or 40GbE distributed spine, forming a non-blocking folded-CLOS data center fabric.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+							<div class="model" value="as5812-54x">
+								<p>AS5812-54X</p>
+							</div>
+							<div id="as5812-54x" style="display:none">
+								<details>
+									<summary>
+										<b class="summary">What are the usages of AS5812-54x?</b>
+									</summary>
+								<p class="answer">The switch can be deployed either as a Top-of-Rack switch, or as part of a 10GbE or 40GbE distributed spine, forming a non-blocking folded-CLOS data center fabric.</p>
+								</details>
+								<details>
+									<summary>
+										<b class="summary">Where can I buy?</b>
+									</summary>
+									<p class="answer">We sell across Asia Pacific, EMEA, North America, Latin America, Russia and CIS.<br>
+									Please visit our services page: <a href="https://www.edge-core.com/where.php" style="color: blue">here</a></p>
+								</details>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>
+<!-- footer content -->
+<footer>
+	<div class="clearfix"></div>
+	<div class="pull-left">Powered by Accton Technology &copy;</div>
+	<div class="clearfix"></div>
+</footer>
+</div>
+</div>
+	{% include 'preset_js.html' %}
+	<script src="{% static 'js/sonic/faq.js' %}"></script>
+</body>
+
+</html>

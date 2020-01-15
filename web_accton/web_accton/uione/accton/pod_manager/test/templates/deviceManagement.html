@@ -1,0 +1,392 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TMS-Deivce Management</title>
+	{% include 'preset_style.html' %}
+	<link href="/static/vendors/additional/labInformation.css" rel="stylesheet">
+</head>
+{% include 'template_ntc.html' %}
+<!-- /main body top navigation bar-->
+<div class="right_col" role="main">
+	<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+	<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+	<!-- breadcomb -->
+	<div class="clearfix"></div><!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<!-- ====     page content     ==== -->
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
+			<div class="x_panel">
+				<div class="x_title">
+					<h1>Taipei Lab</h1>
+				</div>
+				<div class="panel body">
+                    <div class="col-xs-12">
+                        <p class="racktitle">Rack 1</p>
+                        <table class="tablesorter table Table">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center">Location</th>
+                                    <th style="text-align:center">Model</th>
+                                    <th style="text-align:center">Platform</th>
+                                    <th style="text-align:center">Console</th>
+                                    <th style="text-align:center">PDU</th>
+                                    <th style="text-align:center">Default IP</th>
+                                    <th style="text-align:center">User</th>
+                                    <th style="text-align:center">Power Schedule</th>
+                                    <th style="text-align:center">Lease Ends at</th>
+                                </tr>
+                            </thead>
+                            <tbody id="taipeiRack1">
+                                <tr>
+                                    <td data-th="Location">1U</td>
+                                    <td data-th="Model">IXIA</td>
+                                    <td data-th="Console">IXIA</td>
+                                    <td data-th="PDU">IXIA</td>
+                                    <td data-th="Default IP">IXIA</td>
+                                    <td data-th="User">IXIA</td>
+                                    <td data-th="Power Schedule">IXIA</td>
+                                    <td data-th="Lease Ends at">IXIA</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="x_panel">
+                <div class="x_title">
+					<h1>Hsinchu Lab</h1>
+				</div>
+				<div class="panel body">
+                    <div class="col-xs-12">
+                        <p class="racktitle">Rack 1</p>
+                        <table class="tablesorter table Table">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center">Location</th>
+                                    <th style="text-align:center">Model</th>
+                                    <th style="text-align:center">Platform</th>
+                                    <th style="text-align:center">Console</th>
+                                    <th style="text-align:center">PDU</th>
+                                    <th style="text-align:center">Default IP</th>
+                                    <th style="text-align:center">User</th>
+                                    <th style="text-align:center">Power Schedule</th>
+                                    <th style="text-align:center">Lease Ends at</th>
+                                </tr>
+                            </thead>
+                            <tbody id="hsinchuRack1">
+                                <tr>
+                                    <td data-th="Location">18U</td>
+                                    <td data-th="Model">AS7326-56X</td>
+                                    <td data-th="Platform">SONiC</td>
+                                    <td data-th="Console">192.168.3.100 5018</td>
+                                    <td data-th="PDU">192.168.3.61 (#1)</td>
+                                    <td data-th="Default IP">192.168.3.18</td>
+                                    <td data-th="User">SMVDATA</td>
+                                    <td data-th="Power Schedule">7 x 24</td>
+                                    <td data-th="Lease Ends at">not available</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-12">
+                        <p class="racktitle">Rack 2</p>
+                        <table class="tablesorter table Table">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center">Location</th>
+                                    <th style="text-align:center">Model</th>
+                                    <th style="text-align:center">Platform</th>
+                                    <th style="text-align:center">Console</th>
+                                    <th style="text-align:center">PDU</th>
+                                    <th style="text-align:center">Default IP</th>
+                                    <th style="text-align:center">User</th>
+                                    <th style="text-align:center">Power Schedule</th>
+                                    <th style="text-align:center">Lease Ends at</th>
+                                </tr>
+                            </thead>
+                            <tbody id="hsinchuRack2">
+                                <tr>
+                                    <td data-th="Location">1U</td>
+                                    <td data-th="Model">IXIA</td>
+                                    <td data-th="Console">IXIA</td>
+                                    <td data-th="PDU">IXIA</td>
+                                    <td data-th="Default IP">IXIA</td>
+                                    <td data-th="User">IXIA</td>
+                                    <td data-th="Power Schedule">IXIA</td>
+                                    <td data-th="Lease Ends at">IXIA</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-12">
+                        <p class="racktitle">Rack 3</p>
+                        <table class="tablesorter table Table">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center">Location</th>
+                                    <th style="text-align:center">Model</th>
+                                    <th style="text-align:center">Platform</th>
+                                    <th style="text-align:center">Console</th>
+                                    <th style="text-align:center">PDU</th>
+                                    <th style="text-align:center">Default IP</th>
+                                    <th style="text-align:center">User</th>
+                                    <th style="text-align:center">Power Schedule</th>
+                                    <th style="text-align:center">Lease Ends at</th>
+                                </tr>
+                            </thead>
+                            <tbody id="hsinchuRack3">
+                                <tr>
+                                    <th style="text-align:center">Location</th>
+                                    <th style="text-align:center">Model</th>
+                                    <th style="text-align:center">Platform</th>
+                                    <th style="text-align:center">Console</th>
+                                    <th style="text-align:center">PDU</th>
+                                    <th style="text-align:center">Default IP</th>
+                                    <th style="text-align:center">User</th>
+                                    <th style="text-align:center">Power Schedule</th>
+                                    <th style="text-align:center">Lease Ends at</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="x_panel">
+                <div class="x_title">
+					<h1>Tainan Lab</h1>
+				</div>
+				<div class="panel body">
+                    <div class="col-xs-12">
+                        <p class="racktitle">Rack 1</p>
+                        <table class="tablesorter table Table">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center">Location</th>
+                                    <th style="text-align:center">Model</th>
+                                    <th style="text-align:center">Platform</th>
+                                    <th style="text-align:center">Console</th>
+                                    <th style="text-align:center">PDU</th>
+                                    <th style="text-align:center">Default IP</th>
+                                    <th style="text-align:center">User</th>
+                                    <th style="text-align:center">Power Schedule</th>
+                                    <th style="text-align:center">Lease Ends at</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tainanRack1">
+                                <tr>
+                                    <td data-th="Location">1U</td>
+                                    <td data-th="Model">IXIA</td>
+                                    <td data-th="Console">IXIA</td>
+                                    <td data-th="PDU">IXIA</td>
+                                    <td data-th="Default IP">IXIA</td>
+                                    <td data-th="User">IXIA</td>
+                                    <td data-th="Power Schedule">IXIA</td>
+                                    <td data-th="Lease Ends at">IXIA</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-12">
+                        <p class="racktitle">Rack 2</p>
+                        <table class="tablesorter table Table">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center">Location</th>
+                                    <th style="text-align:center">Model</th>
+                                    <th style="text-align:center">Platform</th>
+                                    <th style="text-align:center">Console</th>
+                                    <th style="text-align:center">PDU</th>
+                                    <th style="text-align:center">Default IP</th>
+                                    <th style="text-align:center">User</th>
+                                    <th style="text-align:center">Power Schedule</th>
+                                    <th style="text-align:center">Lease Ends at</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tainanRack2">
+                                <tr>
+                                    <td data-th="Location">1U</td>
+                                    <td data-th="Model">IXIA</td>
+                                    <td data-th="Console">IXIA</td>
+                                    <td data-th="PDU">IXIA</td>
+                                    <td data-th="Default IP">IXIA</td>
+                                    <td data-th="User">IXIA</td>
+                                    <td data-th="Power Schedule">IXIA</td>
+                                    <td data-th="Lease Ends at">IXIA</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-12">
+                        <p class="racktitle">Rack 3</p>
+                        <table class="tablesorter table Table">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center">Location</th>
+                                    <th style="text-align:center">Model</th>
+                                    <th style="text-align:center">Platform</th>
+                                    <th style="text-align:center">Console</th>
+                                    <th style="text-align:center">PDU</th>
+                                    <th style="text-align:center">Default IP</th>
+                                    <th style="text-align:center">User</th>
+                                    <th style="text-align:center">Power Schedule</th>
+                                    <th style="text-align:center">Lease Ends at</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tainanRack3">
+                                <tr>
+                                    <td data-th="Location">1U</td>
+                                    <td data-th="Model">IXIA</td>
+                                    <td data-th="Console">IXIA</td>
+                                    <td data-th="PDU">IXIA</td>
+                                    <td data-th="Default IP">IXIA</td>
+                                    <td data-th="User">IXIA</td>
+                                    <td data-th="Power Schedule">IXIA</td>
+                                    <td data-th="Lease Ends at">IXIA</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+			</div>
+			<div class="col-12">
+                <a class="btn btn-primary" data-target="#a" data-toggle="modal" style="margin:20px 0">Create Deivce To List</a>
+                <a id="showChangeForm" class="btn btn-primary" data-target="#b" data-toggle="modal" style="margin:20px 0">Change Deivce To List</a>
+			</div><!-- Modal -->
+			<div aria-hidden="true" class="modal" id="a" role="dialog">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<p class="modal-title">Create Deivce To List<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button></p>
+						</div>
+						<div class="modal-body">
+							<div class="form-group clearfix">
+								Select Lab & Rack<span class="red">*</span>：<br>
+                                <select id="rack" class="col-xs-12">
+                                    <option>Taipei Rack 1</option>
+                                    <option>Hsinchu Rack 1</option>
+                                    <option>Hsinchu Rack 2</option>
+                                    <option>Hsinchu Rack 3</option>
+                                    <option>Tainan Rack 1</option>
+                                    <option>Tainan Rack 2</option>
+                                    <option>Tainan Rack 3</option>
+                                </select>
+                                Location<span class="red">*</span>：<br>
+                                <div class="col-xs-12">
+                                    <input id="location">  U
+                                </div><br>
+								Model<span class="red">*</span>：<br>
+                                <div class="col-xs-12">
+                                    <input id="model"><br>
+                                </div>
+                                <br>
+                                Platform<span class="red">*</span>：<br>
+                                <div class="col-xs-12">
+                                    <input id="platform"><br>
+                                </div>
+								<br>
+                                Console<span class="red">*</span>：<br>
+                                <div class="col-xs-12">
+                                    <input id="console"> : <input id="port">
+                                </div>
+                                <br><br>
+                                PDU<span class="red">*</span>：<br>
+                                <div class="col-xs-12">
+                                    <input id="PDU"> # <input id="Pport">
+                                </div>
+								<br><br>
+								Default IP<span class="red">*</span>：<br>
+								<div class="col-xs-12">
+                                    <input id="IP">
+                                </div>
+                                <br><br>
+                                User<span class="red">*</span>：<br>
+								<div class="col-xs-12">
+                                    <input id="user">
+                                </div>
+                                <br><br>
+                                Power Schedule<span class="red">*</span>：<br>
+								<div class="col-xs-12">
+                                    <input id="power">
+                                </div>
+                                <br><br>
+                                Status<span class="red">*</span>：<br>
+								<select id="status" class="col-xs-12">
+                                    <option>Not Available</option>
+                                    <option>Available</option>
+                                </select>
+								<br><br>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<a class="btn btn-primary" data-toggle="modal" id="createDeviceList" style="margin:20px 0">Create</a>
+						</div>
+					</div>
+				</div>
+            </div>
+            <div aria-hidden="true" class="modal" id="b" role="dialog">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<p class="modal-title">Change Deivce To List<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button></p>
+						</div>
+						<div class="modal-body">
+							<div class="form-group clearfix">
+								Select Lab & Rack<span class="red">*</span>：<br>
+                                <select id="changeRack" class="col-xs-12">
+                                    <option>Taipei Rack 1</option>
+                                    <option>Hsinchu Rack 1</option>
+                                    <option>Hsinchu Rack 2</option>
+                                    <option>Hsinchu Rack 3</option>
+                                    <option>Tainan Rack 1</option>
+                                    <option>Tainan Rack 2</option>
+                                    <option>Tainan Rack 3</option>
+                                </select>
+                                Select Device<span class="red">*</span>：<br>
+                                <select id="deviceChoose" class="col-xs-12">
+                                </select><br>
+                                Select Type<span class="red">*</span>：<br>
+                                <select id="deviceType" class="col-xs-12">
+                                    <option>Location</option>
+                                    <option>Model</option>
+                                    <option>Platform</option>
+                                    <option>Console</option>
+                                    <option>PDU</option>
+                                    <option>Default IP</option>
+                                    <option>User</option>
+                                    <option>Power Schedule</option>
+                                    <option>Status</option>
+                                </select><br>
+                                Change Content<span class="red">*</span>：<br>
+								<div class="col-xs-12">
+                                    <input id="changeContent">
+                                </div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<a class="btn btn-primary" data-toggle="modal" id="changeDeviceList" style="margin:20px 0">Change</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- footer content -->
+<footer>
+	<div class="pull-right">
+		Powered by Accton Technology&copy;
+	</div>
+	<div class="clearfix"></div>
+</footer><!-- /footer content -->
+{% include 'preset_js.html' %} 
+    <script>
+                $.ajaxSetup({
+                    data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+                });
+    </script> 
+    <script src="{% static 'js/deviceManagement.js' %}"></script>
+</body>
+</html>

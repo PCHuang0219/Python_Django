@@ -1,0 +1,190 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TMS-Job image choose</title>
+	{% include 'preset_style.html' %}
+	<link href="/static/vendors/additional/labInformation.css" rel="stylesheet">
+</head>
+{% include 'template_ntc.html' %}
+<!-- /main body top navigation bar-->
+	<div class="right_col" role="main">
+		<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+		<!-- ==== ==== ==== Main client area ==== ==== ==== -->
+		<!-- breadcomb -->
+		<div class="clearfix"></div>
+		<!-- ====     page content     ==== -->
+		<!-- ====     page content     ==== -->
+		<!-- ====     page content     ==== -->
+		<!-- ====     page content     ==== -->
+		<!-- ====     page content     ==== -->
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
+				<div class="x_panel">
+					<div class="x_title">
+						<div style="font-size:30px">
+							IXIA Status
+						</div>
+					</div><!--br><button type="button" style="float:right;" onclick="submitTestCase()">Submit</button-->
+					<div class="panel body" style="height: 500px ;overflow: auto">
+						<div>
+							<table class="table Table">
+								<thead>
+									<tr class="tr-only-hide">
+										<th style="text-align:center">Location</th>
+										<th style="text-align:center">IXIA Model</th>
+										<th style="text-align:center">Port Number</th>
+										<th style="text-align:center">Status</th>
+										<th style="text-align:center">Connect to Rack</th>
+										<th style="text-align:center">Connect to Device</th>
+										<th style="text-align:center">Start Time</th>
+										<th style="text-align:center">End Time</th>
+										<th style="text-align:center">Owner</th>
+										<th style="text-align:center">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-th="Location">Tainan</td>
+										<td data-th="IXIA Model">XGS12</td>
+										<td data-th="Port Number">1</td>
+										<td data-th="Status">Available Now</td>
+										<td data-th="Connect to Rack"> 21U </td>
+										<td data-th="Connect to Device">AS7712-32X Port 1</td>
+										<td data-th="Start Time"> # </td>
+										<td data-th="End Time"> # </td>
+										<td data-th="Owner">Anber</td>
+										<td data-th="Description">This is a sample</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+					<div class="col-12">
+						<!-- Button trigger modal -->
+						<a class="btn btn-primary" data-toggle="modal" data-target="#a" style="margin:20px 0">Add IXIA Information</a>
+						<!-- Button trigger modal -->
+						<a class="btn btn-primary" data-toggle="modal" data-target="#b" style="margin:20px 0">Change IXIA Status</a>
+						</div>
+						<!-- Modal -->
+						<div class="modal" id="a" role="dialog" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<p class="modal-title">
+											Add IXIA Information
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</p>
+									</div>
+									<div class="modal-body">
+										<div class="form-group clearfix">
+											Location<span class="red">*</span>：</label><br>
+											<select id="createLocation" class="btn btn-default dropdown-toggle col-xs-12">
+												<option>Taipei</option>
+												<option>Hsinchu</option>
+												<option>Taichung</option>
+												<option>Tainan</option>
+											</select><br><br>
+											IXIA Model<span class="red">*</span>：</label><br>
+											<input id="createModel" class="col-xs-12">
+											<br><br>
+											Port Number<span class="red">*</span>：</label><br>
+											<input id="createPortNumber" class="col-xs-12">
+											<br><br>
+											Connect to Rack<span class="red">*</span>：</label><br>
+											<input id="createToRack" class="col-xs-12">
+											<br><br>
+											Connect to Device<span class="red">*</span>：</label><br>
+											<input id="createToDevice" class="col-xs-12">
+											<br><br>
+											Owner<span class="red">*</span>：</label><br>
+											<input id="createOwner" class="col-xs-12">
+											<br><br>
+										</div>						
+									</div>
+									<div class="modal-footer">
+										<a id="createIXIAInformation" class="btn btn-primary" data-toggle="modal" style="margin:20px 0">Create</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal -->
+						<div class="modal" id="b" role="dialog" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<p class="modal-title">
+											Change IXIA Status
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</p>
+									</div>
+									<div class="modal-body">
+										<div class="form-group clearfix" id="selectUpdateView">
+											Location<span class="red">*</span>：</label><br>
+											<select id="location" class="btn btn-default dropdown-toggle col-xs-12" onclick="getChangeView('location')">
+												<option>Taipei</option>
+												<option>Hsinchu</option>
+												<option>Taichung</option>
+												<option>Tainan</option>
+											</select><br><br>
+											IXIA Model<span class="red">*</span>：</label><br>
+											<select id="model" class="btn btn-default dropdown-toggle col-xs-12" onclick="getChangeView('model')">
+											</select><br><br>
+											Port Number<span class="red">*</span>：</label><br>
+											<select id="portNumber" class="btn btn-default dropdown-toggle col-xs-12">
+											</select><br><br>
+											Status<span class="red">*</span>：</label><br>
+											<select id="status" class="btn btn-default dropdown-toggle col-xs-12">
+												<option>Available Now</option>
+												<option>In Use</option>
+											</select><br><br>
+											Connect to Rack<span class="red">*</span>：</label><br>
+											<input id="toRack" class="btn btn-default dropdown-toggle col-xs-12">
+											<br><br>
+											Connect to Device<span class="red">*</span>：</label><br>
+											<input id="toDevice" class="btn btn-default dropdown-toggle col-xs-12">
+											<br><br>
+											Owner<span class="red">*</span>：</label><br>
+											<input id="owner" class="btn btn-default dropdown-toggle col-xs-12">
+											<br><br>
+											Description<span class="red">*</span>：</label><br>
+											<input id="description" class="btn btn-default dropdown-toggle col-xs-12">
+											<br>
+										</div>						
+									</div>
+									<div class="modal-footer">
+										<a id="updateIXIAInfo" class="btn btn-primary" data-toggle="modal" style="margin:20px 0">Change</a>
+									</div>
+								</div>
+							</div>
+						</div>
+            </div>
+		</div>
+	</div><!-- footer content -->
+	<footer>
+		<div class="pull-right">
+			Powered by Accton Technology&copy;
+		</div>
+		<div class="clearfix"></div>
+	</footer><!-- /footer content -->
+</div>
+	{% include 'preset_js.html' %}
+	<script>
+			$.ajaxSetup({
+				data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+			});
+	</script>
+	<script src="{% static 'js/labInformation.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
