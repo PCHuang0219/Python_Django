@@ -97,7 +97,7 @@ let changeProductList = function(vendor_text="Select All",switch_asic_text="Sele
 let getPlatformList = function(){
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/data/platformList/",
+        url: window.location.origin + "/sonic/data/platformList/",
         data:{},
         dataType: "json",
         success: function(data, status){
@@ -115,7 +115,7 @@ let changeProductView = function(data_list){
     for(let i = 0; i < data_list.length; i++){
         html += 
         '<div class="col-xs-6 col-sm-3 devices"> \
-        <a href="http://'+Config.ip_address+Config.port+'/sonic/products/'+data_list[i]["Bandwith"]+'/'+data_list[i]["Switch_SKU"]+'"> \
+        <a href="'+window.location.origin+'/sonic/products/'+data_list[i]["Bandwith"]+'/'+data_list[i]["Switch_SKU"]+'"> \
         <div class="thumbnail"> \
         <img src="../../../static/'+data_list[i]["image"]+'"> \
         <div class="caption"> \

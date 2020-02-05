@@ -87,7 +87,7 @@ let saveEPR = function(){
             formFile.append("fileList",fileList)
             $.ajax({
                 type:'POST',
-                url:'http://' + Config.ip_address + Config.port + '/project_management/save/EPRAttachment/',
+                url:window.location.origin + '/project_management/save/EPRAttachment/',
                 data:formFile,
                 dataType:'json',
                 processData: false,//用于对data参数进行序列化处理 这里必须false
@@ -97,11 +97,11 @@ let saveEPR = function(){
                     EPR_content.EPR_ID = EPR_ID
                     $.ajax({
                         type:'POST',
-                        url:'http://' + Config.ip_address + Config.port + '/project_management/save/EPRContent/',
+                        url:window.location.origin + '/project_management/save/EPRContent/',
                         data:EPR_content,
                         dataType:'json',
                         success:function(data){
-                            location.href = 'http://' + Config.ip_address + Config.port + '/project_management/EPRList'
+                            location.href = window.location.origin + '/project_management/EPRList'
                         }
                     })
                 } 

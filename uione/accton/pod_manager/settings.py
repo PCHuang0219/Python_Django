@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
 import os
 from .middleware import *
 import pymysql
@@ -105,6 +104,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'pod_manager.middleware.MySocialAuthExceptionMiddleware',
+    'pod_manager.middleware.MyTest',
 ]
 
 ROOT_URLCONF = 'pod_manager.urls'
@@ -194,7 +194,11 @@ STATICFILES_DIRS = (
 
 CSRF_COOKIE_NAME = "XSRF-TOKEN"
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'http://0.0.0.0:8000',
+    'http://0.0.0.0:9000',
+)
 CORS_ALLOW_CREDENTIALS = False
 LOGIN_REDIRECT_URL = '/'
 

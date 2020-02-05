@@ -5,14 +5,14 @@ import pandas as pd
 class TestInfo():
     def __init__(self):
         self.test_info_list = []
-        with open('./../../table/test_job.csv', newline='') as csvfile:
+        with open('../../data/test_job.csv', newline='') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 self.test_info_list.append(row)
 
         index_count = 4330        
 
-        with open('./../../table/SONiC_Ansible.csv', newline='') as sonic_ansible_file :
+        with open('../../data/SONiC_Ansible.csv', newline='') as sonic_ansible_file :
             reader = csv.DictReader(sonic_ansible_file)
             for row in reader :
                 TestID = row["Test Case"]
@@ -23,10 +23,12 @@ class TestInfo():
                                             "Topo-type":"T_SONiC_Ansible", \
                                             "TestID":TestID , \
                                             "ansible_type":ansible_type , \
-                                            "Category":category})
+                                            "Model":"", \
+                                            "Category":category, \
+                                            'Comment':''})
                 index_count += 1
 
-        # xl = pd.ExcelFile('./../../table/ansible.xlsx')
+        # xl = pd.ExcelFile('../../data/ansible.xlsx')
         # df1 = xl.parse('SONiC.HEAD.7-602204f')
         # ansible_type_list = ['vms-t0','vms-t1','vms-t1-lag','ptf1-32']
         # for i in range(0,len(df1)):
@@ -40,16 +42,22 @@ class TestInfo():
         #                                     "Category":df1['Headline'][i].split(':')[1].split(' ')[1]})
         #         index_count += 1
 
-        with open('./../../table/FB_minipack.csv', newline='') as sonic_ansible_file :
+        with open('../../data/FB_minipack.csv', newline='') as sonic_ansible_file :
             reader = csv.DictReader(sonic_ansible_file)
             for row in reader :
                 TestID = row["Test ID"]
-                description = row["Component"]
+                description = row["Description"]
+                component = row["Component"]
+                model = row['Model']
+                comment = '-' + row['test_time'] + ' ' + row['test_type'] + ' ' +  row['stress_able'] + ' ' + row['test_utility'] + ' ' + row['description']
                 self.test_info_list.append({"Index":index_count, \
                                             "Platform":"Facebook", \
                                             "Topo-type":"Minipack", \
                                             "TestID":TestID, \
-                                            "Category":description})
+                                            "Category":component, \
+                                            "Model":model, \
+                                            "Description":description, \
+                                            'Comment':comment})
                 index_count += 1
 
         # self.test_info_list.append({"Index":index_count, \
@@ -60,17 +68,17 @@ class TestInfo():
         #             "Description":'999', \
         #             "Category":'1000'})
 
-    def get_by_topo_platform(self,topology,platform):
+    def get_by_topo_platform(self,topology,platform,model):
         data_list = []
         for row in self.test_info_list:
             if(platform == "SONiC"):
                 if(row["Topo-type"] == topology and row["Platform"] == platform):
-                    data_list.append({"testId":row["TestID"] + "/" +row["ansible_type"],"category":row["Category"]})
+                    data_list.append({"testId":row["TestID"] + "--" +row["ansible_type"],"category":row["Category"],'comment':row['Comment']})
             elif(platform == "Facebook"):
-                if(row["Topo-type"] == topology and row["Platform"] == platform):
-                    data_list.append({"testId":row["Category"],"category":row["Category"]})
+                if(row["Topo-type"] == topology and row["Platform"] == platform and row['Model'] == model):
+                    data_list.append({"testId":row["Description"],"category":row["Category"],'comment':row['Comment']})
             else:
-                data_list.append({"testId":row["TestID"],"category":row["Category"]})
+                data_list.append({"testId":row["TestID"],"category":row["Category"],'comment':row['Comment']})
         return data_list
     
     def get_by_testId(self,testId,platform):

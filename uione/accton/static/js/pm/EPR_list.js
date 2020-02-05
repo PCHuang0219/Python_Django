@@ -20,7 +20,7 @@ let getEPRList = function(){
         type:'get',
         data:{},
         dataType:'json',
-        url: "http://" + Config.ip_address + Config.port + "/project_management/get/EPRList/",
+        url: window.location.origin + "/project_management/get/EPRList/",
         success:function(data){
             data = data["data"]
             html = ''
@@ -73,7 +73,7 @@ let jumpDetailPage = function(){
     $(".detailButton").click(function(){
         EPR_ID = $(this).parent().siblings(":first").next().text()
         localStorage.setItem("EPR_ID",EPR_ID);
-        location.href = 'http://' + Config.ip_address + Config.port + '/project_management/EPRList/EPR_detail'
+        location.href = window.location.origin + '/project_management/EPRList/EPR_detail'
     })
 }
 

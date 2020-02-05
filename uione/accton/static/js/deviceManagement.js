@@ -9,7 +9,7 @@ let getDeviceList = function(){
     $.ajax({
         type:'get',
         dataType:'json',
-        url: "http://" + Config.ip_address + Config.port + "/test/get/deviceList/",
+        url: window.location.origin + "/test/get/deviceList/",
         success:function(data){
             data = data["data"]
             taipeiRack1_html = ''
@@ -98,7 +98,7 @@ let createDeivceList = function(){
         else{
             $.ajax({
                 type: 'post',
-                url: "http://" + Config.ip_address + Config.port + "/test/save/deviceList/",
+                url: window.location.origin + "/test/save/deviceList/",
                 data:{rack:rack,
                     location:Dlocation,
                     model:model,
@@ -111,7 +111,7 @@ let createDeivceList = function(){
                     status:status,},
                 dataType:'json',
                 success:function(data){
-                    location.href = "http://" + Config.ip_address + Config.port + "/test/deviceManagement"
+                    location.href = window.location.origin + "/test/deviceManagement"
                 }
             })
         }
@@ -122,7 +122,7 @@ let showDeviceList = function(){
     var rack = $("#changeRack").val()
     $.ajax({
         type: 'get',
-        url: "http://" + Config.ip_address + Config.port + "/test/get/deviceListByRack/",
+        url: window.location.origin + "/test/get/deviceListByRack/",
         data:{rack:rack},
         dataType:'json',
         success:function(data){
@@ -161,14 +161,14 @@ let changeDeivceList = function(){
         // else{
             $.ajax({
                 type: 'post',
-                url: "http://" + Config.ip_address + Config.port + "/test/change/deviceList/",
+                url: window.location.origin + "/test/change/deviceList/",
                 data:{rack:rack,
                     location:Dlocation,
                     type:type,
                     content:content,},
                 dataType:'json',
                 success:function(data){
-                    location.href = "http://" + Config.ip_address + Config.port + "/test/deviceManagement"
+                    location.href = window.location.origin + "/test/deviceManagement"
                 }
             })
         // }

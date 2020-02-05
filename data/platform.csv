@@ -1,0 +1,19 @@
+Switch Vendor,Switch_SKU,ASIC_Vendor,Switch_ASIC,Port_Configuration,Bandwith,Image_path,chip
+Edgecore,as5512-54x,broadcom,brcm-TD2,54X,10g,images/products/forSupportList/as5512-54x_overview.png,
+Edgecore,as5712-54x,broadcom,brcm-TD2,54X,10g,images/products/forSupportList/as5712-54x_overview.png,BCM56854
+Edgecore,as5812-54t,broadcom,brcm-TD2,54T,10g,images/products/forSupportList/as5812-54t_overview.png,
+Edgecore,as5812-54x,broadcom,brcm-TD2,54X,10g,images/products/forSupportList/as5812-54x_overview.png,
+Edgecore,as7312-54xs,broadcom,brcm-TH,54XS,25g,images/products/forSupportList/as7312-54xs_overview.png,BCM56967
+Edgecore,as7326-56x,broadcom,brcm-TD3,56X,25g,images/products/forSupportList/as7326-56x_overview.png,BCM56873
+Edgecore,as6700-32x,broadcom,brcm-TD2,32X,40g,images/products/forSupportList/as6700-32x_overview.png,
+Edgecore,as6701-32x,broadcom,brcm-TD2,32X,40g,images/products/forSupportList/as6701-32x_overview.png,
+Edgecore,as6712-32x,broadcom,brcm-TD2,32X,40g,images/products/forSupportList/as6712-32x_overview.png,
+Edgecore,as6812-32x,broadcom,brcm-TD2,32X,40g,images/products/forSupportList/as6812-32x_overview.png,
+Edgecore,as7712-32x,broadcom,brcm-TH,32X,100g,images/products/forSupportList/as7712-32x_overview.png,BCM56960
+Edgecore,as7726-32x,broadcom,brcm-TD3,32X,100g,images/products/forSupportList/as7726-32x_overview.png,BCM56870
+Edgecore,as7816-64x,broadcom,brcm-TH2,64X,100g,images/products/forSupportList/as7816-64x_overview.png,BCM56970
+Edgecore,wedge100bf-32x,broadcom,brcm-TD2,32X,100g,images/products/forSupportList/wedge100bf-32x_overview.png,
+Edgecore,wedge100bf-65x,broadcom,brcm-TD2,65X,100g,images/products/forSupportList/wedge100bf-65x_overview.png,
+Edgecore,wedge100s-32x,broadcom,brcm-TD2,32X,100g,images/products/forSupportList/wedge100s-32x_overview.png,
+Edgecore,as8000,broadcom,brcm-TD2,32?,400g,images/products/forSupportList/as8000_overview.png,
+Edgecore,as9716-32d,broadcom,brcm-TD2,32D,400g,images/products/forSupportList/as9716-32d_overview.png,

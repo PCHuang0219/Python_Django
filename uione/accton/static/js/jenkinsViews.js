@@ -5,7 +5,7 @@ let jenkins_html = ''
 let getJenkinsJobs = async function(){
     await $.ajax({
         type: "get",
-        url: "http://" + Config.ip_address + Config.port + "/test/jenkins/getJobs/",
+        url: window.location.origin + "/test/jenkins/getJobs/",
         data:{},
         dataType: "json",
         success: function(data, status){
@@ -30,7 +30,7 @@ let showJenkinsJobs = function(){
 let getJenkinsBuilds = async function(job_name){
     await $.ajax({
         type: "get",
-        url: "http://" + Config.ip_address + Config.port + "/test/jenkins/getBuilds/",
+        url: window.location.origin + "/test/jenkins/getBuilds/",
         data:{job_name:job_name},
         dataType: "json",
         success: function(data, status){
@@ -76,11 +76,11 @@ let submitJenkinsJob = function(){
         }        
         $.ajax({
             type: "get",
-            url:"http://" + Config.ip_address + Config.port + "/test/jenkins/buildjob/",
+            url:window.location.origin + "/test/jenkins/buildjob/",
             data:{job_name:job_name},
             dataType: "json",
             success: function(data,status){
-                location.href ="http://" + Config.ip_address + Config.port + "/test/jenkinsViews" 
+                location.href =window.location.origin + "/test/jenkinsViews" 
             }
         })
     })
@@ -94,13 +94,22 @@ let submitImageVersion = function(){
             value = element.value
         }
     })
-    if ( status == "Failed" || status == "Running"){
+    if ( status != "Success"){
         alert("Only can select success build")
     }
-    else if ( status == "Success"){
-        localStorage.setItem("image_path",value)
+    else{
         localStorage.setItem("change_page","1");
-        location.href = "http://" + Config.ip_address + Config.port + "/test/"
+        if (getUrlParameter("test_plan_id")){
+            url = "?test_plan_id=" + getUrlParameter("test_plan_id") + "&"
+        }
+        else{
+            url = "?"
+        }
+        project = getUrlParameter("project")
+        job_name = getUrlParameter("job_name")
+        job_description = getUrlParameter("job_description")
+        url += "job_name=" + job_name + "&job_description=" + job_description + "&image_path=" + value + "&project=" + project
+        location.href = window.location.origin + "/test/" + url
     }
 }
 

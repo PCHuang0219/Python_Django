@@ -31,7 +31,7 @@ var last_name = ''
 let getInformationByUser = function(){
     $.ajax({
         type:'get',
-        url:'http://' + Config.ip_address + Config.port + '/personal_settings/getInfoByUser/',
+        url:window.location.origin + '/personal_settings/getInfoByUser/',
         dataType:'json',
         success:function(data){
             data = data["data"]
@@ -58,12 +58,12 @@ let uploadPersonalPicture = function(){
         img = $("#target").attr("src")
         $.ajax({
             type:'post',
-            url:'http://' + Config.ip_address + Config.port + '/personal_settings/save/personal_picture/',
+            url:window.location.origin + '/personal_settings/save/personal_picture/',
             data:{img:img},
             dataType:'json',
             success:function(){
                 window.onbeforeunload = false
-                location.href = 'http://' + Config.ip_address + Config.port + '/personal_settings/'
+                location.href = window.location.origin + '/personal_settings/'
             }
         })
     })
@@ -84,7 +84,7 @@ let getPersonalPicture = function(){
     $("#target").attr("src","")
     $.ajax({
         type:'get',
-        url:'http://' + Config.ip_address + Config.port + '/personal_settings/get/personal_picture/',
+        url:window.location.origin + '/personal_settings/get/personal_picture/',
         dataType:'json',
         success:function(data){
             data = data["data"]
@@ -144,12 +144,12 @@ let saveBtnClick = function(){
         content=$(this).prev().val()
         $.ajax({
             type:'post',
-            url: 'http://' + Config.ip_address + Config.port + '/personal_settings/save/changeDB/',
+            url: window.location.origin + '/personal_settings/save/changeDB/',
             data:{type:type,content:content},
             dataType:'json',
             success:function(){
                 window.onbeforeunload = false
-                location.href = 'http://' + Config.ip_address + Config.port + '/personal_settings/'
+                location.href = window.location.origin + '/personal_settings/'
             }
         })
     })

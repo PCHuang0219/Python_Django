@@ -13,7 +13,7 @@ let expandTable = function() {
 }
 
 let getDocumentList = async function(){
-    result = await $.get("http://"+ Config.ip_address + Config.port + "/sonic/data/documentList/",
+    result = await $.get(window.location.origin + "/sonic/data/documentList/",
     {
     },
     function(data, status){

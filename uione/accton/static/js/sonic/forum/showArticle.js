@@ -15,11 +15,11 @@ let updateArticleView = () => {
     console.log(article_id)
     $.ajax({
         type: "post",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/putArticleViews/",
+        url: window.location.origin + "/sonic/forum/putArticleViews/",
         data:{article_id:article_id,},
         dataType: "json",
         success: function(data){
-            // location.replace("http://"+ Config.ip_address + Config.port + "/sonic/accton/forum");
+            // location.replace(window.location.origin + "/sonic/accton/forum");
         },
     })
 }
@@ -32,7 +32,7 @@ let setClickMessageAwesomeEvent = function(){
     article_id = $("#article_id").text()
     $(".awesome-button").click(function(){
         if(!is_authenticated){
-            location.href = "http://"+ Config.ip_address + Config.port + "/accounts/login"
+            location.href = window.location.origin + "/accounts/login"
             return;
         }
         if($(this).parent().find(".bad-button path").css("fill") === "rgb(255, 0, 0)"){
@@ -41,11 +41,11 @@ let setClickMessageAwesomeEvent = function(){
             $(this).find("path").css("fill","red")
             $.ajax({
                 type: "post",
-                url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/putMessageAwesome/",
+                url: window.location.origin + "/sonic/forum/putMessageAwesome/",
                 data:{article_id:article_id,message_id:$(this).next().text(),},
                 dataType: "json",
                 success: function(data){
-                    location.replace("http://"+ Config.ip_address + Config.port + "/sonic/accton/forum");
+                    location.replace(window.location.origin + "/sonic/accton/forum");
                 },
             })
             awesome_number = $(this).parent().find("#awesome_number").text()
@@ -55,7 +55,7 @@ let setClickMessageAwesomeEvent = function(){
             $(this).find("path").css("fill","rgb(115, 135, 156)")
             $.ajax({
                 type: "post",
-                url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/deleteMessageAwesome/",
+                url: window.location.origin + "/sonic/forum/deleteMessageAwesome/",
                 data:{article_id:article_id,message_id:$(this).next().text(),},
                 dataType: "json",
                 success: function(data, status){
@@ -73,7 +73,7 @@ let setClickMessageAwesomeEvent = function(){
 let setClickMessageBadEvent = function(){
     $(".bad-button").click(function(){
         if(!is_authenticated){
-            location.href = "http://"+ Config.ip_address + Config.port + "/accounts/login"
+            location.href = window.location.origin + "/accounts/login"
             return;
         }
         if($(this).parent().find(".awesome-button path").css("fill") === "rgb(255, 0, 0)"){
@@ -82,7 +82,7 @@ let setClickMessageBadEvent = function(){
             $(this).find("path").css("fill","red")
             $.ajax({
                 type: "post",
-                url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/putMessageBad/",
+                url: window.location.origin + "/sonic/forum/putMessageBad/",
                 data:{article_id:article_id,message_id:$(this).parent().find("#message_id").text(),},
                 dataType: "json",
                 success: function(data, status){
@@ -97,7 +97,7 @@ let setClickMessageBadEvent = function(){
             $(this).find("path").css("fill","rgb(115, 135, 156)")
             $.ajax({
                 type: "post",
-                url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/deleteMessageBad/",
+                url: window.location.origin + "/sonic/forum/deleteMessageBad/",
                 data:{article_id:article_id,message_id:$(this).parent().find("#message_id").text(),},
                 dataType: "json",
                 success: function(data, status){
@@ -114,7 +114,7 @@ let setClickMessageBadEvent = function(){
 let setPostNewAnswerEvent = function(){
     $("#send").click(function(){
         if(!is_authenticated){
-            location.href = "http://"+ Config.ip_address + Config.port + "/accounts/login"
+            location.href = window.location.origin + "/accounts/login"
             return;
         }
         article_id = $("#article_id").text()
@@ -122,7 +122,7 @@ let setPostNewAnswerEvent = function(){
         content = $(this).parent().find("#message_content").val()
         $.ajax({
             type: "post",
-            url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/postNewReply/",
+            url: window.location.origin + "/sonic/forum/postNewReply/",
             data:{article_id:article_id,message_id:message_id,content:content },
             dataType: "json",
             success: function(data, status){
@@ -137,7 +137,7 @@ let setPostNewAnswerEvent = function(){
 let setPostNewReplyEvent = function(){
     $(".send-reply").click(function(){
         if(!is_authenticated){
-            location.href = "http://"+ Config.ip_address + Config.port + "/accounts/login"
+            location.href = window.location.origin + "/accounts/login"
             return;
         }
         article_id = $("#article_id").text()
@@ -145,7 +145,7 @@ let setPostNewReplyEvent = function(){
         content = ($(this).parent().parent().parent().find("#message_content").val())
         $.ajax({
             type: "post",
-            url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/postNewReply/",
+            url: window.location.origin + "/sonic/forum/postNewReply/",
             data:{article_id:article_id,message_id:message_id,content:content},
             dataType: "json",
             success: function(data, status){
@@ -162,7 +162,7 @@ let getArticleData = () => {
     let article_id = localStorage.getItem("article_id")
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/getArticle/",
+        url: window.location.origin + "/sonic/forum/getArticle/",
         data:{article_id:article_id,},
         dataType: "json",
         success: function(data, status){
@@ -182,7 +182,7 @@ let getArticleMessage = () => {
     let article_id = localStorage.getItem("article_id")
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/getArticleMessage/",
+        url: window.location.origin + "/sonic/forum/getArticleMessage/",
         data:{article_id:article_id,},
         dataType: "json",
         success: function(data, status){
@@ -217,7 +217,7 @@ let updateArticleContentView = (content) => {
 let updateJudgeMessageView = (article_id) => {
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/getJudgeMessage/",
+        url: window.location.origin + "/sonic/forum/getJudgeMessage/",
         data:{article_id:article_id,},
         dataType: "json",
         success: function(data, status){

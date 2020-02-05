@@ -8,7 +8,7 @@ let showEPR_detail = function(){
         type:'get',
         data:{"Task_ID":Task_ID},
         dataType:'json',
-        url: "http://" + Config.ip_address + Config.port + "/project_management/get/tasksDtail/",
+        url: window.location.origin + "/project_management/get/tasksDtail/",
         success:function(data){
             data = data["data"]
             html = ''

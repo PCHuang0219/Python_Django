@@ -27,11 +27,11 @@ let postArticle = function(){
     });
     $.ajax({
         type: "post",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/postNewArticle/",
+        url: window.location.origin + "/sonic/forum/postNewArticle/",
         data:{"article_title" : article_title,"article_content" : article_content,"article_tag" : tag_list,},
         dataType: "json",
         success: function(data){
-            location.replace("http://"+ Config.ip_address + Config.port + "/sonic/accton/forum");
+            location.replace(window.location.origin + "/sonic/accton/forum");
         },
     })
 }

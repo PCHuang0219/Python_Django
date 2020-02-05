@@ -1,5 +1,6 @@
 import pymongo
 from pymongo import MongoClient
+from ...Config import *
 from .Config import * 
 import datetime
 # client = MongoClient('192.168.40.82',27017)
@@ -22,7 +23,7 @@ class Singleton(type):
 
 class Database(metaclass=Singleton):
     def __init__(self,):
-        self._client = MongoClient(DATABASE_IP,DATABASE_PORT)
+        self._client = MongoClient(MONGODB_HOST,MONGODB_PORT)
         self._db = self._client['job']
         self._collection = None
 
@@ -32,7 +33,7 @@ class Database(metaclass=Singleton):
 
 class Lab_Database(metaclass=Singleton):
     def __init__(self,):
-        self._client = MongoClient(DATABASE_IP,DATABASE_PORT)
+        self._client = MongoClient(MONGODB_HOST,MONGODB_PORT)
         self._db = self._client['lab']
         self._collection = None
 

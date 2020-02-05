@@ -29,12 +29,12 @@ let creatMainProject = function(){
 let postData = function(data){
     $.ajax({
         type: "post",
-        url: "http://" + Config.ip_address + Config.port + "/project_management/save/mainProjectData/",
+        url: window.location.origin + "/project_management/save/mainProjectData/",
         data:{cust_model:data["cust_model"],project_name:data["project_name"],description:data["description"],customer:data["customer"]},
         dataType: "json",
         success: function(data,status){
             if (status == "success"){
-                location.href =  "http://" + Config.ip_address + Config.port +"/project_management/att"
+                location.href =  window.location.origin +"/project_management/att"
             }
             else{
                 alert("Create Error !")
@@ -46,7 +46,7 @@ let postData = function(data){
 let getProjectData = function(){
     $.ajax({
         type: "get",
-        url: "http://" + Config.ip_address + Config.port + "/project_management/get/mainProjectData/",
+        url: window.location.origin + "/project_management/get/mainProjectData/",
         data:{customer:customer},
         dataType: "json",
         success: function(data){

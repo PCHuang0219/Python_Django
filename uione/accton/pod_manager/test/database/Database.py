@@ -11,7 +11,7 @@ class Database():
         self.output_log_dir_path = "./../../job_log"
         self.output_csv_dir_path = "./../../output_csv"
         self.job_csv_path = "./../../output_csv/job.csv"
-        self.image_csv_path = "./../../table/image.csv"
+        self.image_csv_path = "../../data/image.csv"
 
     def generate_csv_path(self,job_id,type_name):
         job_csv_path = os.path.join(self.output_csv_dir_path,job_id)

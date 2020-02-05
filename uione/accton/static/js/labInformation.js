@@ -1,4 +1,4 @@
-const local_url = "http://" + Config.ip_address + Config.port
+const local_url = window.location.origin
 let createIXIAInformation = function(){
     $("#createIXIAInformation").click(function(){
         var Lab = $("#createLocation").val()

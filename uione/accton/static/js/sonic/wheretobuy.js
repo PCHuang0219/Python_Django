@@ -95,7 +95,7 @@ let showInitContent = function(area,area_content){
 let getPartnersData = function(){
   $.ajax({
     type: "get",
-    url: "http://" + Config.ip_address + Config.port + "/sonic/get/partnersData/",
+    url: window.location.origin + "/sonic/get/partnersData/",
     data:{},
     dataType: "json",
     success: function(data, status){

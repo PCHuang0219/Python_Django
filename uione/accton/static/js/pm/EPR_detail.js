@@ -8,7 +8,7 @@ let showEPR_detail = function(){
         type:'get',
         data:{"EPR_ID":EPR_ID},
         dataType:'json',
-        url: "http://" + Config.ip_address + Config.port + "/project_management/get/EPRList/",
+        url: window.location.origin + "/project_management/get/EPRList/",
         success:function(data){
             data = data["data"]
             html = ''

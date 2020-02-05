@@ -2,12 +2,12 @@ import jenkins
 
 class Jenkins_conn():
     def __init__(self):
-        self.jenkins_url = "http://192.168.40.82:8080/"
+        self.jenkins_url = "http://jlo:9abcdegf!~00012@192.168.40.82:8080/"
         self.server = self.Connect()
         self.jobs = self.get_jenkins_jobs
 
     def Connect(self):
-        self.server = jenkins.Jenkins(self.jenkins_url,username="jlo",password="9abcdegf!~00012")
+        self.server = jenkins.Jenkins(self.jenkins_url)
         return self.server
 
     def get_jenkins_jobs(self):

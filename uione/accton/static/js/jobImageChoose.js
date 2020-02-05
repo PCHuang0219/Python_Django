@@ -27,13 +27,13 @@ let submitTestCase = function(){
     localStorage.setItem("image_path",value_list);
     localStorage.setItem("change_page","1");
     // location.href = document.referrer;
-    location.href = "http://" + Config.ip_address + Config.port + "/test/"
+    location.href = window.location.origin + "/test/"
 }
 
 let getImageTable = function(){
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/test/image/imageTable/",
+        url: window.location.origin + "/test/image/imageTable/",
         data:{},
         dataType: "json",
         success: function(data, status){

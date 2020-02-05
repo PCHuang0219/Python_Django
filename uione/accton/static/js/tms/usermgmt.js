@@ -1,7 +1,7 @@
 let getAccountList=function(){
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/tmsadmin/AccountList/",
+        url: window.location.origin + "/tmsadmin/AccountList/",
         data:{},
         dataType: "json",
         success: function(data, status){
@@ -14,7 +14,7 @@ let getAccountList=function(){
 let getUserType=function(account_list){
     $.ajax({
         type: "get",
-        url: "http://" + Config.ip_address + Config.port + "/tmsadmin/getUserTypeTable/",
+        url: window.location.origin + "/tmsadmin/getUserTypeTable/",
         data:{},
         dataType: "json",
         success: function(data, status){
@@ -83,11 +83,11 @@ let modifyUserType=function(){
     $("#changeUserType").click(function(){
         $.ajax({
             type: "post",
-            url: "http://"+ Config.ip_address + Config.port + "/tmsadmin/updateUserPriority/",
+            url: window.location.origin + "/tmsadmin/updateUserPriority/",
             data:{user_id:$("#selectUserName").val(),user_type_id:$("#selectUserType").val(),},
             dataType: "json",
             success: function(data, status){
-                window.location = "http://"+ Config.ip_address + Config.port + "/tmsadmin/usermgmt";
+                window.location = window.location.origin + "/tmsadmin/usermgmt";
             },
         })
     })
@@ -98,11 +98,11 @@ let deleteAccount=function(){
     var del_user_id = $("select[name='delete']").val();
         $.ajax({
             type: "post",
-            url: "http://"+ Config.ip_address + Config.port + "/tmsadmin/deleteAccount/",
+            url: window.location.origin + "/tmsadmin/deleteAccount/",
             data:{user_id:del_user_id},
             dataType: "json",
             success: function(data, status){
-                window.location = "http://"+ Config.ip_address + Config.port + "/tmsadmin/usermgmt";
+                window.location = window.location.origin + "/tmsadmin/usermgmt";
             },
         })
     })   

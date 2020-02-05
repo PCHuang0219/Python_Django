@@ -4,7 +4,7 @@ let statusLoad = function() {
         location.href = document.referrer;
     });
     $("#finish_button").click(function(){
-        location.href = "http://" + Config.ip_address + Config.port +"/test/jobLog";
+        location.href = window.location.origin +"/test/jobLog";
     });
     $("#select_job_button").click(function(){
         getRunningJobList();
@@ -29,13 +29,24 @@ let job_status;
 
 window.onunload = function() {
     localStorage.setItem("jobId","");
+    localStorage.setItem("platform","");
 }
 
 let chooseJobId = function() {
     $("#dropdown-job-list li").click(function(){
         let job_id = $(this).text().split('(')[1].split(')')[0]
-        // console.log(job_id)
         localStorage.setItem("jobId",job_id);
+        $.ajax({
+            type:"get",
+            url:window.location.origin + "/test/status/getPlatformByJobID/",
+            data:{job_id:job_id},
+            dataType:"json",
+            success:function(data){
+                platform = data[0]["platform"]
+                localStorage.setItem("platform",platform)
+            }
+
+        })
     });
 }
 
@@ -66,7 +77,7 @@ let clearFunctionInterval = function(){
 }
 
 let getRunningJobList = function(){
-    $.get("http://"+ Config.ip_address + Config.port + "/test/status/jobRunningList/",
+    $.get(window.location.origin + "/test/status/jobRunningList/",
     {
     },function(data, status){
         data = data["data"]
@@ -82,7 +93,7 @@ let getRunningJobList = function(){
 }
 
 let getJobExecuteTime = function(){
-    $.get("http://"+ Config.ip_address + Config.port + "/test/status/jobExecuteTime/",
+    $.get(window.location.origin + "/test/status/jobExecuteTime/",
     {
         job_id: localStorage.getItem("jobId")
     },function(data, status){
@@ -97,7 +108,7 @@ let getJobExecuteTime = function(){
 }
 
 let getConfigure = function(){
-    $.get("http://"+ Config.ip_address + Config.port + "/test/status/testConfigure/",
+    $.get(window.location.origin + "/test/status/testConfigure/",
     {
         job_id: localStorage.getItem("jobId")
     },function(data, status){
@@ -109,12 +120,12 @@ let getConfigure = function(){
 }
 
 let getRunningTestName = function(){
-    $.get("http://"+ Config.ip_address + Config.port + "/test/status/currentRunningName/",
+    $.get(window.location.origin + "/test/status/currentRunningName/",
     {
         job_id: localStorage.getItem("jobId")
     },function(data, status){
         if ( data["name"] == "Finish"){
-            location.href = "http://" + Config.ip_address + Config.port + "/test/jobManagement"
+            location.href = window.location.origin + "/test/jobManagement"
         }
         else {
             $("#test_name").text(data["name"])
@@ -123,7 +134,7 @@ let getRunningTestName = function(){
 }
 
 let getJobStatus = function(){
-    $.get("http://"+ Config.ip_address + Config.port + "/test/status/jobStatus/",
+    $.get(window.location.origin + "/test/status/jobStatus/",
     {
         job_id: localStorage.getItem("jobId")
     },function(data, status){
@@ -140,7 +151,7 @@ let getJobStatus = function(){
 }
 
 let getJobProgress = function(){
-    $.get("http://"+ Config.ip_address + Config.port + "/test/status/jobProgress/",
+    $.get(window.location.origin + "/test/status/jobProgress/",
     {
         job_id: localStorage.getItem("jobId")
     },function(data, status){
@@ -150,7 +161,7 @@ let getJobProgress = function(){
 }
 
 let getTestLog = function(){
-    $.get("http://"+ Config.ip_address + Config.port + "/test/status/nowTestLog/",
+    $.get(window.location.origin + "/test/status/nowTestLog/",
     {
         job_id: localStorage.getItem("jobId"),
         platform: localStorage.getItem("platform")
@@ -161,14 +172,14 @@ let getTestLog = function(){
         data = data["job_log"]
         for(var i = 0; i < data.length;i++)
         {
-            html += "<div>" + data[i] +" "+ "</div>"
+            html += data[i] + "<br>"
         }
         $("#log").append(html);
     });
 }
 
 let jumpJobDetail = async function(){
-    location.href = "http://" + Config.ip_address + Config.port + '/test/jobDetail'
+    location.href = window.location.origin + '/test/jobDetail'
 }
 
 function real_Time_clicked(){

@@ -12,20 +12,26 @@ function addLoadEvent(func){
 }
 
 let getCurrentPath=function(){
-    var path = location.pathname ;
+    var path = window.location.href ;
     updatePath(path);
 }
 
 let updatePath=function(path){
     $("#path").empty();/*清空path*/
-    mainSort = "#"+path.split("/")[1];/*split將path分開，以/為分割點*/
+    mainSort = "#"+path.split("/")[3];/*split將path分開，以/為分割點*/
     $(mainSort).children("ul").attr("style","display:block;")/*mainSort之下的children找到ul，新增他們的style*/
     $(mainSort).addClass("active");/*新增mainSort的Class active*/
     roadmap = path.split("/")
     let html = '<li class="breadcrumb-item"><a href="/">Home</a></li>';
     let link = '';
-    for (let i=1 ; i<roadmap.length ; i++){
-        if (roadmap[i] != ''){
+    if (roadmap[roadmap.length]){
+        argument = roadmap.length - 1 ;
+    }
+    else{
+        argument = roadmap.length - 2 ; 
+    }
+    for (let i=3 ; i<roadmap.length ; i++){
+        if (roadmap[i] != '' && !roadmap[i].includes("?")){
             link += roadmap[i] ;
             substr = roadmap[i].substr(0,1);
             newsubstr = substr.toUpperCase();
@@ -63,7 +69,8 @@ let updatePath=function(path){
             if (roadmap[i] == "Pm"){
                 roadmap[i] = "Project Management"
             }
-            html += '<li class="breadcrumb-item"><a href=/'+link+'>'+roadmap[i]+'</a></li>';
+            // html += '<li class="breadcrumb-item"><a href=/'+link+'>'+roadmap[i]+'</a></li>';
+            html += '<li class="breadcrumb-item"><a onclick=history.go(' + (i-argument) + ')>'+roadmap[i]+'</a></li>';
             if (roadmap[i+1] != ''){
                 link += '/';
             }
@@ -86,6 +93,22 @@ let goTop=function(){
         }
     });
 }
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
 addLoadEvent(getCurrentPath);
 addLoadEvent(goTop);
-
+addLoadEvent(getUrlParameter);

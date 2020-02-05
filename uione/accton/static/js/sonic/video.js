@@ -133,7 +133,7 @@ let showYoutube=function(data_list){
 let getVideoList=function(){
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/data/videoList/",
+        url: window.location.origin + "/sonic/data/videoList/",
         data:{},
         dataType: "json",
         success: function(data, status){

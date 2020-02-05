@@ -17,12 +17,12 @@ let createDescription = function(){
         else{
             $.ajax({
                 type: "post",
-                url: "http://" + Config.ip_address + Config.port + "/project_management/save/TRRDescription/",
+                url: window.location.origin + "/project_management/save/TRRDescription/",
                 data:{project:project,TRR_ID:TRR_ID,description:description},
                 dataType: "json",
                 success: function(data,status){
                     if (status == "success"){
-                        location.href =  "http://" + Config.ip_address + Config.port +"/project_management/bug_issue_detail"
+                        location.href =  window.location.origin +"/project_management/bug_issue_detail"
                     }
                     else{
                         alert("Create Error !")
@@ -43,12 +43,12 @@ let createDiscussion = function(){
         else{
             $.ajax({
                 type: "post",
-                url: "http://" + Config.ip_address + Config.port + "/project_management/save/TRRDiscussion/",
+                url: window.location.origin + "/project_management/save/TRRDiscussion/",
                 data:{project:project,TRR_ID:TRR_ID,issue:issue,mail:mail},
                 dataType: "json",
                 success: function(data,status){
                     if (status == "success"){
-                        location.href =  "http://" + Config.ip_address + Config.port +"/project_management/bug_issue_detail"
+                        location.href =  window.location.origin +"/project_management/bug_issue_detail"
                     }
                     else{
                         alert("Create Error !")
@@ -64,7 +64,7 @@ let getDiscussion = function(){
         type:"get",
         data:{"TRR_ID":TRR_ID},
         dataType:"json",
-        url:"http://" + Config.ip_address + Config.port + '/project_management/get/TRRDiscussion/',
+        url:window.location.origin + '/project_management/get/TRRDiscussion/',
         success:function(data){
             data = data["data"]
             if (data.length != 0){
@@ -93,7 +93,7 @@ let getDescription = function(){
         type:"get",
         data:{"TRR_ID":TRR_ID},
         dataType:"json",
-        url:"http://" + Config.ip_address + Config.port + '/project_management/get/TRRDescription/',
+        url:window.location.origin + '/project_management/get/TRRDescription/',
         success:function(data){
             data = data["data"]
             if (data.length != 0){
@@ -115,7 +115,7 @@ let getDescription = function(){
 let getTRRContent = function(){
     $.ajax({
         type: "get",
-        url: "http://" + Config.ip_address + Config.port + "/project_management/get/TRRContent/",
+        url: window.location.origin + "/project_management/get/TRRContent/",
         data:{ project:project,TRR_ID:TRR_ID},
         dataType: "json",
         success: function(data,status){

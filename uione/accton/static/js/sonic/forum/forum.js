@@ -3,7 +3,7 @@ let clickArticle = () => {
         article_id =$(this).children(":first").text() 
         console.log(article_id)
         localStorage.setItem("article_id",article_id);
-        location.href = "http://" + Config.ip_address + Config.port +"/sonic/accton/forum/showArticle";
+        location.href = window.location.origin +"/sonic/accton/forum/showArticle";
     });
 }
 
@@ -103,7 +103,7 @@ let updatePageNavigationView = (page_number,article_total_page_number) =>{
 }
 
 const getArticleTotalNumber = async function(){
-    const getResult = await Promise.resolve($.get("http://"+ Config.ip_address + Config.port + "/sonic/forum/getArticleListLength/",));
+    const getResult = await Promise.resolve($.get(window.location.origin + "/sonic/forum/getArticleListLength/",));
     article_total_number = getResult["article_total_number"]
     return article_total_number;
 }
@@ -111,7 +111,7 @@ const getArticleTotalNumber = async function(){
 let getArticle = (page_number = 1) => {
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/getArticleList/",
+        url: window.location.origin + "/sonic/forum/getArticleList/",
         data:{page_number:page_number,},
         dataType: "json",
         success: function(data){
@@ -163,7 +163,7 @@ let showArticle=function(data_list){
 let getAllTagName=function(){
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/getAllTagName/",
+        url: window.location.origin + "/sonic/forum/getAllTagName/",
         dataType: "json",
         success: function(data){
             data = data["status"];
@@ -188,7 +188,7 @@ let showSelectTagArticle=function(page_number = 1){
         var tag_name = $(this).attr("value");
         $.ajax({
             type: "get",
-            url: "http://"+ Config.ip_address + Config.port + "/sonic/forum/getArticleList/",
+            url: window.location.origin + "/sonic/forum/getArticleList/",
             data:{page_number:page_number,tag_name:tag_name,},
             dataType: "json",
             success: function(data){

@@ -20,7 +20,7 @@ let getTasksList = function(){
         type:'get',
         data:{},
         dataType:'json',
-        url: "http://" + Config.ip_address + Config.port + "/project_management/get/tasksList/",
+        url: window.location.origin + "/project_management/get/tasksList/",
         success:function(data){
             data = data["data"]
             html = ''
@@ -52,7 +52,7 @@ let jumpDetailPage = function(){
     $(".detailButton").click(function(){
         Task_ID = $(this).parent().siblings(":first").text()
         localStorage.setItem("Task_ID",Task_ID);
-        location.href = 'http://' + Config.ip_address + Config.port + '/project_management/NTC_tasks/task_detail'
+        location.href = window.location.origin + '/project_management/NTC_tasks/task_detail'
     })
 }
 

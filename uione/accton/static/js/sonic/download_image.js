@@ -2,7 +2,7 @@ let download_button_click = function(){
     $("#201903_performanceBtn").click(function(){
         $.ajax({
             type: "get",
-            url: "http://"+ Config.ip_address + Config.port + "/sonic/downloads/getAcctonSonicImage/",
+            url: window.location.origin + "/sonic/downloads/getAcctonSonicImage/",
             data:{},
             dataType: "json",
             success: function(data){
@@ -31,7 +31,7 @@ let download_button_click = function(){
     $("#201811_performanceBtn").click(function(){
         $.ajax({
             type: "get",
-            url: "http://"+ Config.ip_address + Config.port + "/sonic/downloads/getAcctonSonicImage/",
+            url: window.location.origin + "/sonic/downloads/getAcctonSonicImage/",
             data:{},
             dataType: "json",
             success: function(data){
@@ -79,7 +79,7 @@ let download_button_click = function(){
 let getImageList = function(){
     $.ajax({
         type: "get",
-        url: "http://"+ Config.ip_address + Config.port + "/sonic/downloads/getSonicImageVersionData/",
+        url: window.location.origin + "/sonic/downloads/getSonicImageVersionData/",
         data:{},
         dataType: "json",
         success: function(data){

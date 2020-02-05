@@ -1,6 +1,6 @@
 let postCommand = function(){
     command = document.getElementById("command").value;
-    $.post("http://"+ Config.ip_address + Config.port + "/network/command/",
+    $.post(window.location.origin + "/network/command/",
     {
         command: command
     },function(data, status){

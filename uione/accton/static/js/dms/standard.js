@@ -14,7 +14,7 @@ let uploadFile = function(){
         var form_data = new FormData($('#upload-file')[0]);
         $.ajax({
             type: 'POST',
-            url: 'http://' + Config.ip_address + Config.port + '/dms/uploadFile/',
+            url: window.location.origin + '/dms/uploadFile/',
             data: form_data,
             contentType: false,
             cache: false,

@@ -46,7 +46,7 @@ let createTRR = function(){
 let postTRR = function(data_info){
     $.ajax({
         type: "post",
-        url: "http://" + Config.ip_address + Config.port + "/project_management/save/TRR/",
+        url: window.location.origin + "/project_management/save/TRR/",
         data:{"project":data_info["project"],"start_time":data_info["start_time"],"end_time":data_info["end_time"], "status":data_info["status"],
             "TRR_ID":data_info["TRR_ID"],"module":data_info["module"],"bios":data_info["bios"],"diag":data_info["diag"],"cpld":data_info["cpld"],
             "onie":data_info["onie"],"S/W":data_info["S/W"],"H/W":data_info["H/W"],"module":data_info["module"],"test_type":data_info["test_type"],
@@ -55,7 +55,7 @@ let postTRR = function(data_info){
         success: function(data,status){
             type = typeof(data)
             if (type != "string"){
-                location.href =  "http://" + Config.ip_address + Config.port +"/project_management/"
+                location.href =  window.location.origin +"/project_management/"
             }
             else{
                 alert("Sorry, You can't access to create data !")
@@ -67,7 +67,7 @@ let postTRR = function(data_info){
 let getProjectList = function(){
     $.ajax({
         type:'get',
-        url: 'http://' + Config.ip_address + Config.port + '/project_management/get/projectList/',
+        url: window.location.origin + '/project_management/get/projectList/',
         dataType:'json',
         success:function(data){
             data = data["data"]
@@ -87,7 +87,7 @@ let getTRRList = function(){
     }
     $.ajax({
         type: "get",
-        url: "http://" + Config.ip_address + Config.port + "/project_management/get/TRRViewsByCondition/",
+        url: window.location.origin + "/project_management/get/TRRViewsByCondition/",
         data:{data},
         dataType: "json",
         success: function(data,status){
@@ -108,7 +108,7 @@ let getTRRList = function(){
                 TRR_ID = $(this).parent().prev().prev().text()
                 localStorage.setItem("project",project);
                 localStorage.setItem("TRR_ID",TRR_ID);
-                location.href = "http://" + Config.ip_address + Config.port + "/project_management/TR_Detail"
+                location.href = window.location.origin + "/project_management/TR_Detail"
             })
             changeTRRstatus();
         }
@@ -224,11 +224,11 @@ let uploadTRRstatus = function(){
         }
         $.ajax({
             type:"post",
-            url: "http://" + Config.ip_address + Config.port + "/project_management/save/changeTRRStatus/",
+            url: window.location.origin + "/project_management/save/changeTRRStatus/",
             dataType:"json",
             data:{"TRR_ID":TRR_ID,"status":status,"content":data,"MEDF":MEDF},
             success:function(){
-                location.href =  "http://" + Config.ip_address + Config.port +"/project_management/"
+                location.href =  window.location.origin +"/project_management/"
             }
         })
     })
@@ -253,7 +253,7 @@ let compareDate = function(date1,date2){
 let getAllTDList = function(){
     $.ajax({
         type:'get',
-        url: "http://" + Config.ip_address + Config.port + "/project_management/get/TDList/",
+        url: window.location.origin + "/project_management/get/TDList/",
         success:function(data){
             data = data["data"]
             $(".TDList").empty()
@@ -272,7 +272,7 @@ let getAllTCList = function(TD_html){
     TD_ID = $(".TDList").val()
     $.ajax({
         type:'get',
-        url: "http://" + Config.ip_address + Config.port + "/project_management/get/TCList/",
+        url: window.location.origin + "/project_management/get/TCList/",
         data:{"TD_ID":TD_ID},
         dataType: 'json',
         success:function(data){
@@ -295,7 +295,7 @@ let showTCByTD = function(){
         button_odm = $(this)
         $.ajax({
             type:'get',
-            url: "http://" + Config.ip_address + Config.port + "/project_management/get/TCList/",
+            url: window.location.origin + "/project_management/get/TCList/",
             data:{"TD_ID":TD_ID},
             dataType: 'json',
             success:function(data){
@@ -388,12 +388,12 @@ let updateTRRContent = function(){
         }
         $.ajax({
             type:'post',
-            url:'http://' + Config.ip_address + Config.port + "/project_management/save/updateTRRContent/",
+            url:window.location.origin + "/project_management/save/updateTRRContent/",
             data:{"type":type,"content":content,"TRR_ID":TRR_ID},
             dataType:'json',
             success:function(data,status){
                 if (data["result"] == 'True'){
-                    location.href =  "http://" + Config.ip_address + Config.port +"/project_management/"
+                    location.href =  window.location.origin +"/project_management/"
                 }
                 else{
                     alert("Update Error !")
@@ -448,7 +448,7 @@ let selectCondition = function(){
             type:'get',
             data:{data:condition},
             dataType:'json',
-            url: "http://" + Config.ip_address + Config.port + "/project_management/get/selectionByCondition/",
+            url: window.location.origin + "/project_management/get/selectionByCondition/",
             success:function(data){
                 data = data["data"]
                 value_selection.empty()
@@ -495,7 +495,7 @@ let runCondition = function(){
         data += "}"
         localStorage.clear();
         localStorage.setItem("condition",data)
-        location.href = "http://" + Config.ip_address + Config.port + "/project_management/"
+        location.href = window.location.origin + "/project_management/"
     })
 }
 

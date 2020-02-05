@@ -9,3 +9,9 @@ class MySocialAuthExceptionMiddleware(SocialAuthExceptionMiddleware):
             return HttpResponse("Exception %s while processing your social account." % exception)
         else:
             return super(MySocialAuthExceptionMiddleware, self).process_exception(request, exception)
+
+from django.utils.deprecation import MiddlewareMixin
+class MyTest(MiddlewareMixin):
+    def process_response(self, request, response):
+        response['Access-Control-Allow-Origin'] = "*"
+        return response

@@ -17,7 +17,7 @@ from .utility.Job import *
 from .utility.JobQueue import *
 from .utility.FetchAllJobData import *
 from .utility.FilterLog import *
-from .utility.Config import *
+from ..Config import *
 from .database.UpdateDatabase import *
 from .database.GetDatabase import *
 from .database.SaveDatabase import *
@@ -33,6 +33,7 @@ jenkins = Jenkins_conn()
 test_info = TestInfo()
 get_database = GetDatabase()
 job_info_database = Job_Info_Database()
+test_plan_info_database = Test_Plan_Info_Database()
 lab_info = Lab_Info_Database()
 device_info = Device_Info_Data()
 
@@ -80,6 +81,74 @@ def lab_status_views(request):
 @job_Submission_required
 def device_management_views(request):
     return render(request ,"deviceManagement.html")
+
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def testPlanManagement(request):
+    return render(request ,"testPlanTable.html")
+
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def createTestPlan(request):
+    return render(request ,"createTestPlan.html")
+
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def modifyTestPlan(request):
+    return render(request ,"modifyTestPlan.html")
+
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def testPlanDetail(request):
+    return render(request ,"testPlanDetail.html")
+
+@api_view(['POST'])
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def createTestPlanFunction(request):
+    user_id = request.user.id 
+    data_list = dict(request.data)
+    if(data_list == {}):
+        return Response({"job_id":"no test"})
+    test_list = data_list['testList[]']
+    project = data_list['project'][0]
+    headline = data_list['headline'][0]
+    purpose = data_list['purpose'][0]
+    model = data_list['model'][0]
+    topo = data_list['topology'][0]
+    platform = data_list['platform'][0]
+    test_plan_info = Test_Plan_Information(project,headline,purpose,platform,model,user_id,topo,test_list)
+    try:
+        test_plan_id = data_list['test_plan_id'][0]
+        test_plan_info_database.update(test_plan_info,test_plan_id)
+    except:
+        test_plan_id = test_plan_info_database.insert(test_plan_info)
+    return Response({"result":'Success'})
+
+@api_view(['GET'])
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def getTestPlanTable(request):
+    data_list = test_plan_info_database.get_list()
+    return Response({"data":data_list})
+
+@api_view(['GET'])
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def getTestPlanDetail(request):
+    test_plan_id = request.query_params.get('test_plan_id')
+    if(test_plan_id == ''):
+        return Response({"data":{}})
+    return Response(test_plan_info_database.get_tests_data_by_test_plan_id(test_plan_id))
+
+@api_view(['GET'])
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def getTestDetailByTestPlanID(request):
+    test_plan_id = request.query_params.get('test_plan_id')
+    if(test_plan_id == ''):
+        return Response({"data":{}})
+    return Response({"data":test_plan_info_database.get_tests_data_by_test_plan_id(test_plan_id)})
 
 @api_view(["POST"])
 def save_IXIA_Information(request):
@@ -191,16 +260,24 @@ def get_testcases_list(request):
 def get_now_test_log_from_server(request):
     job_id = request.query_params.get('job_id')
     platform = request.query_params.get('platform')
-    print(platform)
     if(job_id == ''):
         return Response({"job_log":""})
-    if platform != "Facebook":
-        r = requests.get("http://" + IP_ADDRESS + ":" + PORT + "/jobLog", data =  {'job_id':job_id}, verify = False)
+    # print(platform)
+    if platform == "Facebook":
+        r = requests.get("http://" + FB_IP_ADDRESS + ":" + FB_PORT + "/jobLog", data =  {'job_id':job_id,'platform':platform}, verify = False)
     else:
-        r = requests.get("http://" + FB_IP_ADDRESS + ":" + FB_PORT + "/jobLog", data =  {'job_id':job_id}, verify = False)
+        r = requests.get("http://" + IP_ADDRESS + ":" + PORT + "/jobLog", data =  {'job_id':job_id}, verify = False)
     log_data = r.json()['log']
     return Response({"job_log":log_data})
 
+@api_view(['GET'])
+
+def get_platform_by_job_id(request):
+    job_id = request.query_params.get('job_id')
+    if job_id == '' :
+        return Response({"platform":""})
+    return Response(job_info_database.get_platform_by_job_id(job_id))
+    
 @api_view(['GET'])
 @login_required(login_url='/accounts/login/')
 @job_Submission_required
@@ -216,10 +293,10 @@ def receive_finished_log_from_server(request):
     brief_log = json.loads(request.data['brief_log'])
     job_id = request.data['job_id']
     test_id = request.data['test_id']
-    complete_log_path = "./../../../../log/" + str(job_id) +"/" + str(test_id) +"/" + "complete_log.txt"
-    brief_log_path = "./../../../../log/" + str(job_id) +"/" + str(test_id) +"/" +"brief_log.txt"
+    complete_log_path = "/share/log/" + str(job_id) +"/" + str(test_id) +"/" + "complete_log.txt"
+    brief_log_path = "/share/log/" + str(job_id) +"/" + str(test_id) +"/" +"brief_log.txt"
     try:
-        os.makedirs("./../../../../log/" + str(job_id) +"/" + str(test_id) +"/")
+        os.makedirs("/share/log/" + str(job_id) +"/" + str(test_id) +"/")
     except FileExistsError:
         # directory already exists
         pass
@@ -232,13 +309,30 @@ def receive_finished_log_from_server(request):
     return Response({"status":job_info_database.update_test_log_path_by_id(job_id,test_id,complete_log_path)})
 
 @api_view(['POST'])
+def receive_finished_report_from_server(request):
+    job_id = request.data['job_id']
+    report = request.FILES['report']
+    report_path = "/share/log/" + str(job_id) +"/"
+    file_name = job_id + '_report.docx'
+    if not os.path.exists(report_path):
+        os.makedirs(report_path)
+    
+    with open(report_path + file_name, 'wb') as f :
+        for chunk in report.chunks():
+            f.write(chunk)
+    
+    url = 'http://210.63.221.19:8888/log/' + str(job_id) + '/' + file_name
+    
+    return Response({'status':job_info_database.update_test_report_url_by_id(job_id, url)})
+
+@api_view(['POST'])
 @login_required(login_url='/accounts/login/')
 @job_Submission_required
 def get_test_case(request):
     platform = request.data['platform']
     topology = request.data['topology']
     model = request.data['model']
-    test_name_list = test_info.get_by_topo_platform(topology,platform)
+    test_name_list = test_info.get_by_topo_platform(topology,platform,model)
     return Response({"testData":test_name_list,"platform":platform})
 
 @api_view(['GET'])
@@ -247,7 +341,7 @@ def get_test_case(request):
 def get_test_log(request):
     job_id = request.query_params.get('job_id')
     test_id = request.query_params.get('test_id')
-    complete_log_path = "./../../../../log/" + str(job_id) +"/" + str(test_id) +"/" + "complete_log.txt"
+    complete_log_path = "/share/log/" + str(job_id) +"/" + str(test_id) +"/" + "complete_log.txt"
     if(job_id == ''):
         return Response({"log":""})
     if os.path.isfile(complete_log_path):
@@ -280,24 +374,27 @@ def submit_testcase(request):
     data_list = dict(request.data)
     if(data_list == {}):
         return Response({"job_id":"no test"})
-    test_list = data_list['testList[]']
+    thread_num = data_list['thread_num'][0]
+    project = data_list['project'][0]
     job_name = data_list['job_name'][0]
     job_description = data_list['job_description'][0]
     job_model = data_list['model'][0]
     job_topo = data_list['topology'][0]
     job_platform = data_list['platform'][0]
     image_version = data_list['image_version'][0]
+    thread_list = []
+    for i in range(int(thread_num)):
+        key = 'testList[' + str(i) + '][]'
+        thread_list.append(data_list[key])
 
-    job_info = Job_Information(job_name,job_description,job_platform,job_model,user_id,job_topo,image_version,test_list)
+    job_info = Job_Information(project,job_name,job_description,job_platform,job_model,user_id,job_topo,image_version,thread_list)
     job_id = job_info_database.insert(job_info)
     if job_platform == "Facebook":
         r = requests.post("http://" + FB_IP_ADDRESS + ":" + FB_PORT +"/submitJob",\
-        data = {"job_id":str(job_id),"job_model":job_model,"job_platform":job_platform,"job_topo":job_topo}\
-        ,verify = False)
+        data = {"job_id":str(job_id)},verify = False)
     else:
         r = requests.post("http://" + IP_ADDRESS + ":" + PORT +"/submitJob",\
-        data = {"job_id":str(job_id),"job_model":job_model,"job_platform":job_platform,"job_topo":job_topo}\
-        ,verify = False)
+        data = {"job_id":str(job_id)},verify = False)
     return Response({"job_id":str(job_id)})
 
 @api_view(['GET'])
@@ -332,7 +429,13 @@ def get_test_table_in_job(request):
 @login_required(login_url='/accounts/login/')
 @job_Submission_required
 def get_job_table(request):
-    return Response({"data":job_info_database.get_list()})
+    condition = request.query_params.get("condition")
+    print(condition)
+    if condition == '':
+        data = job_info_database.get_list()
+    else:
+        data = job_info_database.get_list_by_condition(condition)
+    return Response({"data":data})
 
 @api_view(['GET'])
 @login_required(login_url='/accounts/login/')
@@ -437,3 +540,10 @@ def change_device_list(request):
     data = {"rack":rack,"location":location,"type":changeType,"content":content}
     result = device_info.update_device_list(data)
     return Response({"result":result})
+
+@api_view(['GET'])
+@login_required(login_url='/accounts/login/')
+def get_selection_by_condition(request):
+    condition = request.query_params.get("data")
+    data = job_info_database.get_selection_by_condition(condition)
+    return Response({"data":data})

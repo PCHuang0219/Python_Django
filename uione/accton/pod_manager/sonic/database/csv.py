@@ -6,13 +6,13 @@ import base64
 
 class Database():
     def __init__(self):
-        self.platform_csv_path = "./../../table/platform.csv"
+        self.platform_csv_path = "../../data/platform.csv"
         self.platform_list = self.init_get_platform_table()
-        self.document_csv_path = "./../../table/document.csv"
+        self.document_csv_path = "../../data/document.csv"
         self.document_list = self.init_get_document_table()
-        self.video_csv_path = "../../table/youtube.csv"
+        self.video_csv_path = "../../data/youtube.csv"
         self.video_list = self.init_get_video_table()
-        self.partner_csv_path = "../../table/partners.csv"
+        self.partner_csv_path = "../../data/partners.csv"
         self.partner_list = self.init_get_partners_data()
 
     def get_platform_table(self):
