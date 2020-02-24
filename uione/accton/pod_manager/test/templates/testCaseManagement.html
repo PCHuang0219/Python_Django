@@ -29,8 +29,8 @@
 				<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
 					<div class="x_panel">
 						<div class="x_title">
-							<h1>Test Plan Management
-									<a href="createTestPlan" class="btn btn-primary" style="margin:0 20px">Create Test Plan</a>
+							<h1>Test Case Management
+									<a href="createTestPlan" class="btn btn-primary" style="margin:0 20px">Add New</a>
 									<a class="btn btn-primary" data-target="#c" data-toggle="modal" style="margin:0 20px">Filter The Views</a>
 							</h1>
 							<div class="clearfix"></div>
@@ -41,15 +41,15 @@
 								<table class="table Table">
 									<thead>
 										<tr class="tr-only-hide">
-											<th scope="col">#</th>
-											<th scope="col">Project</th>
+											<th scope="col">Test Case Mgnt</th>
 											<th scope="col">Headline</th>
 											<th scope="col">Purpose</th>
-											<th scope="col">Last Test</th>
-											<th scope="col">During Time</th>
-											<th scope="col">Modify</th>
-											<th scope="col">Detail</th>
-											<th scope="col">Execute</th>
+											<th scope="col">Status</th>
+											<th scope="col">Project Name</th>
+											<th scope="col">Topology</th>
+											<th scope="col">Model</th>
+                                            <th scope="col">Modify</th>
+                                            <th scope="col">Result</th>
 										</tr>
 									</thead>
 									<tbody></tbody>
@@ -69,7 +69,6 @@
 													Condition<span class="red">*</span>：<br>
 													<select class="col-xs-6">
 														<option>Project</option>
-														<option>End Time</option>
 														<option>Result</option>
 														<option>Status</option>
 														<option>Platform</option>
@@ -104,7 +103,7 @@
 	</div>
 </div>
 	{% include 'preset_js.html' %}
-	<script src="{% static 'js/testPlanTable.js' %}"></script> 
+	<script src="{% static 'js/testCaseManagement.js' %}"></script> 
 
 </body>
 </html>

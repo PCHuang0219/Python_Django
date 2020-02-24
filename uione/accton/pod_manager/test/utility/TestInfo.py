@@ -68,6 +68,48 @@ class TestInfo():
         #             "Description":'999', \
         #             "Category":'1000'})
 
+        self.topo_config_list = []
+        with open('../../data/topology.csv', newline='') as topo_config:
+            reader = csv.DictReader(topo_config)
+            for row in reader:
+                project = row['Project']
+                topo    = row['Topology']
+                model   = row['Model']
+                level_1 = row['Level_1']
+                level_2 = row['Level_2']
+                level_3 = row['Level_3']
+                level_4 = row['Level_4']
+                level_5 = row['Level_5']
+                self.topo_config_list.append({
+                    'project': project, \
+                    'topo': topo, \
+                    'model': model, \
+                    'level_1': level_1, \
+                    'level_2': level_2, \
+                    'level_3': level_3, \
+                    'level_4': level_4, \
+                    'level_5': level_5, \
+                })
+    
+    def get_topo_config_by_project_and_topo(self, project, topo):
+        for i in self.topo_config_list:
+            if i['project'] == project and i['topo'] == topo:
+                return i
+        
+        # return i if i['project'] == project and i['topo'] == topo for i in self.topo_config_list
+
+    def get_topo_models(self):
+        model_list = []
+        for i in self.topo_config_list:
+            if i['topo'] != 'Data Center Core':
+                model_list.append(i['model'])
+        return list(set(model_list))
+    
+    def get_model_config(self, model):
+        for i in self.topo_config_list:
+            if i['model'] == model:
+                return i
+
     def get_by_topo_platform(self,topology,platform,model):
         data_list = []
         for row in self.test_info_list:

@@ -1,96 +1,89 @@
 let initLoadFunction = function(){
-    getJobTable()
-    createFilterCondition()
-    deleteCondition()
-    runCondition()
-    selectCondition()
-    // setInterval(getJobTable, 10000);
+    getTestPlanTable()
+
 }
 
-let getJobTable = function(){
+let getTestPlanTable = function(){
     condition = localStorage.getItem("condition")
     if (!condition){
         condition = ""
     }
     $.ajax({
         type: "get",
-        url: window.location.origin + "/test/management/jobTable/",
+        url: window.location.origin + "/sonic/compatiblesoftWare/table",
         data:{condition},
         dataType: "json",
         success: function(data, status){
             $(".table tbody").empty();
-            let html = ""
-            data = data["data"]
-            for(var i=0,x=data.length-1 ; x >= 0 ; x--,i++)
+            let html = "";
+            let title = "";
+            odata = data['data'];
+            console.log(odata);
+            var a = Object.keys(odata[1]);
+            console.log(a);
+            for(var i=0;i <17;i++)
             {
-                element = JSON.parse(data[x])
-                job_id = element["_id"]
-                if(element['test_report_url']){
-                    url = element['test_report_url']
-                    report_html = "<td data-th='Report'> \
-                    <a href='" + url + "'><button  aria-hidden='true' class='glyphicon glyphicon-download-alt'></button></a></td>"
+                topic = a[i];
+                let content ="";
+                for(var j=0;j<18;j++)
+                {   
+                    element = odata[j];
+                    if(topic!='device')
+                        {
+                        content += "<td>" + element[topic] + "</td>" ;
+                        }
+                    else{
+                        title += "<th>" + element[topic] +"</th>";
+                    }
                 }
-                else{
-                    report_html = "<td data-th='Report'><button aria-hidden='true' class='glyphicon glyphicon-download-alt' disabled></button></td>"
-                }
-                html +=  
-                "<tr>" +
-                "<td data-th='#'>"+ parseInt(i+1) + "</th>" +
-                "<td data-th='Project' job_id='" + job_id + "'>" + element["project"] + "</td>" +
-                "<td data-th='Job Name'>" + element["job_name"] + "</td>" +
-                "<td data-th='Job Description'>" + element["job_describe"] + "</td>" +
-                "<td data-th='Status'>" + element["status"] + "</td>" +
-                "<td data-th='Start Time'>" + element["start_time"] + "</td>" +
-                "<td data-th='End Time'>" + element["end_time"] + "</td>" +
-                "<td data-th='Result'>" + element["result"] + "</td>" +
-                "<td data-th='Detail'>" + "<button class='button' type='button'>detail</button>"+"</td>" +
-                report_html+
-                "</tr>"
-            }
+                if(topic =='device' | topic =='_id')
+                    {
+                        continue;
+                    }
+                html += "<tr>" + "<td>" + a[i] + "</td>" + content +"</tr>";
+            } 
+            console.log(title);
+            title = "<tr><td></td>" + title + "</tr>";
+            $(".table thead").append(title);
             $(".table tbody").append(html);
-            $(".button").click(function(){
-                jobId = $(this).parent().parent().children().first().next().attr("job_id");
-                location.href = window.location.origin + "/test/jobManagement/jobDetail/?jobId=" + jobId
-            });
         },
     })
-    localStorage.clear("condition")
+    localStorage.clear();
 }
-
+/*
 let createFilterCondition = function(){
     $("#addViewsCondition").click(function(){
-        html = '<div class="col-xs-12">\
-        <div class="col-xs-6 selectFilter">\
-            Condition<span class="red">*</span>：<br>\
-            <select class="col-xs-6" onchange="selectCondition(this);">\
-            <option><b>----CONDITION----</b></option>\
-                <option valeu="Project">Project</option>\
-                <option valeu="Job Name">Job Name</option>\
-                <option valeu="Job Description">Job Description</option>\
-                <option valeu="Submit Time">Submit Time</option>\
-                <option valeu="Start Time">Start Time</option>\
-                <option valeu="End Time">End Time</option>\
-                <option valeu="Result">Result</option>\
-                <option valeu="Status">Status</option>\
-                <option valeu="Platform">Platform</option>\
-                <option valeu="Topology">Topology</option>\
-                <option valeu="Model">Model</option>\
-            </select>\
-        </div>\
-        <div class="col-xs-6">\
-            Value<span class="red">*</span>：<br>\
-            <select class="col-xs-8">\
-            </select>\
-            <a class="btn btn-primary deleteCondition">Delete</a>\
-        </div>\
-    </div>'
-        
+        html = '<div class="col-xs-12"> \
+                    <div class="col-xs-6"> \
+                        Condition<span class="red">*</span>：<br> \
+                        <select class="col-xs-6"> \
+                            <option>Project</option> \
+                            <option>Job Name</option> \
+                            <option>Job Description</option> \
+                            <option>Submit Time</option> \
+                            <option>Start Time</option> \
+                            <option>End Time</option> \
+                            <option>Result</option> \
+                            <option>Status</option> \
+                            <option>Platform</option> \
+                            <option>Topology</option> \
+                            <option>Model</option> \
+                        </select> \
+                        <a class="btn btn-primary selectCondition">Select</a> \
+                    </div> \
+                    <div class="col-xs-6"> \
+                        Value<span class="red">*</span>：<br> \
+                        <select class="col-xs-8"> \
+                        </select> \
+                        <a class="btn btn-primary deleteCondition">Delete</a> \
+                    </div> \
+                </div>'
         $("#filtercondition").append(html)
         deleteCondition()
         selectCondition()
     })
 }
-
+*/
 let deleteCondition = function(){
     $(".deleteCondition").click(function(){
         if ($(this).parent().parent().parent().children().length != 1){
@@ -99,48 +92,6 @@ let deleteCondition = function(){
     })
 }
 
-
-let selectCondition = function(){
-    $('.selectFilter').on('change', function(){
-        condition = $(this).children('select').val()
-        condition = condition.toLowerCase()
-        condition = condition.replace(' ','_')
-        value_selection = $(this).next().children('select')
-        value_selection.next('input').remove()
-        if (condition == 'job_description'){
-            condition = 'job_describe'
-        }
-        if (condition == 'topology'){
-            condition = 'testcase_topology'
-        }
-        if (condition.includes('time')){
-            value_selection.replaceWith('<select> \
-                                            <option>&equiv;</option> \
-                                            <option>&le;</option> \
-                                            <option>&ge;</option> \
-                                        </select> \
-                                        <input style="margin-top: 4px" type="date" startDate=”${startTime?datetime}”>')
-        }
-        else{
-            $.ajax({
-                type:'get',
-                data:{data:condition},
-                dataType:'json',
-                url: window.location.origin + "/test/get/selectionByCondition/",
-                success:function(data){
-                    data = data["data"]
-                    html = '<select class="col-xs-8">'
-                    for ( var i=0 ; i < data.length ; i++){
-                        html += "<option>" + data[i] + "</option>"
-                    }
-                    html += '</select>'
-                    value_selection.replaceWith(html)
-                }
-            })
-        }
-        //console.log(condition)
-    })
-}
 
 let dateAdd = function (startDate,days) {
     startDate = new Date(startDate);
@@ -152,7 +103,7 @@ let dateAdd = function (startDate,days) {
 
 let runCondition = function(){
     $("#updateTRRViews").click(function(){
-        $(".modal").attr("style","display:none");
+        // $(".modal").attr("style","display:none");
         condition_number = $("#filtercondition").children().length
         key_list = ['project','job_name','job_describe','submit_time','start_time','end_time','result',
                     'status','platform','testcase_topology','model']
@@ -183,6 +134,7 @@ let runCondition = function(){
             }
             if (key.includes('time')){
                 operator = $("#filtercondition").children().eq(i).children().eq(1).children().siblings("select").val()
+                console.log(operator);
                 date = $("#filtercondition").children().eq(i).children().eq(1).children().siblings("input").val()
                 value = [operator, date]
             }
@@ -229,10 +181,10 @@ let runCondition = function(){
             data = ConvertMutilValueToMongoDB(data, key_list[i], value_list[i])
         }
         data += "}"
-        //console.log(data)
+        console.log(data)
         localStorage.clear();
         localStorage.setItem("condition",data)
-        location.href = window.location.origin + "/test/jobManagement"
+         location.href = window.location.origin + "/test/testPlanManagement"
     })
 }
 

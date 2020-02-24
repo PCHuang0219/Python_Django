@@ -48,6 +48,11 @@ def index(request):
     return render(request, "test/jobSubmit.html")
 
 @login_required(login_url='/accounts/login/')
+@job_Submission_required
+def topology_configuration(request):
+    return render(request, "topologyConfig.html")
+
+@login_required(login_url='/accounts/login/')
 @job_management_required
 def detail(request):
     return render(request, "test/jobDetail.html")
@@ -86,6 +91,13 @@ def device_management_views(request):
 @job_Submission_required
 def testPlanManagement(request):
     return render(request ,"testPlanTable.html")
+
+####################################################
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def testCaseManagement(request):
+    return render(request ,"testCaseManagement.html")
+###############################################
 
 @login_required(login_url='/accounts/login/')
 @job_Submission_required
@@ -312,13 +324,19 @@ def receive_finished_log_from_server(request):
 def receive_finished_report_from_server(request):
     job_id = request.data['job_id']
     report = request.FILES['report']
+    gantt  = request.FILES['gantt']
     report_path = "/share/log/" + str(job_id) +"/"
     file_name = job_id + '_report.docx'
+    gantt_name = 'gantt.html'
     if not os.path.exists(report_path):
         os.makedirs(report_path)
     
     with open(report_path + file_name, 'wb') as f :
         for chunk in report.chunks():
+            f.write(chunk)
+    
+    with open(report_path + gantt_name, 'wb') as f :
+        for chunk in gantt.chunks():
             f.write(chunk)
     
     url = 'http://210.63.221.19:8888/log/' + str(job_id) + '/' + file_name
@@ -547,3 +565,26 @@ def get_selection_by_condition(request):
     condition = request.query_params.get("data")
     data = job_info_database.get_selection_by_condition(condition)
     return Response({"data":data})
+
+@api_view(['GET'])
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def get_topo_config(request):
+    project = request.query_params.get('project')
+    topo    = request.query_params.get('topo')
+    topo_config = test_info.get_topo_config_by_project_and_topo(project ,topo)
+    return Response({'data': topo_config})
+
+@api_view(['GET'])
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def get_topo_model(request):
+    return Response({'data': test_info.get_topo_models()})
+
+@api_view(['GET'])
+@login_required(login_url='/accounts/login/')
+@job_Submission_required
+def get_model_config(request):
+    model = request.query_params.get('model')
+    result = test_info.get_model_config(model)
+    return Response(result)

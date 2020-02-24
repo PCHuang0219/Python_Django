@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from application import api 
 
-def mainpage(request): 
+def mainpage(request): 	
 	print(request.user)
 	print(request.user.id)
 	return render(request, 'main_page.html')

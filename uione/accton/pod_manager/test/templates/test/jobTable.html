@@ -29,7 +29,7 @@
 				<div class="col-md-12 col-sm-12 col-xs-12 system_T1_Table">
 					<div class="x_panel">
 						<div class="x_title">
-							<h1>Test Job Management<a class="btn btn-primary" data-target="#c" data-toggle="modal" style="margin:0 20px">Filter The Views</a></h1>
+							<h1>Test Job Management<a class="btn btn-primary" id="filter_view" data-target="#c" data-toggle="modal" style="margin:0 20px">Filter The Views</a></h1>
 							<div class="clearfix"></div>
 						</div>
 						<div class="x_content">
@@ -74,27 +74,26 @@
 									<div class="modal-body">
 										<div id="filtercondition" class="form-group clearfix">
 											<div class="col-xs-12">
-												<div class="col-xs-6">
+												<div class="col-xs-6 selectFilter">
 													Condition<span class="red">*</span>：<br>
-													<select class="col-xs-6">
-														<option>Project</option>
-														<option>Job Name</option>
-														<option>Job Description</option>
-														<option>Submit Time</option>
-														<option>Start Time</option>
-														<option>End Time</option>
-														<option>Result</option>
-														<option>Status</option>
-														<option>Platform</option>
-														<option>Topology</option>
-														<option>Model</option>
+													<select  class="col-xs-6">
+														<option><b>----CONDITION----</b></option>
+														<option valeu="Project">Project</option>
+														<option valeu="Job Name">Job Name</option>
+														<option valeu="Job Description">Job Description</option>
+														<option valeu="Submit Time">Submit Time</option>
+														<option valeu="Start Time">Start Time</option>
+														<option valeu="End Time">End Time</option>
+														<option valeu="Result">Result</option>
+														<option valeu="Status">Status</option>
+														<option valeu="Platform">Platform</option>
+														<option valeu="Topology">Topology</option>
+														<option valeu="Model">Model</option>
 													</select>
-													<a class="btn btn-primary selectCondition">Select</a>
 												</div>
-												<div class="col-xs-6">
+												<div  class="col-xs-6">
 													Value<span class="red">*</span>：<br>
-													<select class="col-xs-8">
-													</select>
+													<select  class="col-xs-8"></select>
 													<a class="btn btn-primary deleteCondition">Delete</a>
 												</div>
 											</div>

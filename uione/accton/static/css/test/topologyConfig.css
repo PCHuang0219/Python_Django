@@ -1,0 +1,20 @@
+div > img {
+  vertical-align : middle;
+}
+
+.level {
+  border: 1px solid #E6E9ED;
+  display:inline-block; 
+  margin: 30px auto;
+  /* For IE use */
+  *display:inline; 
+  *zoom:1;
+}
+
+.level_content{
+  display:inline-block; 
+  margin: 0px 10px;
+  /* For IE use */
+  *display:inline; 
+  *zoom:1;
+}

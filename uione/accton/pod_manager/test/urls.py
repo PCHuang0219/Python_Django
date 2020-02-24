@@ -4,6 +4,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     path('', views.index, name='test_index'),
+    path('topologyConfig', views.topology_configuration, name='test_index'),
     path('status',views.status, name="test_status"),
     path('jobManagement/jobDetail/',views.detail, name="test_detail"),
     path('jobManagement',views.management, name="job_management"),
@@ -17,10 +18,22 @@ urlpatterns = [
     path('modifyTestPlan',views.modifyTestPlan, name="Modify Test Plan Page"),
     path('testPlanManagement/testPlanDetail',views.testPlanDetail, name="Test Plab Detail Page"),
     
+    path('get/topoConfig/', views.get_topo_config),
+    path('get/topoModel/', views.get_topo_model),
+    path('get/modelConfig/', views.get_model_config),
+
     path('createTestPlan/',views.createTestPlanFunction),
     path('modifyTestPlan/',views.createTestPlanFunction),
     path('testPlanManagement/testPlanTable/', views.getTestPlanTable),
     path('testPlanManagement/detail/',views.getTestPlanDetail),
+
+
+
+################################################################
+    path('testCaseManagement',views.testCaseManagement, name="Test Case Management"),
+    path('testCaseManagement/testPlanTable/', views.getTestPlanTable),
+#################################################################
+
 
     path('save/finishedTestLog/',views.receive_finished_log_from_server),
     path('save/finishedTestReport/',views.receive_finished_report_from_server),

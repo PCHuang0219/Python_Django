@@ -56,7 +56,7 @@ let getTestPlanTable = function(){
     })
     localStorage.clear();
 }
-
+/*
 let createFilterCondition = function(){
     $("#addViewsCondition").click(function(){
         html = '<div class="col-xs-12"> \
@@ -89,7 +89,7 @@ let createFilterCondition = function(){
         selectCondition()
     })
 }
-
+*/
 let deleteCondition = function(){
     $(".deleteCondition").click(function(){
         if ($(this).parent().parent().parent().children().length != 1){
@@ -178,6 +178,7 @@ let runCondition = function(){
             }
             if (key.includes('time')){
                 operator = $("#filtercondition").children().eq(i).children().eq(1).children().siblings("select").val()
+                console.log(operator);
                 date = $("#filtercondition").children().eq(i).children().eq(1).children().siblings("input").val()
                 value = [operator, date]
             }
@@ -227,7 +228,7 @@ let runCondition = function(){
         console.log(data)
         localStorage.clear();
         localStorage.setItem("condition",data)
-        // location.href = window.location.origin + "/test/jobManagement"
+         location.href = window.location.origin + "/test/testPlanManagement"
     })
 }
 

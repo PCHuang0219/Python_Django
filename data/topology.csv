@@ -1,0 +1,7 @@
+Project,Topology,Model,Level_1,Level_2,Level_3,Level_4,Level_5
+SONiC,Single Device,AS7712-32X,,,,,
+SONiC,Single Device,AS5812-54X,,,,,
+SONiC,Single Device,AS7816-64X,,,,,
+SONiC,Single Device,AS8000,,,,,
+Facebook,Single Device,AS8000,,,,,
+Data Center,Data Center Core,,AS7816-64X,"AS7712-32X, AS7712-32X","AS7712-32X, AS7712-32X, AS7712-32X, AS7712-32X","AS5812-54X, AS5812-54X, AS5812-54X, AS5812-54X",

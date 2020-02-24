@@ -13,6 +13,7 @@ from .utility.time import *
 from .database.message_user import *
 from .database.user import *
 from .database.sonic_image_version import *
+from .database.getDatabase import *
 from ..decorators import *
 
 database = Database()
@@ -115,6 +116,32 @@ def wiki(request):
     return render(request, "sonic/accton/wiki/data_center.html")
 def roadmap(request):
     return render(request, "sonic/roadmap.html")
+
+
+
+#--------------------------------------------------------------------
+def device_future(request):
+    return render(request, "sonic/device_feture.html")
+
+@api_view(['GET'])
+def get_device_data(request):
+    data_list = get_device()
+    return Response(data_list)
+
+def compatible_softWare(request):
+    return render(request, "sonic/compatible_sofotware.html")
+
+@api_view(['GET'])
+def get_software_data(request):
+    data_list = get_software()
+    return Response(data_list)
+
+def firmware(request):
+    return render(request, "sonic/firware.html")
+#--------------------------------------------------------------------
+
+
+
 def support(request):
     return render(request, "sonic/support.html")
 def wiki_mainpage(request):

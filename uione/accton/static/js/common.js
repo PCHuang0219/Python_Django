@@ -16,21 +16,81 @@ let getCurrentPath=function(){
     updatePath(path);
 }
 
+
+
+
+
 let updatePath=function(path){
     $("#path").empty();/*清空path*/
     mainSort = "#"+path.split("/")[3];/*split將path分開，以/為分割點*/
+
     $(mainSort).children("ul").attr("style","display:block;")/*mainSort之下的children找到ul，新增他們的style*/
     $(mainSort).addClass("active");/*新增mainSort的Class active*/
     roadmap = path.split("/")
+    /*console.log(roadmap);*/
+    let topic = roadmap[0]+'/'+roadmap[1]+'/'+roadmap[2]+'/'+roadmap[3];
     let html = '<li class="breadcrumb-item"><a href="/">Home</a></li>';
-    let link = '';
-    if (roadmap[roadmap.length]){
-        argument = roadmap.length - 1 ;
+
+    /*大寫字母間加上空白 */
+    for(let i = 0; i<roadmap[4].length; i++){
+        if(roadmap[4].charCodeAt(i) >=65 && roadmap[4].charCodeAt(i)<= 90){
+            title = roadmap[4].substr(0,i);
+            old = roadmap[4].substr(i,roadmap[4].length);
+            newword = " "+old;
+            roadmap[4] = title + newword;
+          
+            i++;
+        }
     }
-    else{
-        argument = roadmap.length - 2 ; 
-    }
+ 
     for (let i=3 ; i<roadmap.length ; i++){
+        if (roadmap[i] != '' && !roadmap[i].includes("?")){
+            substr = roadmap[i].substr(0,1);
+            newsubstr = substr.toUpperCase();
+            roadmap[i] = newsubstr+roadmap[i].substr(1);
+            if (roadmap[i] == 'Sonic'){
+                roadmap[i]='SONiC';
+            }
+            if (roadmap[i] == 'Test'){
+                roadmap[i]='Network Test Center';
+            }
+            if (roadmap[i] == 'Tmsadmin'){
+                roadmap[i] = 'TMS Admin';
+            }
+            if (roadmap[i] == 'Kb'){
+                roadmap[i] = 'Knowledge Base';
+            }
+            if (roadmap[i] == 'Contact_us'){
+                roadmap[i] = 'Contact Us';
+            }
+            if (roadmap[i] == 'LabInformation'){
+                roadmap[i] = 'Lab Information';
+            }
+            if (roadmap[i] == 'Iot'){
+                roadmap[i] = 'IoT';
+            }
+            if (roadmap[i] == "VOLT"){
+                roadmap[i] = "vOLT"
+            }
+            if (roadmap[i] == "Dcsg"){
+                roadmap[i] = "DCSG"
+            }
+            if (roadmap[i] == "Roadm"){
+                roadmap[i] = "ROADM"
+            }
+            if (roadmap[i] == "Pm"){
+                roadmap[i] = "Project Management"
+            }
+            /*因大寫字母產生空白 需要改善*/ 
+            if (roadmap[i] == " N T C_tasks"){
+                roadmap[i] = " NTC_tasks"
+            }
+        }
+    }
+    html += '<li class="breadcrumb-item"><a href=' + topic + '>'+roadmap[3]+'</a></li>';
+    html += '<li class="breadcrumb-item"><a onclick=history.go(-1)>'+roadmap[4]+'</a></li>';
+    /*
+    for (let i=4 ; i<roadmap.length ; i++){
         if (roadmap[i] != '' && !roadmap[i].includes("?")){
             link += roadmap[i] ;
             substr = roadmap[i].substr(0,1);
@@ -76,6 +136,7 @@ let updatePath=function(path){
             }
         }
     }
+    */
     $("#path").append(html);/*append增加()內的內容*/
 }
 

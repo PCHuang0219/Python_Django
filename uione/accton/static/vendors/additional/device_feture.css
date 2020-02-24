@@ -1,0 +1,27 @@
+
+.device_feturetable{
+    overflow: auto;
+    height: 600px;
+}
+table{
+    text-align: center;
+}
+table tr th{
+    position: sticky;
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+    top: 0px;
+    z-index: 1;
+}
+td:first-child{
+    position: sticky;
+    text-align: left;
+    left: 0px;
+    z-index: 2;
+    background-color: rgb(240, 240, 240);
+}
+#filtercondition ul {
+    list-style: none;
+    float: left;
+    display: inline-block;
+}

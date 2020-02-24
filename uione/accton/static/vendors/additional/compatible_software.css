@@ -1,0 +1,37 @@
+
+.device_feturetable{
+    overflow: auto;
+
+    height: 600px;
+}
+table tr th{
+    position: sticky;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    top: 0px;
+    z-index: 1;
+}
+td:first-child{
+    position: sticky;
+    left: 0px;
+    z-index: 2;
+    background-color: rgb(233, 233, 233);
+}
+td:nth-child(2),th:nth-child(2){
+    background-color: rgb(255, 245, 192);
+}
+td:nth-child(n+3):nth-child(-n+8),th:nth-child(n+3):nth-child(-n+8){
+    background-color: rgb(255, 228, 109);
+}
+td:nth-child(n+9):nth-child(-n+10),th:nth-child(n+9):nth-child(-n+10){
+    background-color: rgba(144, 175, 216);
+}
+td:nth-child(n+11):nth-child(-n+12),th:nth-child(n+11):nth-child(-n+12){
+    background-color: rgb(248, 220, 220);
+}
+td:nth-child(n+13):nth-child(-n+17),th:nth-child(n+13):nth-child(-n+17){
+    background-color: rgb(166, 193, 230);
+}
+td:nth-child(n+18):nth-child(-n+19),th:nth-child(n+18):nth-child(-n+19){
+    background-color: rgb(132, 173, 121);
+}

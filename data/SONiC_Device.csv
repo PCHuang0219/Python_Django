@@ -1,0 +1,129 @@
+0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23
+test,Minipack,AS9716-32D,AS7726-32X,AS7816-64X,AS7716-32X,AS7712-32X,AS6812-32X,AS6712-32X,AS7326-56X,AS7312-54XS,AS5916-54XKS,AS5916-54XM,AS5916-54XL,AS5912-54X,AS5835-54T,AS5835-54X,AS5812-54X,AS5812-54T,AS5712-54X,AS4610-54T,AS4610-54P,AS4610-30T,AS4610-30P
+400 Gigabit QSFP-DD, 32 max.,32,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X
+100 Gigagbit  QSFP 28,128 max.,X,32,64,32,32,X,X,6,6,6,6,6,6,6,6,X,X,X,X,X,X,X
+  40 Gigagbit  QSFP +,X,X,X,X,X,X,32,32,X,X,X,X,X,X,X,X,6,6,6,X,X,X,X
+  10 Gigabit  SFP＋,X,X,X,X,X,X,X,X,X,X,48,48,48,48,X,48,48,X,48,4,4,4,4
+  10 Gigabit  Base-T,X,X,X,X,X,X,X,X,X,X,X,X,X,X,48,X,X,48,X,X,X,X,X
+25 Gigabit SFP28,X,X,X,X,X,X,X,X,48,48,X,X,X,X,X,X,X,X,X,X,X,X,X
+    1 Gigabit  SFP,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X
+    1 Gigagbit  Base-T,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,48,48,24,24
+Serial Console,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+RJ-45  Management,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+USB Port,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+SPI Flash,16Mbytes SPI,128MB x 2,32Mbytes SPI,16Mbytes SPI,16Mbytes SPI,16Mbytes,16Mbytes,16Mbytes,32Mbytes,16Mbytes,32Mbytes,16Mbytes,32Mbytes,16Mbytes,16Mbytes,16Mbytes,16Mbytes,16Mbytes,16Mbytes,8Mbytes,8Mbytes,8Mbytes,8Mbytes
+DRAM,64GB DDR4,16GB DDR4,16GB DDR4,16GB DDR4,16GB DDR4,16GB DDR3,8GB DDR3,8GB DDR3,16GB DDR4,16GB DDR3,8GB DDR4 x 2 ,8GB DDR4 x 2,8GB DDR4 x 2,8GB DDR3 x 2,8GB DDR4 x 2,8GB DDR4 x 2,8GB DDR3,8GB DDR3,8GB DDR3,2GB DDR3,2GB DDR3,2GB DDR3,2GB DDR3
+Option Storage,256GB M.2 SSD,50GB M.2 SSD,64GB M.2 SSD,32GB M.2 SSD, 32GB M.2 SSD,64GB mSATA,32GB mSATA MLC,32GB mSATA MLC, 64GB M.2 MLC,32GB mSATA MLC,"128GB mSATA x 1
+128GB M.2 2242 x 1","128GB mSATA x 1
+128GB M.2 2242 x 1",128GB M.2 MLC,32GB mSATA MLC,32GB M.2 MLC,32GB m2 MLC,32GB mSATA MLC,32GB mSATA MLC,32GB mSATA MLC,32GB eUSB,32GB eUSB,32GB eUSB,32GB eUSB
+MAC Address Table Size,8K,8K,"32K min.
+288 max.","8K min.
+264K max.","8K min.
+136K max.","8K min.
+136K max.","32K min.
+288 max.","32K min.
+288 max.","32K min.
+288 max.","8K min.
+136K max.",750K,750K,750K,750K,"32K min.
+288 max.","32K min.
+288 max.","32K min.
+288 max.","32K min.
+288 max.","32K min.
+288 max.",96 K,96 K,96 K,96 K
+Switching Capacity,25.6Tbps full duplex,25.6Tbps full duplex,6.4Tbps full duplex,12.8Tbps full duplex,6.4Tbps full duplex,6.4Tbps full duplex,2.56Tbps full dplex,2.56Tbps full dplex,4Tbps full duplex,3.6Tbps full duplex,800Gbps,800Gbps,800Gbps,800Gbps,2.16Tbps full duplex,2.16Tbps full duplex,1.44Tbps full duplex,1.44Tbps full duplex,1.44Tbps full duplex,256Gbps full duplex,256Gbps full duplex,208Gbps full duplex,208Gbps full duplex
+IPv4 / IPv6 Routes,"IPv4 UC: 16 K
+IPv4 MC: 8 K
+IPv6 UC: 8 K
+IPv6 MC: 4 K","IPv4 UC: 16 K
+IPv4 MC: 8 K
+IPv6 UC: 8 K
+IPv6 MC: 4 K","IPv4: 16K min./ 168K max. host entries;
+32K LPM entries with TCAM-only mode 
+
+IPv6: 8K min./ 100K max. hostentries; 
+IPv6/ 64= 16K TCAM-only mode","IPv4: 76K min./ 128K max. L3 hosts/ extended view; 
+
+IPv4 /32: 32K LPM entries with TCAM-only mode
+
+IPv6: 46 K min./ 64K max. L3 hosts/ extended view; 
+IPv6/ 64: 16K LPM entries with TCAM-only mode","IPv4: 8K min./ 72K max. host entries; 16K LPM entries with TCAM-only mode
+
+IPv6: 4K min./ 36K max. host entries; 
+IPv6/ 64= 8K TCAM-only mode","IPv4: 8K min./ 72K max. host entries; 16K LPM entries with TCAM-only mode
+
+IPv6: 4K min./ 36K max. host entries; 
+IPv6/ 64= 8K TCAM-only mode","IPv4: 16K min./ 112K max. host entries;
+16K LPM entries withTCAM-only mode 
+
+IPv6: 8K min./ 56K max. host 
+entries; 
+IPv6/ 64= 8K TCAM-only mode","IPv4: 16K min./ 112K max. host entries;
+16K LPM entries with TCAM-only mode
+
+IPv6: 8K min./ 56K max. host entries; 
+IPv6/ 64= 8K TCAM-only mode","IPv4: 16K min./168K max. host entries;
+32K LPM entries with TCAM-only mode
+
+IPv6: 8K min./100K max. host entries; 
+IPv6/ 64= 16K TCAM-only mode","IPv4/32: 16 K L3 LPM entries with TCAM-only mode
+
+IPv6/ 64: 8 K L3 LPM entries with TCAM-only mode 
+
+IPv6/ 128: 4K L3 LPM entries with TCAM-only mode",10M IPv4/ 8M IPv6 routes entries w/ VPN,10M IPv4/ 8M IPv6 routes entries w/ VPN,10M IPv4/ 8M IPv6 routes entries w/ VPN,10M IPv4/ 8M IPv6 routes entries w/ VPN,IPv4: 16 K min./ 112K max. host entries, 16K LPM entries with TCAM-only mode,IPv4: 16 K min./ 112K max. host entries, 16K LPM entries with TCAM-only mode,"IPv4: 16K min./ 112K max. host entries; 16K LPM entries with TCAM-only mode
+
+IPv6: 8K min./ 56K max. host entries; IPv6/ 64= 8K TCAM-only mode","IPv4: 16K min./ 112K max. host entries; 16K LPM entries with TCAM-only mode
+
+IPv6: 8K min./ 56K max. host entries; IPv6/ 64= 8K TCAM-only mode","IPv4: 16K min. / 112K max. host entries; 16K LPM entries with TCAM-only mode
+
+IPv6: 8K min./ 56K max. host entries; IPv6/ 64= 8K TCAM-only mode","96k/ 48k Unicast,
+48k/ 24k Multicast","96k/ 48k Unicast,
+48k/ 24k Multicast"
+Forwarding Rate,19Bpps,19Bpps,4.7Bpps,9.5Bpps,4.7Bpps,4.7Bpps, 1.9Bpps, 1.9Bpps,2.9Bpps,2.6Bpps,700Mpps,700Mpps,700Mpps,700Mpps,1.6Bpps,1.6Bpps,1.0Bpps,1.0Bpps,1.0Bpps,191Mpps,191Mpps,156Mpps,156Mpps
+Packet Buffer Size,64MBytes,64MBytes,32MBytes,42MBytes,16MBytes,16MBytes,16MBytes,12MBytes,32Mbytes,22Mbytes,Upto 8GB,Upto 6GB,Upto 6GB,Upto 6GB,32MBytes,32MBytes,16MBytes,16MBytes,12MBytes,4MBytes,4MBytes,4MBytes,4MBytes
+Jumbo  Frame,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,9K,12K,12K,12K,12K
+Switch Silicon," Tomahawk III
+BCM56980"," Tomahawk III
+BCM56980","Trident III 
+BCM56870 ","Tomahawk II
+BCM56970"," Tomahawk
+BCM56960"," Tomahawk
+BCM56960","Trident II+
+BCM56860 ","Trident II
+ BCM56850 "," Trident III 
+BCM56873"," Tomahawk+
+BCM56967",Qumran 88375,Qumran 88370,Qumran 88370,Qumran 88370," Trident III 
+BCM56771"," Trident III 
+BCM56771","Trident II+
+BCM56864 ",Trident II+ BCM56864 ,"Trident II 
+BCM56854 "," Helix4 
+BCM56340"," Helix4 
+BCM56340"," Helix4 
+BCM56342"," Helix4 
+BCM56342"
+Central Process Unit,X,Intel Xeon® D-1518  ,Intel Xeon® D-1518  ,Intel Xeon D-1518,Intel Xeon D-1518,Intel Atom C2538,Intel Atom C2538,Intel Atom C2538,Intel Xeon® D-1518  ,Intel Atom C2538,"Intel Broadwell-DE
+ D-1548","Intel Broadwell-DE
+ D-1518","Intel Broadwell-DE
+ D-1518",Intel Atom C2538,Intel Atom C3558,Intel Atom C3558,Intel Atom C2538,Intel Atom C2538,Intel Atom C2538,ARM Cortex A9,ARM Cortex A9,ARM Cortex A9,ARM Cortex A9
+Air  Flow (1),FtoB,FtoB / BtoF,FtoB / BtoF,FtoB,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,FtoB / BtoF,Front-to-Back,Front-to-Back,Front-to-Back,Front-to-Back
+FAN  Module,8,5 +1,5 +1,3 + 1,5 +1,5 + 1,4 + 1 ,4 + 1 ,5 + 1,5 + 1,5 + 1 ,5 + 1 ,5 + 1 ,5 + 1 ,4 + 1 ,4 + 1 ,4 + 1 ,4 + 1 ,4 + 1 ,PSU FAN,Fixed FAN,PSU FAN,Fixed FAN
+Power  Module,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,X,X,X,X
+Dimension (WxDxH) cm,44 x 75.5 x 17.6,43.8 x 53.6 x 4.3,44 x 47 x 4.4,44 x 58 x 8.8,44 x 51 x 4.4,44 x 51 x 4.4,44 x 51 x 4.4,44 x 51 x 4.4,44 x 54 x 4.4,44 x 47 x 4.4,43.5 x 51.5 x 4.3,43.8 x 50.2 x 4.4,43.8 x 60.9 x 4.3,43.5 x 51.5 x 4.3,44.2 x 47.3 x 4.3,44.2 x 47.3 x 4.39,43.8 x 47.3 x 4.3,44 x 47 x 4.4,44 x 47 x 4.4,44 x 35 x 4.5,44 x 35 x 4.5,44 x 35 x 4.5,44 x35 x4.5
+Operation Temperature,0ºC～45ºC,0ºC～45ºC,0ºC～45ºC,0ºC～45ºC,0ºC～45ºC,0ºC～45ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～45ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～40ºC,0ºC～45ºC,0ºC～45ºC
+Typical Power Consumption,max. 3000W,max. 1300W,max. 550W,max. 760W,550W,550W,310W,227W,max. 550W,max. 400W,400W,500W,400W,360W,max. 323W,max. 356W,282W,max. 384W,282W,150W,max. 1500W,150W,max. 800W
+ONIE,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Cumulus Linux,Future Release,X,Yes,Yes,X,Yes,Yes,Yes,Yes,Yes,X,X,X,X,X,X,Yes,Yes,Yes,Yes,Yes,X,X
+Big Monitor Fabric,X,X,X,X,X,Yes,Yes,Yes,X,Yes,X,X,X,X,X,X,Yes,Yes,Yes,X,X,X,X
+Big Cloud Fabric,X,X,X,X,X,Yes,Yes,Yes,X,X,X,X,X,X,X,X,Yes,Yes,Yes,X,X,X,X
+Open Network Linux (ONL),Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,X,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,X,X
+PicOS,X,X,X,Yes,X,Yes,Yes,Yes,X,Yes,X,X,X,X,X,X,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+IPInfusion OcNOS,X,X,Yes,Yes,Yes,Yes,X,X,Future Release,X,Yes,Yes,Yes,Yes,X,X,Yes,X,X,Yes,X,X,X
+Pluribus,X,X,X,X,Yes,Yes,X,Yes,X,Yes,X,X,X,X,X,X,X,Yes,Yes,X,X,X,X
+SnapRoute,X,X,X,Yes,X,Yes,Yes,X,X,Yes,X,X,X,X,X,X,Yes,X,Yes,X,X,X,X
+Netscout,X,X,X,X,X,Yes,X,X,X,X,X,X,X,X,X,X,Yes,X,X,X,X,X,X
+SONiC,X,X,X,Yes,X,Yes,X,X,X,X,X,X,X,X,X,X,X,X,Yes,X,X,X,X
+IXIA Vision EdgeOS,X,X,X,X,X,Yes,X,X,X,X,X,X,X,X,X,X,Yes,X,X,X,X,X,X
+Cisco-ISO-XR,X,X,X,Yes,X,X,X,X,X,X,Yes,X,X,X,X,X,X,X,X,X,X,X,X
+PoE  Standard,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,802.3af / at,X,802.3af / at
+Power Budget,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,"1,500 W",X,800W
+Ultra PoE ( 60 W ),X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,8 Ports,X,8 Ports
+OCP Status,X,X,X,X,X,Accepted,X,Accepted,X,X,X,X,X,Accepted,X,X,X,X,First Accepted,Accepted,Accepted,Accepted,Accepted

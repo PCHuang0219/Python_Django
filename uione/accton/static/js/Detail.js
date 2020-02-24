@@ -40,11 +40,6 @@ let getJobStatus = function(){
                 if (typeof(element['test_start_time']) != 'string'){
                     if (element["test_start_time"].length > 0){
                         lastIdx = element["test_start_time"].length - 1
-                    }
-                    else{
-                        lastIdx = element["test_start_time"].length
-                    }
-                    if (lastIdx >= 0){
                         start_time = element["test_start_time"][lastIdx]
                         end_time = element["test_end_time"][lastIdx]
                         result = element["test_result"][lastIdx]
@@ -53,6 +48,7 @@ let getJobStatus = function(){
                         start_time = 'not start'
                         end_time = 'not start'
                         result = 'not start'
+                        element["test_status"] = 'not start'
                     }
                 }
                 else{
@@ -60,7 +56,6 @@ let getJobStatus = function(){
                     end_time = element["test_end_time"]
                     result = element["test_result"]
                 }
-
                 html +=
                 "<tr>" +
                 "<td data-th='#'>"+ parseInt(i+1) + "</th>" +

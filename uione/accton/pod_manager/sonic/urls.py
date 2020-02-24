@@ -69,7 +69,15 @@ urlpatterns = [
 
     path('accton/resources/whitepaper',views.whitepaper, name="whitepaper"),
 
-
+    ################################################################3
+    path('devicefeture',views.device_future, name="device_future"),
+    path('devicefeture/table',views.get_device_data, name="device_future_data"),
+    path('compatiblesoftWare',views.compatible_softWare, name="compatible_softWare"),
+    path('compatiblesoftWare/table',views.get_software_data, name="compatible_softWare_data"),
+    path('firmware',views.firmware, name="firmware"),
+    ##################################################################
+    
+    
     path('roadmap',views.roadmap, name="road_map"),
     path('support',views.support, name="support"),
     path('accton/forum/newArticle',login_required(views.newArticle), name="newArticle"),
