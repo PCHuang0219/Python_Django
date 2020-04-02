@@ -1,5 +1,0 @@
-ID,SOURCE,TYPE,CLASS,OUTPUT,OUTPUT_PATH,PLATFROM,RESULT,STATUS,START_TIME,END_TIME,DESCRIPTION
-1,manual job,only_once,Sonic_1.image,ok,./a.log,as3000,failed,finish,2019/3/9 19:00,2019/3/9 19:02,
-2,jenkins job,daily,Sonic_2.image,ok,./b.log,as7700,failed,finish,2019/3/10 12:00,2019/3/10 17:00,
-3,manual job,by trigger,Sonic_3.image,error,./c.log,as3000,ok ,dead,2019/3/11 4:00,2019/3/11 15:00,
-4,jenkins job,36 hours,Sonic_4.image,,,as3000,,running,2019/3/12 7:00,,
