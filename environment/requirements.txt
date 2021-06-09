@@ -1,4 +1,4 @@
-django==2.2
+django==2.2.22
 django-cors-headers
 django-bootstrap3
 djangorestframework==3.7.7
